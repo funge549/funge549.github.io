@@ -1,0 +1,13 @@
+html, body { width: 100%; height: 100%; }
+
+@font-face { font-family: "UniversBlack"; src: url("./fonts/UniversLTStd-Black.otf"); }
+
+@font-face { font-family: "UniversLight"; src: url("./fonts/UniversLTStd-LightCn.otf"); }
+
+head {background-color: #27857d;}
+
+h1 {text-align: center; font-family: "UniversBlack"; color: white;}
+
+p {font-family: "UniversLight"; color: white; }
+
+a {text-decoration: none;font-family: "UniversLight";}
