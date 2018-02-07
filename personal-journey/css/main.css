@@ -16,10 +16,125 @@ p {font-family: "UniversLight"; font-size: 20pt; color: white; }
 
 a {text-decoration: none; font-family: "UniversLight"; font-size: 18pt;color: white;}
 
-a:hover {font-family:"Univers";color: #99cccc; background-color: transparent;text-decoration: underline;}
+a:hover {font-family:"Univers"; color: #99cccc; background-color: transparent;text-decoration: underline;}
 
-h2 {font-family: "UniversBlack"; font-size:36pt; color: white;}
+h2 {font-family: "UniversBlack"; font-size:36pt; color: white;text-decoration: underline;}
 
-h2:hover {font-family: "UniversOblique";}
+pre {text-align: center;margin-top: 300px}
 
-pre {text-align: center;}
+#title span {display: none; font-family: "UniversBlack"; font-size: 24px; text-align: center;}
+
+#extra {display: none;}
+
+#text:hover #extra {display: block;}
+
+#text:hover a #extra {font-family:"UniversOblique"; color: #99cccc;}
+
+#title:hover #time {display: block;}
+
+#flight h1 {
+    position: relative;
+    color: rgba(0, 0, 0, .3);
+    font-size: 5em
+}
+#flight h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 5s linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+#flight2 p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#flight2 h1 {
+    position: relative;
+    color: rgba(0, 0, 0, .3);
+    font-size: 5em
+}
+#flight2 h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 30s linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+#flight2 p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#btw {display: none; text-align: center; color:white; font-family: "UniversLight" }
+
+#flight3:hover #btw{display: block;}
+
+#flight3 p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#flight3 h1 {
+    position: relative;
+    color: rgba(0, 0, 0, .3);
+    font-size: 5em
+}
+#flight3 h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 75s linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+#flight3 p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#bus:hover #btw{display: block;}
+
+#bus p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#bus h1 {
+    position: relative;
+    color: rgba(0, 0, 0, .3);
+    font-size: 5em
+}
+#bus h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 7em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 35s linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+#bus p {text-align: center; color:#99cccc; font-family: "UniversBlack" }
+
+#ps {display: none;}
+
+#final:hover #ps {display: block; font-family: "UniversOblique";font-size: 12px}
+
+
+
+
+
