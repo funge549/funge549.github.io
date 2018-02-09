@@ -1,0 +1,195 @@
+html, body {width: 100%; height: 100%;}
+
+@font-face {font-family: "UniversBlack"; src: url("../fonts/UniversLTStd-Black.otf");}
+@font-face {font-family: "UniversLight"; src: url("../fonts/UniversLTStd-Light.otf");}
+@font-face {font-family: "Garamond"; src: url("../fonts/AGaramondPro-Bold.otf");}
+ 
+a{
+	text-decoration: none;
+}
+.marquee {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 100px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.marquee p {
+  float: left;
+  width: 50%;
+  font-family: "UniversLight"; 
+  font-size: 24pt; color:black;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+/*USTEDES*/ 
+
+.marquee2 {
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee2 div {
+  display: block;
+  width: 100%;
+  height: 165px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 8s linear infinite;
+}
+.marquee2 p {
+  float: left;
+  width: 50%;
+  font-family: "Garamond"; 
+  font-size: 24pt; color:black;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+/*NOSOTROS*/ 
+
+.marquee3 {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee3 div {
+  display: block;
+  width: 100%;
+  height: 145spx;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 15s linear infinite;
+}
+
+.marquee3 p {
+  float: left;
+  width: 50%;
+  font-family: "UniversBlack"; 
+  font-size: 24pt; color:black;
+
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee3 {
+	margin-left: -50%;
+}
+
+h1 {
+	padding-left: 250px;
+	font-family: "UniversBlack";
+	font-size: 86px;
+}
+
+.info {
+	font-family: "UniversLight";
+	font-size: 48px;
+	padding-left: 250px;
+	padding-right: 250px;
+	letter-spacing: 0;
+}
+
+.back{
+	font-family: "UniversLight";
+	font-size: 48px;
+	padding-left: 50px;
+	color: black;
+}
+
+.uds{
+	font-family: "Garamond";
+	font-size: 86px;
+	padding-left: 200px;
+}	
+
+.alt {
+	font-family: "Garamond";
+	font-size: 86px;
+	padding-left: 200px;
+	letter-spacing: 0;
+	color: #E9E9E9;
+}
+
+.uds-bottom{
+	padding-top: 100px;
+	font-family: "Garamond";
+	font-size: 48px;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+
+.uds-bottom a {
+	color: #000000;
+}
+
+.uds-shadow{
+	color: #E9E9E9;
+
+}
+
+.nos{
+	font-family: "UniversBlack";
+	font-size: 86px;
+	padding-left: 150px;
+}	
+
+.alt2 {
+	font-family: "UniversBlack";
+	font-size: 86px;
+	padding-left: 150px;
+	letter-spacing: 0;
+	color: #E9E9E9;
+}
+
+.nos-bottom{
+	padding-top: 100px;
+	font-family: "UniversBlack";
+	font-size: 48px;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+
+.nos-bottom a {
+	color: #000000;
+}
+
+.nos-shadow{
+	color: #E9E9E9;
+
+}
+
+
+
