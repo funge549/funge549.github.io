@@ -16,10 +16,10 @@ html {background-color: #ffeee6;}
 }
 
 .content p {
-    font-family: "Univers"; font-size:14pt; width: 500px; position:}
+    font-family: "Univers"; font-size:14pt; width: 500px; padding-top: 10px}
 
 .content ul {
-    text-align: center; list-style-type: none; margin: 0;padding: 0;overflow: hidden;
+    text-align: center; list-style-type: none; margin: 0;padding: 10px;overflow: hidden;
 }
 
 .content li {
