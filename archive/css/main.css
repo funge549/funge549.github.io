@@ -1,0 +1,74 @@
+html, body {width: 100%; height: 100%; padding-left: 10px;padding-top: 15px;}
+@font-face {font-family: "UniversBlack"; src: url("../fonts/UniversLTStd-Black.otf");}
+@font-face {font-family: "Univers"; src: url("../fonts/UniversLTStd.otf");}
+
+
+html {background-color: #ffeee6;}
+
+.content {padding-top: 120px; width: 50%; float: left;}
+
+.content h1 {
+    font-family: "UniversBlack"; font-size: 36pt; top: calc(100% - 100px)
+}
+
+.content h2{
+     font-family: "UniversBlack"; font-size: 24pt;
+}
+
+.content p {
+    font-family: "Univers"; font-size:14pt; width: 500px; position:}
+
+.content ul {
+    text-align: center; list-style-type: none; margin: 0;padding: 0;overflow: hidden;
+}
+
+.content li {
+    float: left;
+}
+
+.content li a {
+    display: block;padding-right: 15px; color: black;font-family: "Univers"; text-decoration: none;
+}
+
+.content li a:hover {
+    text-decoration: underline;
+}
+
+.bold li {
+    font-family: "UniversBlack";
+}
+
+.people ul {
+    padding-top: 100px;
+}
+
+.people ul li {
+    padding-left: 600px; text-decoration: none; list-style: none;
+}
+
+.people ul li {
+    font-family: 'Lobster', cursive; font-size: 86pt; 
+}
+
+.people a {
+    text-decoration: none; color: #000000;
+}
+
+.people:HOVER a {
+    color: #4775d1;
+}
+  
+.focus {
+    display: block;padding-right: 15px; color: black;font-family: "UniversBlack"; text-decoration: none;
+}
+
+.dos {
+    padding-left: 300px;
+}
+
+}
+.tres {
+    padding-left: 100px;
+}
+
+
