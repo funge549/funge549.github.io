@@ -10,6 +10,7 @@ a{
 	color: #000000;
 }
 .mario {
+  padding-top: 50px;
   height: 100px;
 }
 
@@ -200,7 +201,6 @@ p {
 
 .nos-shadow{
 	color: #e9e9e9;
-
 }
 
 .dot{
@@ -243,25 +243,175 @@ h1 {
 }
 
 .marquee-uds {
-  height: 300px;
+  height: 70pt;
   overflow: hidden;
   position: relative;
+  width: 300%;
 }
 
 .marquee-uds div {
   display: block;
+  width: 250%;
+  height: 65pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee4 14s linear infinite;
+}
+
+.marquee-uds span {
+  padding-top: 20px;	
+  float: left;
+  font-family: "Garamond"; 
+  font-size: 48pt; color:black;
+}
+
+@keyframes marquee4 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee-nos {
+  height: 70pt;
+  overflow: hidden;
+  position: relative;
+  width: 300%;
+}
+
+.marquee-nos div {
+  display: block;
+  width: 250%;
+  height: 55pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee5 18s linear infinite;
+}
+
+.marquee-nos span {
+  padding-top: 20px;  
+  float: left;
+  font-family: "UniversBlack"; 
+  font-size: 48pt; color:black;
+}
+
+
+@keyframes marquee5 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee-nos2 {
+  height: 70pt;
+  overflow: hidden;
+  position: relative;
+  width: 300%;
+}
+
+.marquee-nos2 div {
+  display: block;
+  width: 250%;
+  height: 55pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-nos2 span {
+  padding-top: 20px;  
+  float: left;
+  font-family: "UniversBlack"; 
+  font-size: 48pt; color:black;
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+
+.marquee-nos3 {
+  height: 70pt;
+  overflow: hidden;
+  position: relative;
+  width: 300%;
+}
+
+.marquee-nos3 div {
+  display: block;
+  width: 250%;
+  height: 55pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 13s linear infinite;
+}
+
+.marquee-nos3 span {
+  padding-top: 20px;  
+  float: left;
+  font-family: "UniversBlack"; 
+  font-size: 48pt; color:black;
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee-nos4 {
+  height: 70pt;
+  overflow: hidden;
+  position: relative;
+  width: 300%;
+}
+
+.marquee-nos4 div {
+  display: block;
+  width: 250%;
+  height: 55pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-nos4 span {
+  padding-top: 20px;  
+  float: left;
+  font-family: "UniversBlack"; 
+  font-size: 48pt; color:black;
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee-uds {
+  height: 50pt;
+  overflow: hidden;
+  position: relative;
   width: 200%;
-  height: 300px;
+  padding: 20px 0;
+
+}
+
+.marquee-uds div {
+  display: block;
+  width: 300%;
+  height: 70pt;
   position: absolute;
   overflow: hidden;
   animation: marquee 8s linear infinite;
 }
 
-.marquee-uds p {
+.marquee-uds span {
   float: left;
-  width: 50%;
-  font-family: "UniversBlack"; 
+  width: 500%;
+  height: 55pt;
+  font-family: "Garamond"; 
   font-size: 48pt; color:black;
+  display: block;
 }
 
 @keyframes marquee {
@@ -269,4 +419,127 @@ h1 {
   100% { left: -100%; }
 }
 
+
+.marquee-uds2 {
+  height: 50pt;
+  overflow: hidden;
+  position: relative;
+  width: 200%;
+  padding: 20px 0;
+
+}
+
+.marquee-uds2 div {
+  display: block;
+  width: 300%;
+  height: 70pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-uds2 span {
+  float: left;
+  width: 500%;
+  height: 55pt;
+  margin-top: 10pt;
+  font-family: "Garamond"; 
+  font-size: 48pt; color:black;
+  display: block;
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+
+.marquee-uds3 {
+  height: 50pt;
+  overflow: hidden;
+  position: relative;
+  width: 200%;
+  padding: 20px 0;
+
+}
+
+.marquee-uds3 div {
+  display: block;
+  width: 300%;
+  height: 70pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 13s linear infinite;
+}
+
+.marquee-uds3 span {
+  float: left;
+  width: 500%;
+  height: 55pt;
+  margin-top: 10pt;
+  font-family: "Garamond"; 
+  font-size: 48pt; color:black;
+  display: block;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee-uds4 {
+  height: 60pt;
+  overflow: hidden;
+  position: relative;
+  width: 200%;
+  padding: 20px 0;
+
+}
+
+.marquee-uds4 div {
+  display: block;
+  width: 300%;
+  height: 75pt;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 21s linear infinite;
+}
+
+.marquee-uds4 span {
+  float: left;
+  width: 500%;
+  height: 55pt;
+  font-family: "Garamond"; 
+  font-size: 48pt; color:black;
+  display: block;
+}
+
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+
+
+.index2{
+	padding-top: 100px;
+	font-family: "UniversBlack";
+	font-size: 48px;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
+
+.index3{
+	padding-top: 30px;
+	font-family: "Garamond";
+	font-size: 48px;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #000000;
+	text-align: center;
+}
 
