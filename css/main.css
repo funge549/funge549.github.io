@@ -11,14 +11,33 @@ h3:hover {font-family: "Anisha"}
 
 #logo img {padding-left: 650px}
 
-ul {text-align: center; list-style-type: none; margin: 0;padding: 0;overflow: hidden;}
+#side-bar ul {text-align: center; list-style-type: none; margin: 0;padding: 0;overflow: hidden;}
 
-li {float: left;}
+#side-bar li {float: left;}
 
-li a {display: block;padding: 8px; color: black;font-family: "UniversBO";}
+#side-bar li a {display: block;padding: 8px; color: black;font-family: "UniversBO";}
 
-li a:hover {text-decoration: none;}
+#side-bar li a:hover {text-decoration: none;}
 
-li a: active {color: white;}
 
 #key img {width: 50%; height: 50%; padding-left: 350px; padding-bottom: 25px}
+
+#projects ul {
+	text-align: center;
+	text-align: center; 
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+}
+
+#projects li a {
+	display: block;
+	padding: 8px; 
+	color: black;
+	font-family: "UniversBO";
+	font-size: 24pt;
+}
+
+#projects li a:hover {
+	text-decoration: none;
+}
