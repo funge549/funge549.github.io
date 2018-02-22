@@ -1,0 +1,108 @@
+/*
+  Coding from Life – Sketch 2: fluid layout
+
+  For sketch 2 you'll be positioning elements relative to a fluid container. This
+  means you'll need to use percentages when positioning and sizingelements within
+  your frame.
+*/
+
+
+body {
+  background-color: black;
+}
+
+.frame {
+  width: 95vw;
+  height: 57vw;
+  background: white;
+  margin: 2.5vw auto;
+  position: relative;
+}
+
+/* Your CSS goes here */
+
+.table {
+	position: absolute;
+	left: 30%;
+	top: 20%;
+	width: 30%;
+	height: 65%;
+	transform: rotate(28deg);
+	background:AliceBlue;
+}
+
+.books {
+	top: 37%;
+	left: 36%;
+	position: absolute;
+	transform: rotate(26deg);
+}
+
+.book-top{
+	width: 7%;
+	height: 15%;
+	background: repeating-linear-gradient(190deg, OrangeRed,blue 7%);
+}
+
+.book-middle{
+	top: 39%;
+	width: 9%;
+	height: 13%;
+	background-color: white;
+	border-color: gray;
+}
+
+.plant{
+	top: 20%;
+	left: 30%;
+}
+
+.vase {
+	z-index: 1;
+	position: absolute;
+	top: 37%;
+	left: 37%;
+   width: 6%;
+   height: 10%;
+   border-radius: 50%;
+   background: linear-gradient(gray 15%, white 10%, gray);
+}
+
+.flor {
+	width: 4%;
+	height: 2%;
+	background: #DDA0DD;
+	border-radius: 80%;
+	position: absolute;
+}
+
+.flower {
+	top: 33%;
+	left: 36%;
+	opacity: 0.5;
+	transform: rotate(42deg);
+}
+.flower2 {
+	transform: rotate(17deg);
+	top: 35%;
+	left: 35%;
+}
+
+.flower3 {
+	transform: rotate(-43deg);
+	top:33%;
+	left: 39.5%;
+	opacity: 0.6;
+}
+.flower4 {
+	transform: rotate(-20deg);
+	top: 35%;
+	left: 40%;
+}
+
+.flower5 {
+	transform: rotate(70deg);
+	top: 32%;
+	left: 37%;
+}
+
