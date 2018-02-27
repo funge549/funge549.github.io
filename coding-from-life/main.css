@@ -1,11 +1,3 @@
-/*
-  Coding from Life – Sketch 2: fluid layout
-
-  For sketch 2 you'll be positioning elements relative to a fluid container. This
-  means you'll need to use percentages when positioning and sizingelements within
-  your frame.
-*/
-
 
 body {
   background-color: black;
@@ -18,8 +10,6 @@ body {
   margin: 2.5vw auto;
   position: relative;
 }
-
-/* Your CSS goes here */
 
 .table {
 	position: absolute;
@@ -54,19 +44,60 @@ body {
 .leg {
 	position: absolute;
 	right: 22%;
-	top: 42%;
+	top: 40%;
 	width: 2%;
-	height: 57%;
+	height: 60%;
 	background: gray;
 }	
 
+
+.half {
+	position: absolute;
+	top: 29%;
+	left: 63%;
+   width: 6%;
+   height: 10%;
+   background: repeating-linear-gradient(120deg, gray,white 7%,gray);
+}
+
+.banana {
+	position: absolute;
+	top: 16%;
+	left: 62.7%;
+   	width: 10%;
+   	height: 15%;
+	clip-path: polygon(13% 0%, 0% 100%, 70% 100%);
+	background-color: yellow;
+}
+
+.banana2 {
+	position: absolute;
+	top: 25%;
+	left: 59%;
+   	width: 13%;
+   	height: 10%;
+	clip-path: ellipse(25% 27% at 56% 49%);
+	background-color: yellow;
+}
+
+.bananaS{
+	position: absolute;
+	top: 16%;
+	left: 62%;
+   	width: 13%;
+   	height: 16%;
+	clip-path: ellipse(25% 27% at 56% 49%);
+	clip-path: polygon(13% 1%, 0% 100%, 21% 100%);
+	background-color: goldenrod;
+}
+
 .books {
-	top: 33%;
-	left: 40%;
+	top: 30%;
+	left: 44%;
 	position: absolute;
 }
 
-.book-top{
+.book-cover{
 	width: 13%;
 	height: 13%;
 	background:AliceBlue;
@@ -74,13 +105,90 @@ body {
 	background: repeating-linear-gradient(120deg, OrangeRed,blue 7%);
 }
 
-.book-middle{
+.book-side1{
 	top: 39%;
-	width: 9%;
-	height: 13%;
-	background-color: white;
-	border-color: gray;
+	left: 41.5%;
+	position: absolute;
+	width: 10%;
+	height: 8%;
+	clip-path: polygon(27% 9%, 100% 24%, 100% 48%, 26% 28%);
+	background: lightgray;
+
 }
+
+.book-side2{
+	top: 35%;
+	left: 52%;
+	position: absolute;
+	width: 11%;
+	height: 13%;
+	background:AliceBlue;
+	clip-path: polygon(47% 6%, 48% 16%, 0 56%, 0 43%);
+	background: repeating-linear-gradient(120deg, OrangeRed,blue 7%);
+}
+
+.book-middle-side{
+	position: absolute;
+	top: 41%;
+	left: 42%;
+	width: 16%;
+	height: 14%;
+	background-color: lightgreen;
+	clip-path: polygon(25% 0%, 100% 13%, 100% 43%, 25% 24%);
+}
+
+.book-middle-cover{
+	width: 19%;
+	height: 13%;
+	top: 32%;
+	left: 45%;
+	position: absolute;
+	clip-path: polygon(52% 31%, 100% 38%, 68% 82%, 0 72%);
+	background-color: green;
+}
+
+.book-middle-side2{
+	width: 15%;
+	height: 19%;
+	top: 28%;
+	left: 55%;
+	position: absolute;
+	clip-path: polygon(20% 77%, 63% 47%, 64% 70%, 20% 100%);
+	background-color: lightgreen;
+}
+
+
+.book-bottom-side{
+	width: 14%;
+	height: 17%;
+	top: 31.5%;
+	left: 56.5%;
+	position: absolute;
+	clip-path: polygon(19% 85%, 69% 44%, 70% 58%, 19% 98%);
+	background-color: lightgray;
+}
+
+.book-bottom-side2{
+	position: absolute;
+	top: 45%;
+	left: 43%;
+	width: 16%;
+	height: 7%;
+	background-color: white;
+	clip-path: polygon(25% 0%, 100% 13%, 100% 43%, 25% 24%);
+
+}
+
+.book-bottom-cover{
+	width: 19%;
+	height: 13%;
+	top: 34%;
+	left: 47.5%;
+	position: absolute;
+	background-color: white;
+	clip-path: polygon(52% 31%, 100% 38%, 68% 82%, 0 72%);
+}
+
 
 
 .vase {
@@ -131,4 +239,95 @@ body {
 	top: 23%;
 	left: 47%;
 }
+
+.can-rect {
+	width: 7%;
+	height: 16%;
+	top: 37%;
+	left: 52.5%;
+	position: absolute;
+	background-color: salmon;
+	clip-path: polygon(18% 41%, 82% 48%, 75% 73%, 10% 67%);
+}
+
+.can-side1{
+	top: 44% ;
+	left: 52%;
+	transform: rotate(-80deg);
+	position: absolute;
+	width: 2.7%;
+    height: 3%; 
+    background-color: salmon;
+    border-top-left-radius: 95%;  
+    border-top-right-radius: 95%;
+    border: 1% solid gray;
+    border-bottom: 0;
+}
+
+.can-side2{
+	top: 45.3% ;
+	left: 57%;
+	transform: rotate(98deg);
+	position: absolute;
+	width: 2.5%;
+    height: 3%; 
+    background-color: salmon;
+    border-top-left-radius: 95%;  
+    border-top-right-radius: 95%;
+    border: 1% solid gray;
+    border-bottom: 0;
+}
+
+.cat {
+	position: absolute;
+	top: 27%;
+	left: 67%;
+   	width: 7%;
+  	height: 17%;
+   	border-radius: 50%;
+   	background: red;
+   	text-align: center;
+   	font-family: sans-serif;
+   	font-size: 12px
+}
+
+.eyeR {
+	position: absolute;
+	top: 35%;
+	left: 71%;
+	width: 1%;
+	height: 1%;
+	border-radius: 90%;
+	background: white;
+}
+
+.eyeL {
+	position: absolute;
+	top: 35%;
+	left: 69%;
+	width: 1%;
+	height: 1%;
+	border-radius: 90%;
+	background: white;
+}
+
+.nose {
+	position: absolute;
+	top: 36%;
+	left: 70.2%;
+	width: 0.5%;
+	height: 0.5%;
+	border-radius: 90%;
+	background: white;
+}
+
+.mouth {
+	position: absolute;
+	top: 37%;
+	left: 70.2%;
+	text-align: center;
+	transform: rotate(90deg);
+	color: white;
+}	
+
 
