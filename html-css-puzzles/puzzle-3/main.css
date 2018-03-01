@@ -1,0 +1,39 @@
+html body {width: 100%, height 100%}
+
+.square {
+	width: 33.33%;
+	height: 33.33%;
+	float: left;
+	position: absolute;
+}
+
+.green {
+	background-color: rgb(192,220,25);
+}
+
+.gray {
+	background-color: rgb(78,105,122);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.uno {
+	top: 0;
+	left: 0;
+}
+
+.dos {
+	top: 0;
+	right: 0;
+}
+
+.tres {
+	bottom: 0;
+	right: 0;
+}
+
+.cuatro {
+	bottom: 0;
+	left: 0;
+}

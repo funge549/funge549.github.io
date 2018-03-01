@@ -1,0 +1,64 @@
+html body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: rgb(188,52,28);
+	margin: 5%;
+}
+
+.uno {
+	position: absolute;
+	width: 90%;
+	height: 80%;
+	background: rgb(249,176,25);
+}
+
+.dos {
+	top: 42%;
+	position: absolute;
+	width: 90%;
+	height: 15%;
+	background: rgb(213,191,186);
+}
+
+.tres {
+	top: 57%;
+	position: absolute;
+	width: 90%;
+	height: 35%;
+	background: black;
+}
+
+@media (max-width: 500px) {
+  
+  body {
+	background: rgb(34,32,82);
+}
+
+.uno {
+	position: absolute;
+	width: 90%;
+	height: 60%;
+	background: rgb(46,11,24);
+}
+
+.dos {
+	top: 50%;
+	position: absolute;
+	width: 90%;
+	height: 15%;
+	background: rgb(41,65,170);
+	z-index: 2;
+}
+
+.tres {
+	top: 57%;
+	position: absolute;
+	width: 90%;
+	height: 35%;
+	background: rgb(46,42,76);
+}
+
+}

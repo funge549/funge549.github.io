@@ -1,0 +1,30 @@
+@font-face {font-family: "UniversBO"; src: url("../fonts/UniversLTStd-BoldCnObl.otf");}
+
+body {
+  font-family: "UniversBO";
+  text-align: left;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 36pt;
+  margin-top: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+
+}
+
+ul {
+  list-style-type: none;
+  font-size: 22pt;
+}
+li {
+  margin-bottom: 0.5em;
+}
