@@ -1,16 +1,18 @@
 html, body {width: 100%, height: 100%;}
 
-@font-face {font-family: "Univers"; src: url("../fonts/UniversLTStd.otf");}
+@font-face {font-family: "Reg"; src: url("../fonts/UniversLTStd.otf");}
+@font-face {font-family: "Bold"; src: url("../fonts/UniversLTStd-Black.otf");}
+@font-face {font-family: "Obl"; src: url("../fonts/UniversLTStd-Obl.otf");}
+
  
 .top {
-  padding-left: 50px;
   visibility: visible;
 }
 
 .header {
-  font-family: "Univers", sans-serif;
+  font-family: "Reg", sans-serif;
   padding-top: 50px;
-  padding-left: 50px;
+  padding-bottom: 50px;
   font-size: 36px;
   text-align: center;
   display: block;
@@ -33,15 +35,35 @@ html, body {width: 100%, height: 100%;}
 
 .pics .time {
   visibility: hidden;
-  width: 120px;
+  width: 100%;
   text-align: right;
   position: relative;
   right: 50%; 
 }
 
-.pics:hover .time {
-  visibility: visible;
+.oct{
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  flex: column;
+  padding-left: 50px;
+  position: relative;
 }
+
+.oct:hover {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+  to {
+    transform: translate3d(-100%, 0, 0) 
+  }
+}
+
 .nov{
   display: flex;
   flex: column;
@@ -50,7 +72,16 @@ html, body {width: 100%, height: 100%;}
 }
 
 .nov:hover {
-  animation: marquee 10s linear infinite;
+  animation: marquee2 20s linear infinite;
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+  to {
+    transform: translate3d(-300%, 0, 0) 
+  }
 }
 
 .dec{
@@ -61,6 +92,17 @@ html, body {width: 100%, height: 100%;}
 }
 
 .dec:hover {
+  animation: marquee 10s linear infinite;
+}
+
+.jan{
+  display: flex;
+  flex: column;
+  padding-left: 50px;
+  position: relative;
+}
+
+.jan:hover {
   animation: marquee 10s linear infinite;
 }
 
@@ -86,6 +128,17 @@ html, body {width: 100%, height: 100%;}
   animation: marquee 10s linear infinite;
 }
 
+.apr{
+  display: flex;
+  flex: column;
+  padding-left: 50px;
+  position: relative;
+}
+
+.feb:hover {
+  animation: marquee 10s linear infinite;
+}
+
 .unknown{
   display: flex;
   flex: column;
@@ -103,9 +156,284 @@ html, body {width: 100%, height: 100%;}
 }
 
 
-
-
-img {
+.pics img {
   max-width: 500px;
 }
+
+/*inner pages*/
+
+.detail{
+
+}
+
+.detail img {
+  display: block;
+  position: relative;
+  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
+.info {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 180%;
+  transform: translate(-50%,-50%);
+}
+
+.text {
+  font-family: "Reg";
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.number{
+  font-family: "Bold";
+}
+
+.title{
+  font-family: "Obl";
+
+}
+
+.more {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 190%;
+  padding-bottom: 50px;
+}
+
+.gray{
+  color: #778899;
+
+}
+
+.nav .right {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  font-family: "Reg";
+  font-size: 14px;
+  transform: rotate(-90deg);
+}
+
+.nav .left {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  font-family: "Reg";
+  font-size: 14px;
+  transform: rotate(90deg);
+}
+
+/*shorter img*/
+.info2 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 130%;
+  transform: translate(-50%,-50%);
+}
+
+.more2 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 140%;
+  padding-bottom: 50px;
+}
+
+/*way shorter img*/
+.info3 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%,-50%);
+}
+
+.more3 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 120%;
+  padding-bottom: 50px;
+}
+
+/*taller img*/
+.info4 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 200%;
+  transform: translate(-50%,-50%);
+}
+
+.more4 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 210%;
+  padding-bottom: 50px;
+}
+
+/* a bittaller img*/
+.info6 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 240%;
+  transform: translate(-50%,-50%);
+}
+
+.more6 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 250%;
+  padding-bottom: 50px;
+}
+
+/* way taller img*/
+.info5 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 310%;
+  transform: translate(-50%,-50%);
+}
+
+.more5 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 320%;
+  padding-bottom: 50px;
+}
+
+/**/
+
+/* +1400 height*/
+.info7 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 360%;
+  transform: translate(-50%,-50%);
+}
+
+.more7 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 370%;
+  padding-bottom: 50px;
+}
+
+/* +1600 height*/
+.info8 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 390%;
+  transform: translate(-50%,-50%);
+}
+
+.more8 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 400%;
+  padding-bottom: 50px;
+}
+
+/* +1800 height*/
+.info10 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 440%;
+  transform: translate(-50%,-50%);
+}
+
+.more10 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 450%;
+  padding-bottom: 50px;
+}
+
+/* +2000 height*/
+.info9 {
+  float: left;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 530%;
+  transform: translate(-50%,-50%);
+}
+
+.more9 {
+  font-family: "Reg";
+  font-size: 16px;
+  line-height: 25px; 
+  float: left;
+  position: absolute;
+  display: block;
+  left: 20%;
+  top: 540%;
+  padding-bottom: 50px;
+}
+
 
