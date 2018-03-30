@@ -71,18 +71,24 @@ body::-webkit-scrollbar-track {
  } 
 
 .dynamic::-webkit-scrollbar {
-  height:4px;
+  height:5px;
+
 }
 
 .dynamic::-webkit-scrollbar-track {
-    background: white;
+    background-color: rgba(12,12,12,0.1);
+}
+
+.dynamic::-webkit-scrollbar-thumb {
+  border: 5px dashed blue;
 }
  
 
-.dynamic:hover::-webkit-scrollbar-thumb {
-  background-color: salmon; 
-  border: 2px dashed white;
-}
+/*.dynamic:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(119, 136, 153,0.5);
+  background-color: blue;
+  border: 20px dashed red;
+}*/
 
 .pics img {
   max-width: 500px;
@@ -135,13 +141,13 @@ body::-webkit-scrollbar-track {
 }  
 
 .tombstone-column{
-  width: 200px;
+  width: 150px;
   display: inline-block;
   text-align: left;
 }
 
 .tombstone-row{
-
+  padding-left: 35px;
 }
 
 .gray{
