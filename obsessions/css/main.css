@@ -46,7 +46,16 @@ html, body {width: 100%, height: 100%;}
   right: 50%; 
 }
 
-.oct{
+body::-webkit-scrollbar {
+  width:1px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+
+.static{
   display: flex;
   width: 100%;
   flex: column;
@@ -54,65 +63,26 @@ html, body {width: 100%, height: 100%;}
 
 }
 
-.nov{
+.dynamic{
   display: flex;
-  flex: column;
   padding-left: 50px;
   overflow-y: hidden;
   overflow-x: scroll;
+ } 
+
+.dynamic::-webkit-scrollbar {
+  height:4px;
 }
 
-
-.dec{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
+.dynamic::-webkit-scrollbar-track {
+    background: white;
 }
+ 
 
-
-.jan{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;
+.dynamic:hover::-webkit-scrollbar-thumb {
+  background-color: salmon; 
+  border: 2px dashed white;
 }
-
-
-.feb{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
-
-.mar{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
-
-.apr{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;  
-}
-
-.unknown{
-  display: flex;
-  flex: column;
-  padding-left: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;  
-}
-
 
 .pics img {
   max-width: 500px;
