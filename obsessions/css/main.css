@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
   width:1px;
 }
 
-body::-webkit-scrollbar-track {
+body::-iwebkit-scrollbar-track {
   background: white;
 }
 
@@ -139,6 +139,7 @@ body::-webkit-scrollbar-track {
 .info {
   display: block;
   text-align: center;
+  padding-bottom: 25px;
 
 }
 
@@ -158,31 +159,28 @@ body::-webkit-scrollbar-track {
 }
 
 .tombstone {
-  width: 500px;
-  /*margin: 50px auto 0;*/
+  width: 600px;
   margin: 0 auto;
   font-family: "Reg";
   font-size: 16px;
   text-align: center;
   margin-bottom: 50px;
+  padding-left: 100px;
 }  
 
 .tombstone-row{
   position: relative;
-/*  padding-left: 35px;
-*/  height: 60px;
+  padding-left: 35px;
+  height: 60px;
 }
 
 .tombstone-column {
   position: relative;
-  top: 0;
-  margin: 0; /*should delete this?*/
-  width: 150px;
-  height: 60px;
+  width: 170px;
   display: inline-block;
   float: left;
   text-align: left;
-  margin: 0 50px;
+/*  margin: 0 50px;*/
 }
 
 .gray{
@@ -191,14 +189,6 @@ body::-webkit-scrollbar-track {
   color: #778899;
   margin: 0 auto;
   padding: 0;
-}
-
-.tombstone-column p {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding: 0;
-  overflow-wrap: break-word;
 }
 
 .nav .right {
@@ -217,5 +207,46 @@ body::-webkit-scrollbar-track {
   font-family: "Reg";
   font-size: 14px;
   transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+  .date {
+    font-size: 36px;
+  }
+
+  .header_main{
+  	font-size: 60px;
+  }
+
+  .tombstone{
+  	width: 400px;
+  }
+
+  .text {
+  	font-size: 24px;
+  	line-height: 28px;
+  }
+
+  .tombstone {
+  	font-size: 20px;
+  	line-height: 22px;
+  }
+
+  .nav .right {
+  	font-size: 16px;
+  	transform: rotate(0deg);
+  	position: absolute;
+    top: 160%;
+    right: 5%;
+  }
+
+  .nav .left {
+  	font-size: 16px;
+  	transform: rotate(0deg);
+  	position: absolute;
+    top: 160%;
+    left: 5%;
+  }
+
 }
 
