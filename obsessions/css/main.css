@@ -201,7 +201,7 @@ body::-iwebkit-scrollbar-track {
   transform: rotate(90deg);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   .date {
     font-size: 16px;
   }
