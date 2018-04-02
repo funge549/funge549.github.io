@@ -209,9 +209,13 @@ body::-iwebkit-scrollbar-track {
   transform: rotate(90deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .date {
     font-size: 36px;
+  }
+
+  .header {
+  	font-size: 60px;
   }
 
   .header_main{
