@@ -132,7 +132,6 @@ body::-iwebkit-scrollbar-track {
   display: block;
   text-align: center;
   padding-bottom: 25px;
-
 }
 
 .text {
@@ -183,24 +182,38 @@ body::-iwebkit-scrollbar-track {
   padding: 0;
 }
 
+.nav {
+  padding-top: 50px;
+  display: inline-block;
+/*  position: relative;  
+  float: left;*/
+}
+
 .nav .right {
-  position: fixed;
-  top: 50%;
-  right: 0;
   font-family: "Reg";
-  font-size: 16px;
-  transform: rotate(-90deg);
+  font-size: 18px;
+  text-align: right;
+  position: fixed;
+  right: 0;
 }
 
 .nav .left {
-  position: fixed;
-  top: 50%;
-  left: 0;
   font-family: "Reg";
-  font-size: 16px;
-  transform: rotate(90deg);
+  font-size: 18px;
+  position: fixed;
+  text-align: left;
+  left:0;
 }
 
+@media only screen and (min-width: 100px) and (max-width: 400px){
+  .nav .right{
+      bottom: 0;
+  }
+
+  .nav .left {
+      bottom: 0;
+  }
+}
 @media (min-width: 500px) {
   .date {
     font-size: 16px;
@@ -229,11 +242,19 @@ body::-iwebkit-scrollbar-track {
   }
 
   .nav .right {
-  	font-size: 18px;
+    padding: 0;
+  	font-size: 16px;
+    top: 50%;
+    right: 0;
+    transform: rotate(-90deg);
 }
 
   .nav .left {
-  	font-size: 18px;
+    margin: 0 auto;
+    font-size: 16px;
+    transform: rotate(90deg);
+    top: 50%;
+    left: 0;
   }
 
 }
