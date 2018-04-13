@@ -1,0 +1,46 @@
+html, body {width: 100%; height: 100%; margin-left: 10px;}
+@font-face {font-family: "UniversBlack"; src: url("../fonts/UniversLTStd-Black.otf");}
+@font-face {font-family: "Univers"; src: url("../fonts/UniversLTStd.otf");}
+
+
+html {
+	background-color: #e9e8f9;
+}
+
+.top {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/still3.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "UniversBlack";
+    font-size: 76px;
+    text-align: center;
+}
+
+p{
+    font-family: "Univers";
+    text-align: center;
+    font-size: 36px;
+}
+
+.subtext{
+    font-size: 24px;
+}
+
+.wrapper {
+     padding-top: 850px;
+}
+
+video {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    padding-top: 25px;
+}
