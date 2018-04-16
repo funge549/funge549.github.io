@@ -27,6 +27,10 @@ html, body {
 	position: absolute;
 }
 
+/*.audio-play-button{
+	position: absolute;
+}*/
+
 .object{
 	max-width: 350px;
 	visibility: hidden;
@@ -64,10 +68,9 @@ html, body {
 	visibility: visible;
 }
 
-
-
-
-
+.audio-play-button:hover {
+	cursor: pointer;
+}
 
 
 
