@@ -2,42 +2,125 @@
 
 @font-face {font-family: "Anisha"; src: url("../fonts/Anisha Free.otf");}
 @font-face {font-family: "UniversBO"; src: url("../fonts/UniversLTStd-BoldCnObl.otf");}
+@font-face {font-family: "UniversBC"; src: url("../fonts/UniversLTStd-BoldCn.otf");}
 
 body {background-color: #B0C4DE;}
 
-h3 {text-align: center; color: white; font-family: "UniversBO"; font-size: 48pt;margin: 20,0,0,10;}
+h3 {
+	text-align: center; 
+	color: white; 
+	font-family: "UniversBO"; 
+	font-size: 42pt;
+	margin-top: 20px;}
 
 h3:hover {font-family: "Anisha"}
 
-#logo img {padding-left: 650px}
-
-#side-bar ul {text-align: center; list-style-type: none; margin: 0;padding: 0;overflow: hidden;}
-
-#side-bar li {float: left;}
-
-#side-bar li a {display: block;padding: 8px; color: black;font-family: "UniversBO";}
-
-#side-bar li a:hover {text-decoration: none;}
-
-
-#key img {width: 50%; height: 50%; padding-left: 350px; padding-bottom: 25px}
-
-#projects ul {
-	text-align: center;
+#side-bar ul {
 	text-align: center; 
-	list-style-type: none;
+	list-style-type: none; 
+	margin: 0;
 	padding: 0;
-	overflow: hidden;
-}
+	overflow: hidden;}
 
-#projects li a {
+#side-bar li a {
+	float: left;
 	display: block;
 	padding: 8px; 
 	color: black;
-	font-family: "UniversBO";
-	font-size: 24pt;
+	font-family: "UniversBO";}
+
+#side-bar li a:hover {text-decoration: none;}
+
+#projects {
+	text-align: center;
+	list-style-type: none;
+	position: relative;
 }
 
-#projects li a:hover {
+#key img {
+	max-width: 700px;
+	position: fixed;
+	padding-top: 150px;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);}
+
+#projects ul {
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+}
+
+#projects li a{
+	display: block;
+	padding: 8px; 
+	color: black;
+	font-family: "UniversBC";
+	font-size: 20pt;
+	line-height: 28pt;
+}
+
+li a:hover {
 	text-decoration: none;
+}
+
+.work {
+	background-color: white;
+}
+
+.work h3{
+	text-align: center; 
+	color: #B0C4DE; 
+	font-family: "UniversBO"; 
+	font-size: 42pt;
+	margin-top: 20px;
+}
+
+
+.project-images{
+	max-width: 700px;
+	position: inline-block;
+}
+
+.project-images-width{
+	max-width: 1000px;
+}
+
+.tombstone{
+	position: absolute;
+	text-align: left;
+	font-family: "UniversBC";
+	font-size: 24pt;
+	background-color: #B0C4DE;
+	border: 5px solid #B0C4DE;
+	max-width: 450px;
+}
+
+.tombstone.right{
+	margin-left: 200px;
+}
+
+.tombstone:hover {
+	opacity: 0;
+}
+
+h4 {
+	font-family: "UniversBO"; 
+	font-size: 38pt;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.info {
+	font-family: "UniversBC"; 
+	font-size: 38pt;
+	text-align: center;
+}
+
+.info a {
+	color: white;
+}
+
+.info a:hover{
+	font-family: "UniversBO";
 }
