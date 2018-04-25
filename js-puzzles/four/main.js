@@ -6,7 +6,7 @@ $(document).on('keypress', function(e) {
   console.log('keypress:', key);
 
   if ( key == 'a' ) {
-    img = 'img/1.jpg';
+    img = 'img/1.JPG';
   } else if ( key == 's' ) {
     img = 'img/2.jpg';
   } else if ( key == 'd' ) {
@@ -36,11 +36,11 @@ $(document).on('keypress', function(e) {
   } else if ( key == 't' ) {
     img = 'img/15.jpg';
   }  else if ( key == 'y' ) {
-    img = 'img/16.jpg';
+    img = 'img/16.JPG';
   } else if ( key == 'u' ) {
     img = 'img/17.png';
   } else if ( key == 'i' ) {
-    img = 'img/18.jpg';
+    img = 'img/18.JPG';
   }  else if ( key == 'o' ) {
     img = 'img/19.jpg';
   } else if ( key == 'p' ) {
@@ -52,13 +52,13 @@ $(document).on('keypress', function(e) {
   } else if ( key == 'z' ) {
     img = 'img/23.jpg';
   } else if ( key == 'x' ) {
-    img = 'img/24.jpg';
+    img = 'img/24.JPG';
   }  else if ( key == 'c' ) {
     img = 'img/25.jpg';
   }  else if ( key == 'v' ) {
-    img = 'img/26.jpg';
+    img = 'img/26.JPG';
   } else if ( key == 'b' ) {
-    img = 'img/27.jpg';
+    img = 'img/27.JPG';
   } else if ( key == 'n' ) {
     img = 'img/28.jpg';
   }  else if ( key == 'm' ) {
@@ -80,15 +80,15 @@ $(document).on('keypress', function(e) {
   } else if ( key == '4' ) {
     img = 'img/35.jpg';
   }  else if ( key == '5' ) {
-    img = 'img/36.jpg';
+    img = 'img/36.JPG';
   } else if ( key == '6' ) {
-    img = 'img/37.jpg';
+    img = 'img/37.JPG';
   } else if ( key == '7' ) {
-    img = 'img/38.jpg';
+    img = 'img/38.JPG';
   }  else if ( key == '8' ) {
-    img = 'img/39.jpg';
+    img = 'img/39.JPG';
   } else if ( key == '9' ) {
-    img = 'img/40.jpg';
+    img = 'img/40.JPG';
   }  else if ( key == '0' ) {
     img = 'img/41.jpg';
   } else if ( key == '-' ) {
