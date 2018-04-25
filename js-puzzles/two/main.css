@@ -1,0 +1,11 @@
+.image{
+	position: relative;
+	width:200px;
+	height:auto;
+	top:0;
+	left:0%;
+}
+p {
+	font-family: Calibri;
+	font-size: 20px; 
+}
