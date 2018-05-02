@@ -1,0 +1,130 @@
+body {
+	background-color: #441e03;
+}
+
+.wrapper {
+	font-family: serif;
+	font-size: 72px;
+}
+
+.uno{
+	color: #f2bd98;
+	position: absolute;
+	top: 50%;
+	width: 800px;
+}
+
+.two {
+	color: #f2bd98;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	width: 800px;
+}
+.dos{
+		display: none;
+		opacity: 0;
+}		
+
+.tres{
+	width: 50px;
+	height: 800px;
+	background-color: green;
+	left: 50%;
+	bottom:100%;
+	position: absolute;
+	z-index: 3;
+}
+
+.cuatro{
+	width: 600px;
+	height: 800px;
+	background-color: white;
+	bottom:100%;
+	position: absolute;
+}
+
+@media (min-width: 1000px){
+	.uno{
+		display: block;
+	}
+	.dos{
+		display: none;
+		opacity: 0;
+	}
+	.two{
+		display: none;
+	}
+	.tres{
+		display: none;
+	}
+	.cuatro{
+		display: none;
+	}	
+}
+
+@media (max-width: 800px){
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: block;
+		color: #f7e2d4;
+		opacity: 1;
+	}
+	.two{
+		display: none;
+	}
+	.tres{
+		bottom:10%;
+		transition-duration: 10s;
+		animation-direction:normal;
+	}
+	.cuatro{
+		display: none;
+	}	
+}
+
+@media (max-width: 400px){
+	body{
+		background-color: white;
+	}
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: none;
+		opacity: 0;
+	}
+	.two{
+		display: none;
+	}
+	.tres{
+		display: block;
+	}
+	.cuatro{
+		bottom: 10%;
+		transition-duration: 10s;
+		animation-direction: normal;
+	}
+
+@media (min-width: 700px){
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: none;
+		opacity: 0;
+	}
+	.cuatro{
+		display: none;
+	}	
+}
+
+
+
+
+
+
+
+

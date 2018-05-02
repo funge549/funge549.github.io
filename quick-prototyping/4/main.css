@@ -1,0 +1,17 @@
+p {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 36px;
+	left: 10%;
+	visibility: visible;
+}
+
+p:hover {
+	visibility: hidden;
+}
+
+img {
+	display: inline-block;
+	max-width: 350px;
+}
+

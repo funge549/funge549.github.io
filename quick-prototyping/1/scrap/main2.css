@@ -1,0 +1,138 @@
+.wrapper {
+	font-family: serif;
+	font-size: 72px;
+	position: absolute;
+	top: 25%;
+	left: 30%;
+}
+
+@media (min-width: 400px){
+	body{
+		background-color: black;
+	}
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: none;
+	}
+	.tres{
+		display: block;
+	}
+	.cuatro{
+		display: block;
+	}
+	.cinco{
+		display: block;
+		color: salmon;
+		position: absolute;
+		top: 10%;
+		left: 0%;
+	}
+	.seis{
+		display: none;
+	}
+}
+
+@media (min-width: 850px){
+	body{
+		background-color: salmon;
+	}
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: none;
+	}
+	.tres{
+		display: none;
+	}
+	.cuatro{
+		display: block;
+	}
+	.cinco{
+		display: none;
+	}
+	.seis{
+		display: none;
+	}
+}
+
+@media (min-width: 900px){
+	body{
+		background-color: #ADD8E6;
+	}
+	.uno{
+		display: none;
+	}
+	.dos{
+		display: none;
+	}
+	.tres{
+		display: block;
+	}
+	.cuatro{
+		display: none;
+	}
+	.cinco{
+		display: none;
+	}
+	.seis{
+		display: none;
+	}
+}
+
+@media (min-width: 1000px){
+	body{
+		background-color: salmon;
+	}
+	.uno{
+		display: block;
+		font-size: 72px;
+		margin-top: 30%;
+		color: white;
+	}
+	.dos{
+		display: block;
+	}
+	.tres{
+		display: none;
+	}
+	.cuatro{
+		display: none;
+	}
+	.cinco{
+		display: none;
+	}
+	.seis{
+		display: none;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.uno{
+		display: block;
+	}
+	.dos{
+		display: none;
+	}
+	.tres{
+		display: none;
+	}
+	.cuatro{
+		display: none;
+	}
+	.cinco{
+		display: none;
+	}
+	.seis{
+		display: none;
+	}
+
+}
+
+
+
+
+
