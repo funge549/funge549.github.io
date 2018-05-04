@@ -1,3 +1,7 @@
+$('.closeSplash').click(function () {
+    $(this).parent('#splashscreen').fadeOut(1000);
+});
+
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -9,7 +13,7 @@ function buildColor( r, g, b ) {
 $(function() {
 	$(document).on('click', '.box', function(e) {
 		var thisBox = $(e.target);
-		var red = 240;
+		var red = 264;
 		var green = getRandomInt(187,150);
 		var blue = getRandomInt(198,178);
 		var randomColor = buildColor(red, green, blue)
@@ -29,9 +33,12 @@ $(function() {
 		var green = getRandomInt(187,150);
 		var blue = getRandomInt(198,178);
 		var randomColor = buildColor(red, green, blue)
-		var styles = [];
 
-		styles.push('outline: ' + randomColor + '3px solid');
+		var green2 = getRandomInt(150,118);
+		var randomColor2 = buildColor(red, green2, blue);
+		var styles = [];
+		// styles.push('outline: ' + randomColor + '7px solid');
+		styles.push('background-color: ' + randomColor2 + '');
 		// styles.push('z-index:' + $('.box').length);
 
 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-one"></div>');
@@ -53,6 +60,7 @@ $(function() {
 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-two"></div>');
 	});
 });
+
 
 // $(function() {
 // 	$(document).on('click', '.box-one', function(e) {
