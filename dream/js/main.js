@@ -1,6 +1,6 @@
-$('.closeSplash').click(function () {
-    $(this).parent('#splashscreen').fadeOut(1000);
-});
+// $('.closeSplash').click(function () {
+//     $(this).parent('#splashscreen').fadeOut(1000);
+// });
 
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
@@ -11,7 +11,7 @@ function buildColor( r, g, b ) {
 }
 
 $(function() {
-	$(document).on('click', '.box', function(e) {
+	$(document).on('click touchstart', '.box', function(e) {
 		var thisBox = $(e.target);
 		var red = 264;
 		var green = getRandomInt(187,150);
@@ -27,7 +27,7 @@ $(function() {
 });
 
 $(function() {
-	$(document).on('click', '.box-one', function(e) {
+	$(document).on('click touchstart', '.box-one', function(e) {
 		var thisBox = $(e.target);
 		var red = 240;
 		var green = getRandomInt(187,150);
@@ -62,15 +62,15 @@ $(function() {
 });
 
 
-// $(function() {
-// 	$(document).on('click', '.box-one', function(e) {
-// 		var thisBox = $(e.target);
-// 		var randomColor = 'pink';
-// 		var styles = [];
+$(function() {
+	$(document).on('click', '.box-one', function(e) {
+		var thisBox = $(e.target);
+		var randomColor = 'pink';
+		var styles = [];
 
-// 		styles.push('background-color: ' + randomColor);
-// 		// styles.push('z-index:' + $('.box').length);
+		styles.push('background-color: ' + randomColor);
+		// styles.push('z-index:' + $('.box').length);
 
-// 		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
-// 	});
-// });
+		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+	});
+});
