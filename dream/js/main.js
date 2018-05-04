@@ -11,7 +11,7 @@ function buildColor( r, g, b ) {
 }
 
 $(function() {
-	$(document).on('click touchstart', '.box', function(e) {
+	$(document).on('touchstart', '.box', function(e) {
 		var thisBox = $(e.target);
 		var red = 264;
 		var green = getRandomInt(187,150);
@@ -27,7 +27,7 @@ $(function() {
 });
 
 $(function() {
-	$(document).on('click touchstart', '.box-one', function(e) {
+	$(document).on('touchstart', '.box-one', function(e) {
 		var thisBox = $(e.target);
 		var red = 240;
 		var green = getRandomInt(187,150);
