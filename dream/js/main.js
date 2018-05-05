@@ -45,32 +45,32 @@ $(function() {
 	});
 });
 
-$(function() {
-	$(document).on('click', '.box-two', function(e) {
-		var thisBox = $(e.target);
-		var red = getRandomInt(250,191);
-		var green = getRandomInt(187,130);
-		var blue = getRandomInt(200,178);
-		var randomColor = buildColor(red, green, blue)
-		var styles = [];
+// $(function() {
+// 	$(document).on('click', '.box-two', function(e) {
+// 		var thisBox = $(e.target);
+// 		var red = getRandomInt(250,191);
+// 		var green = getRandomInt(187,130);
+// 		var blue = getRandomInt(200,178);
+// 		var randomColor = buildColor(red, green, blue)
+// 		var styles = [];
 
-		styles.push('background-color: ' + randomColor + '');
-		// styles.push('z-index:' + $('.box').length);
+// 		styles.push('background-color: ' + randomColor + '');
+// 		// styles.push('z-index:' + $('.box').length);
 
-		thisBox.append('<div style="' + styles.join('; ') + '" class="box-two"></div>');
-	});
-});
+// 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-two"></div>');
+// 	});
+// });
 
 
-$(function() {
-	$(document).on('click', '.box-one', function(e) {
-		var thisBox = $(e.target);
-		var randomColor = 'pink';
-		var styles = [];
+// $(function() {
+// 	$(document).on('click', '.box-one', function(e) {
+// 		var thisBox = $(e.target);
+// 		var randomColor = 'pink';
+// 		var styles = [];
 
-		styles.push('background-color: ' + randomColor);
-		// styles.push('z-index:' + $('.box').length);
+// 		styles.push('background-color: ' + randomColor);
+// 		// styles.push('z-index:' + $('.box').length);
 
-		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
-	});
-});
+// 		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+// 	});
+// });
