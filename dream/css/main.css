@@ -8,13 +8,14 @@ html, body {
 .wrapper{
 	height:100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 }
 
 .box {
 	width: 99%;
 	height: 99%;
 	outline: 1px solid white;
+
 }
 /*
 .box {
