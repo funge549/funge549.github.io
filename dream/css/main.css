@@ -5,18 +5,30 @@ html, body {
 /*	overflow-y:hidden;*/
 }
 
+.head-image{
+    z-index: 0;
+}
+
+.front{
+    z-index: 1;
+}
+
 .wrapper{
 	height:100%;
 	width: 100%;
-	position: relative;
+}
+
+.fill{
+	height:100%;
+	width: 100%;
 }
 
 .box {
 	width: 99%;
 	height: 99%;
 	outline: 1px solid white;
-
 }
+
 /*
 .box {
 	width: 50%;
@@ -29,9 +41,6 @@ html, body {
 	outline: 1px solid white;
 }
 
-.box-two {
-	width: 99%;
-	height: 99%;
-	outline: 1px solid white;
-	transform: translate(20px,20px);
+.fill {
+	background-color: white;
 }

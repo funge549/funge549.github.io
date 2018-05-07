@@ -1,7 +1,3 @@
-// $('.closeSplash').click(function () {
-//     $(this).parent('#splashscreen').fadeOut(1000);
-// });
-
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -10,13 +6,26 @@ function buildColor( r, g, b ) {
 	return "rgb(" + r + ", " + g + ", " + b + ")";  
 }
 
+function colorScheme(){
+	var red = getRandomInt(244,196);
+	var green = getRandomInt(187,150);
+	var blue = getRandomInt(198,178);
+	var color = buildColor(red, green, blue)
+}
+
+function colorScheme2(){
+	var red2 = getRandomInt(49,80);
+	var green2 = getRandomInt(9,65);
+	var blue2 = getRandomInt(84,94);
+	var color2 = buildColor(red2, green2, blue)
+}
+
+var colorPicker = [ colorScheme() , colorScheme2() , ];
+
 $(function() {
 	$(document).on('click touchstart', '.box', function(e) {
 		var thisBox = $(e.target);
-		var red = 264;
-		var green = getRandomInt(187,150);
-		var blue = getRandomInt(198,178);
-		var randomColor = buildColor(red, green, blue)
+		var randomColor = colorPicker[Math.floor(Math.random() * colorPicker.length)];
 		var styles = [];
 
 		styles.push('background-color: ' + randomColor + '');
@@ -24,9 +33,7 @@ $(function() {
 
 		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
 	});
-});
 
-$(function() {
 	$(document).on('click touchstart', '.box-one', function(e) {
 		var thisBox = $(e.target);
 		var red = 240;
@@ -43,34 +50,6 @@ $(function() {
 
 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-one"></div>');
 	});
+
 });
 
-// $(function() {
-// 	$(document).on('click', '.box-two', function(e) {
-// 		var thisBox = $(e.target);
-// 		var red = getRandomInt(250,191);
-// 		var green = getRandomInt(187,130);
-// 		var blue = getRandomInt(200,178);
-// 		var randomColor = buildColor(red, green, blue)
-// 		var styles = [];
-
-// 		styles.push('background-color: ' + randomColor + '');
-// 		// styles.push('z-index:' + $('.box').length);
-
-// 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-two"></div>');
-// 	});
-// });
-
-
-// $(function() {
-// 	$(document).on('click', '.box-one', function(e) {
-// 		var thisBox = $(e.target);
-// 		var randomColor = 'pink';
-// 		var styles = [];
-
-// 		styles.push('background-color: ' + randomColor);
-// 		// styles.push('z-index:' + $('.box').length);
-
-// 		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
-// 	});
-// });
