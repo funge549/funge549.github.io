@@ -6,22 +6,20 @@ function buildColor( r, g, b ) {
 	return "rgb(" + r + ", " + g + ", " + b + ")";  
 }
 
-// $(function addBackground(){
-// 	$(document).on('.wrapper'){
-// 		var red = getRandomInt(244, 221);
-// 		var green = getRandomInt(153,88);
-// 		var blue = getRandomInt(168,78);
-// 		var randomColors = buildColor(red, green, blue);
-		
-// 		var el = $("<div/>");
-// 		$(el).addClass("square");
-// 		$(el).css({
-// 			backgroundColor: randomColors()
-// 		});
-// 		$(el).appendTo($(".wrapper"));
-// 		}
-// });
-
+$(".box").mousemove(function(e){
+    if (e.pageX > 0 && e.pageY > 0 && e.pageX < 2000 && e.pageY < 400){
+        $(".box").css("cursor", "url(./img/cursorA.png), auto");
+        console.log("cursor 1 working");
+    } 
+    else if (e.pageX > 0 && e.pageY > 400 && e.pageX < 2000 && e.pageY < 2000){
+    	$(".box").css("cursor", "url(./img/cursor.png), auto");
+        console.log("cursor 2 working");
+    }   
+    else{
+        $(".box").css("cursor", "url(./img/cursorB.png), auto");
+        console.log("cursor 3 working");
+    }
+});
 
 $(function() {
 	$(document).on('click touchstart', '.box', function(e) {
@@ -35,24 +33,14 @@ $(function() {
 		styles.push('background-color: ' + randomColor + '');
 		// styles.push('z-index:' + $('.box').length);
 		// console.log(e.target.offsetWidth);
-		if (e.target.offsetWidth <= 1000) {
-			console.log("STOP");
+		if (e.target.offsetWidth <= 600) {
+			console.log("refreshing page");
 			$(".box").empty();
 		}
 		else {
 			thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
 		}
 	});
-
-	// 	$(function() {
-	//       $(".box").click( function(){
- //      		if ($(".box").css({width: ' '300px' '});
- //            lastClass.addClass("fill")
- //            console.log(working)
- //           }
-	//       );
-	// });
-
 });
 
 $(function() {
@@ -73,3 +61,4 @@ $(function() {
 		thisBox.append('<div style="' + styles.join('; ') + '" class="box-one"></div>');
 	});
 });
+
