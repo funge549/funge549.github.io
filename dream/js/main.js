@@ -17,7 +17,7 @@ function colorScheme2(){
 	var red2 = getRandomInt(49,80);
 	var green2 = getRandomInt(9,65);
 	var blue2 = getRandomInt(84,94);
-	var color2 = buildColor(red2, green2, blue)
+	var color2 = buildColor2(red2, green2, blue)
 }
 
 var colorPicker = [ colorScheme() , colorScheme2() , ];

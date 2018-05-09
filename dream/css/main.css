@@ -1,4 +1,4 @@
-@font-face {font-family: "Baskerville"; src: url("../fonts/Baskerville.woff");}
+@font-face {font-family: "Futura"; src: url("../fonts/Futura-Medium.woff");}
 
 html, body {
 	width: 100%;
@@ -12,11 +12,23 @@ html, body {
 }
 
 @keyframes fadeOut{
-  from {
+  100% {
     opacity:1;
   }
-  to {
-    opacity:0;
+  80%{
+  	opacity: 0;
+  }
+  60% {
+    opacity:1;
+  }
+  40%{
+  	opacity: 0;
+  }
+  20%{
+  	opacity: 1
+  }
+  0%{
+  	opacity: 0
   }
 }
 
@@ -26,11 +38,10 @@ html, body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	z-index: -1;
-	font-family: 'Baskerville' , serif;
+	font-family: 'Futura' , sans-serif;
 	font-size: 42px;
-	animation: fadeOut 10s;
+	animation: fadeOut 3s;
 	animation-iteration-count: 1;
-	opacity: 0;
 }
 
 .box {
@@ -38,12 +49,5 @@ html, body {
 	left: 0;
 	width:99%;
 	height: 99%;
-	outline: 1px solid white;
-}
-
-
-.box-one {
-	width: 101%;
-	height: 101%;
-	outline: 1px solid white;
+	outline: white;
 }
