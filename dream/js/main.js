@@ -6,50 +6,66 @@ function buildColor( r, g, b ) {
 	return "rgb(" + r + ", " + g + ", " + b + ")";  
 }
 
-function colorScheme(){
-	var red = getRandomInt(244,196);
-	var green = getRandomInt(187,150);
-	var blue = getRandomInt(198,178);
-	var color = buildColor(red, green, blue)
-}
+$("html").mousemove(function(e){
+    if (e.pageX > 0 && e.pageY > 0 && e.pageX < 2000 && e.pageY < 400){
+        $("html").css("cursor", "url(./img/cursorA.png), auto");
+        console.log("cursor 1 working");
+    } 
+    else if (e.pageX > 0 && e.pageY > 400 && e.pageX < 2000 && e.pageY < 2000){
+    	$("html").css("cursor", "url(./img/cursor.png), auto");
+        console.log("cursor 2 working");
+    }   
+    else{
+        $("html").css("cursor", "url(./img/cursorB.png), auto");
+        console.log("cursor 3 working");
+    }
+});
 
-function colorScheme2(){
-	var red2 = getRandomInt(49,80);
-	var green2 = getRandomInt(9,65);
-	var blue2 = getRandomInt(84,94);
-	var color2 = buildColor2(red2, green2, blue)
-}
-
-var colorPicker = [ colorScheme() , colorScheme2() , ];
 
 $(function() {
 	$(document).on('click touchstart', '.box', function(e) {
 		var thisBox = $(e.target);
+
+		var red = getRandomInt(244,221);
+		var green = getRandomInt(153,88);
+		var blue = getRandomInt(168,78);
+		var color = buildColor(red, green, blue);
+
+		var red2 = getRandomInt(120,179);
+		var green2 = 15;
+		var blue2 = getRandomInt(45,134);
+		var color2 = buildColor(red2, green2, blue2);
+
+		var red3 = getRandomInt(35,180);
+		var green3 = getRandomInt(114,214);
+		var blue3 = 247;
+		var color3 = buildColor(red3, green3, blue3);
+
+		var colorPicker = [  color2,  ];
 		var randomColor = colorPicker[Math.floor(Math.random() * colorPicker.length)];
+		console.log('randomColor', randomColor);
+
+		var boxWidth = getRandomInt(200, 700);
+
+		var thickArray = [1,4,8];
+		var randomThick = thickArray[Math.floor(Math.random() * thickArray.length)];
+		
 		var styles = [];
 
+		styles.push('border: ' +  randomThick + 'px solid white');
 		styles.push('background-color: ' + randomColor + '');
+		
+		styles.push('width: ' + randomWidth + '');
 		// styles.push('z-index:' + $('.box').length);
-
-		thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+		if (e.target.offsetWidth <= 1000) {
+			console.log(e.target.offsetWidth);
+			console.log("refreshing page");
+			// $(".box").empty();
+			$(".box").addClass('move');
+			// $(".box").css({transform: 'translate(' + getRandomInt(1, 5) + getRandomInt(1, 5) + ')'
+		}
+		else {
+			thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+		}
 	});
-
-	$(document).on('click touchstart', '.box-one', function(e) {
-		var thisBox = $(e.target);
-		var red = 240;
-		var green = getRandomInt(187,150);
-		var blue = getRandomInt(198,178);
-		var randomColor = buildColor(red, green, blue)
-
-		var green2 = getRandomInt(150,118);
-		var randomColor2 = buildColor(red, green2, blue);
-		var styles = [];
-		// styles.push('outline: ' + randomColor + '7px solid');
-		styles.push('background-color: ' + randomColor2 + '');
-		// styles.push('z-index:' + $('.box').length);
-
-		thisBox.append('<div style="' + styles.join('; ') + '" class="box-one"></div>');
-	});
-
 });
-
