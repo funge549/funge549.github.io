@@ -39,9 +39,9 @@ $(function() {
 		var blue = getRandomInt(27,128);
 		var color = buildColor(red, green, blue);
 
-		var red2 = getRandomInt(120,179);
-		var green2 = 15;
-		var blue2 = getRandomInt(45,134);
+		var red2 = getRandomInt(28,90);
+		var green2 = getRandomInt(104,226);
+		var blue2 = getRandomInt(145,185);
 		var color2 = buildColor(red2, green2, blue2);
 
 		var red3 = getRandomInt(35,180);
@@ -75,20 +75,20 @@ $(function() {
 		stylesA.push(positionsY[Math.floor(Math.random() * positionsY.length)] + ': 0');
 
 		var stylesB =[];
-		stylesB.push('background-color: ' + 'black' + '');
+		stylesB.push('background-color: ' + color2 + '');
 		stylesB.push(positionsX[Math.floor(Math.random() * positionsX.length)] + ': 0');
 		stylesB.push(positionsY[Math.floor(Math.random() * positionsY.length)] + ': 0');
 
 		// styles.push('z-index:' + $('.box').length);
-		if ( myWindow > 500) {      
-		 console.log("change color")
- 		 thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
-		} 
-		else if( myWindow > 600 && myWindow > 900 )  {
-			thisBox.append('<div style="' + stylesB.join('; ') + '" class="box"></div>');
-		}
-		else {
- 		thisBox.append('<div style="' + stylesA.join('; ') + '" class="box"></div>');
+		if ( myWindow < 600) {
+		  console.log("myWindow 1");
+		  thisBox.append('<div style="' + stylesB.join('; ') + '" class="box"></div>');
+		} else if ( myWindow < 900 )  {
+		  console.log("myWindow 2");
+		  thisBox.append('<div style="' + stylesA.join('; ') + '" class="box"></div>');
+		} else {
+		  console.log("myWindow 3");
+		  thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
 		}
 
 		// if (e.target.offsetWidth <= 400) {
