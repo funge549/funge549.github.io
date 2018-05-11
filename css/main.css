@@ -31,11 +31,6 @@ h3:hover {font-family: "Anisha"}
 
 #side-bar li a:hover {text-decoration: none;}
 
-#projects {
-	text-align: center;
-	list-style-type: none;
-	position: relative;
-}
 
 #key img {
 	max-width: 700px;
@@ -46,9 +41,16 @@ h3:hover {font-family: "Anisha"}
 	transform: translate(-50%, -50%);}
 
 #projects ul {
-	text-align: center;
 	list-style-type: none;
-	position: relative;
+	width: 400px;
+}
+
+#projects {
+	list-style-type: none;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-30%, -50%);
 }
 
 #projects li a{
@@ -58,6 +60,16 @@ h3:hover {font-family: "Anisha"}
 	font-family: "UniversBC";
 	font-size: 20pt;
 	line-height: 28pt;
+}
+
+.left {
+	position: absolute;
+
+}
+
+.right {
+	position: absolute;
+	right: 0%;
 }
 
 li a:hover {

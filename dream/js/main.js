@@ -7,28 +7,36 @@ function buildColor( r, g, b ) {
 }
 
 $("html").mousemove(function(e){
-    if (e.pageX > 0 && e.pageY > 0 && e.pageX < 2000 && e.pageY < 400){
-        $("html").css("cursor", "url(./img/cursorA.png), auto");
-        console.log("cursor 1 working");
+    if (e.pageX > 0 && e.pageY > 0 && e.pageX < 700 && e.pageY < 400){
+    	console.log("up L")
+        $("html").css("cursor", "url(./img/cursorUpL.png), auto");
     } 
-    else if (e.pageX > 0 && e.pageY > 400 && e.pageX < 2000 && e.pageY < 2000){
-    	$("html").css("cursor", "url(./img/cursor.png), auto");
-        console.log("cursor 2 working");
+    else if (e.pageX > 460 && e.pageY > 0 && e.pageX < 2000 && e.pageY < 400){
+    	console.log("up R")
+    	$("html").css("cursor", "url(./img/cursorUpR.png), auto");
+    }  
+    else if (e.pageX > 0 && e.pageY > 410 && e.pageX < 750 && e.pageY < 700){
+    	console.log("down L")
+    	$("html").css("cursor", "url(./img/cursorDownL.png), auto");
+    }  
+    else if (e.pageX > 460 && e.pageY > 410 && e.pageX < 2000 && e.pageY < 700){
+    	console.log("down R")
+    	$("html").css("cursor", "url(./img/cursorDownR.png), auto");
     }   
     else{
-        $("html").css("cursor", "url(./img/cursorB.png), auto");
-        console.log("cursor 3 working");
+        $("html").css("cursor", "url(./img/cursorDown.png), auto");
     }
 });
 
-
 $(function() {
 	$(document).on('click touchstart', '.box', function(e) {
+		var myWindow = $(window).width();
+
 		var thisBox = $(e.target);
 
-		var red = getRandomInt(244,221);
-		var green = getRandomInt(153,88);
-		var blue = getRandomInt(168,78);
+		var red = getRandomInt(198,239);
+		var green = getRandomInt(7,88);
+		var blue = getRandomInt(27,128);
 		var color = buildColor(red, green, blue);
 
 		var red2 = getRandomInt(120,179);
@@ -41,31 +49,56 @@ $(function() {
 		var blue3 = 247;
 		var color3 = buildColor(red3, green3, blue3);
 
-		var colorPicker = [  color2,  ];
+		var colorPicker = [ color, color2, color3  ];
 		var randomColor = colorPicker[Math.floor(Math.random() * colorPicker.length)];
-		console.log('randomColor', randomColor);
+		// console.log('randomColor', randomColor);
+		var positionsX = [
+			'left',
+			'right'
+		];
 
-		var boxWidth = getRandomInt(200, 700);
+		var positionsY = [
+			'top',
+			'bottom'
+		]
 
-		var thickArray = [1,4,8];
-		var randomThick = thickArray[Math.floor(Math.random() * thickArray.length)];
-		
 		var styles = [];
+		styles.push('border: ' + '1px solid white');
+		styles.push('background-color: ' + color3 + '');
 
-		styles.push('border: ' +  randomThick + 'px solid white');
-		styles.push('background-color: ' + randomColor + '');
-		
-		styles.push('width: ' + randomWidth + '');
+		styles.push(positionsX[Math.floor(Math.random() * positionsX.length)] + ': 0');
+		styles.push(positionsY[Math.floor(Math.random() * positionsY.length)] + ': 0');
+
+		var stylesA = [];
+		stylesA.push('background-color: ' + color + '');
+		stylesA.push(positionsX[Math.floor(Math.random() * positionsX.length)] + ': 0');
+		stylesA.push(positionsY[Math.floor(Math.random() * positionsY.length)] + ': 0');
+
+		var stylesB =[];
+		stylesB.push('background-color: ' + 'black' + '');
+		stylesB.push(positionsX[Math.floor(Math.random() * positionsX.length)] + ': 0');
+		stylesB.push(positionsY[Math.floor(Math.random() * positionsY.length)] + ': 0');
+
 		// styles.push('z-index:' + $('.box').length);
-		if (e.target.offsetWidth <= 1000) {
-			console.log(e.target.offsetWidth);
-			console.log("refreshing page");
-			// $(".box").empty();
-			$(".box").addClass('move');
-			// $(".box").css({transform: 'translate(' + getRandomInt(1, 5) + getRandomInt(1, 5) + ')'
+		if ( myWindow > 500) {      
+		 console.log("change color")
+ 		 thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+		} 
+		else if( myWindow > 600 && myWindow > 900 )  {
+			thisBox.append('<div style="' + stylesB.join('; ') + '" class="box"></div>');
 		}
 		else {
-			thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+ 		thisBox.append('<div style="' + stylesA.join('; ') + '" class="box"></div>');
 		}
+
+		// if (e.target.offsetWidth <= 400) {
+		// 	thisBox.append('<div style="' + stylesA.join('; ') + '" class="box"></div>');
+		// }
+		// else {
+		// 	thisBox.append('<div style="' + styles.join('; ') + '" class="box"></div>');
+		// }
 	});
 });
+
+
+
