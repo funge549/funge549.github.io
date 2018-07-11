@@ -1,0 +1,35 @@
+@font-face {font-family: "Futura"; src: url("../fonts/Futura-Medium.woff");}
+@font-face {font-family: "Campaign"; src: url("../fonts/Futura-Medium.woff");}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.images {
+	float: left;
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	z-index: -1;
+	width: 200px;
+	height: 500px;
+	background-color: black;
+}
+
+
+.dos {
+	left: 5%;
+	z-index: -2;
+}
+
+.tres {
+	left: 15%;
+	z-index: -3;
+}
+
+.cuatro {
+	left: 25%;
+	z-index: -4;
+}
+
