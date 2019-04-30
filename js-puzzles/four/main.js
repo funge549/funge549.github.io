@@ -95,6 +95,36 @@ $(document).on('keypress', function(e) {
     img = 'img/42.jpg';
   } else if ( key == '=' ) {
     img = 'img/43.jpg';
+  } else if ( key == 'A' ) {
+    img = 'img/44.jpg';
+  } else if ( key == 'B' ) {
+    img = 'img/45.jpg';
+  } else if ( key == 'C' ) {
+    img = 'img/46.jpg';
+  } else if ( key == 'D' ) {
+    img = 'img/47.jpg';
+  } else if ( key == 'E' ) {
+    img = 'img/48.jpg';
+  } else if ( key == 'F' ) {
+    img = 'img/49.jpg';
+  } else if ( key == 'G' ) {
+    img = 'img/50.jpg';
+  } else if ( key == 'H' ) {
+    img = 'img/51.jpg';
+  } else if ( key == 'I' ) {
+    img = 'img/52.jpg';
+  } else if ( key == 'J' ) {
+    img = 'img/53.jpg';
+  } else if ( key == 'K' ) {
+    img = 'img/56.jpg';
+  } else if ( key == 'L' ) {
+    img = 'img/57.jpg';
+  } else if ( key == 'M' ) {
+    img = 'img/58.jpg';
+  } else if ( key == 'N' ) {
+    img = 'img/59.jpg';
+  } else if ( key == 'O' ) {
+    img = 'img/60.jpg';
   } 
 
 
