@@ -1,0 +1,53 @@
+#button-box {
+display: flex;
+	position: absolute;
+	left: 5em; 
+}
+
+.button {
+	right: 5em;
+	display: inline-flex;
+	background-color: white;
+	border: none;
+	color:#fff9ed;
+	font-size:1em;
+	cursor:pointer;
+	justify-content:center;
+  
+}
+
+.button p{
+	font-family: "Univers", sans-serif;
+}
+
+.flat {
+	margin: 0.3em;
+	position:relative;
+	border-radius:0.2em;
+	color: gray;
+	width: 5em;
+}
+
+.flat:hover {
+	background-color:#f1f1f1;
+	color:#9999CC;
+}
+
+.flat.selected:hover {
+	background-color:white;
+}
+
+.flat.selected {  
+	color:#9999CC;
+}
+
+.flat.selected:after {
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	border-radius:0.2em;
+	border: 2px solid #666699;
+}
