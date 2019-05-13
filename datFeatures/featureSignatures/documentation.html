@@ -10,7 +10,7 @@
 
 <body>
 	<div id="nav">
-		<a href="dat://9088710bbf7aca37015d1eb7ac259e905e231f99837d9054d358fa05a282ee6a/featureEmoticons/" target="_blank">dat.emoticons &#10509;</a>
+		<a href="../featureEmoticons/index.html" target="_blank">dat.emoticons &#10509;</a>
 	</div>	
 	<div id="docTitle">	
 		<h1><a style="text-decoration: none;" href="index.html">dat.signatures</a></h1>
@@ -91,35 +91,44 @@
 	<h2 class=header> 1.2 dat.signature in a separate .js file</h2>	
 		<p> _ if you decide to create a separate <code>.js file</code> , then do the following
 			<br>
+		_ eliminate any writePost() in you <code>js files</code> as these will overlap with each other and your code will probably break.
+			<br>	
 		_ create a blank <code>.js</code> file and include:
 		</p>
 <div class="code">
 <p><pre>function writePostandSignature(archive, postSubmission){
 	var archive = archive;
-	
+
 	postSubmission.addEventListener("submit", function(e) {
-  		e.preventDefault(); 
-	  		var formRecieved = e.target,
-			imageReader = new FileReader(),
-			formSignatureImage = ((formRecieved.getElementsByTagName("img").length > 0) ? formRecieved.getElementsByTagName
-			("img")[0].src : "not available" );
+	  	e.preventDefault(); 
+	  	var formRecieved = e.target,
+	  			formTitle = formRecieved.elements["Title"].value.toString(),
+	  			formContents = formRecieved.elements["Content"].value.toString(),
+	  			timestamp = new Date().getTime(),
+	  			imageReader = new FileReader();
 
-  		console.log("form recieved: ", formSignatureImage)
+		var formSignatureImage = ((formRecieved.getElementsByTagName
+		("img").length > 0) ? formRecieved.getElementsByTagName("img")[0].src : "not available" );
+	  	
+	  	console.log("form recieved: ", formSignatureImage)
 
-	var postContent = {
-  		"signature" : formSignatureImage,
-  	}
+	  	var postContent = {
+	  		"title" : formTitle,
+	  		"timestamp" : timestamp,
+	  		"content" : formContents,
+	  		"signature" : formSignatureImage;
+	  	}
 
-	async function postFile(archive, postContent){
-		await archive.writeFile('/posts/post-' + postContent.timestamp +'.json', JSON.stringify(postContent));
-	}
+	  	async function postFile(archive, postContent){
+	  		await archive.writeFile('/posts/post-' + postContent.timestamp +'.json', JSON.stringify(postContent));
+	  	}
 
-  	postFile(archive, postContent)
-  	.then(function(event){
-  		console.log("post is posted!")
-  	})
-  	.catch(function(error){
-  		console.log("error\n", error)
+	  	postFile(archive, postContent)
+	  	.then(function(event){
+	  		console.log("post is posted!")
+	  	})
+	  	.catch(function(error){
+	  		console.log("error\n", error)
   		})
 	});
 }</pre></p>
