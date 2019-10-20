@@ -1,0 +1,569 @@
+/*html, body {width: 100%; height: 100%;}*/
+
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {font-family: "UniversBO"; src: url("../fonts/UniversLTStd-BoldCnObl.otf");}
+@font-face {font-family: "UniversBC"; src: url("../fonts/UniversLTStd-BoldCn.otf");}
+@font-face {font-family: "UniversC"; src: url("../fonts/UniversLTStd-Cn.otf");}
+
+
+body {background-color: #B0C4DE;}
+
+#header{
+	color: white; 
+	font-family: "UniversBO"; 
+	font-size: 3em;
+	top: 1em;
+}
+
+#about{
+	color: white; 
+	font-family: "UniversBO"; 
+	font-size: 3em;
+	position: absolute;
+	top: 2em;
+	text-align: left;
+	margin-left: 0.75em;
+}
+
+
+#header h3 a {
+	top: 8vh;
+	left: 50%;
+	transform: translate(-50%,0);
+	text-align: center;
+	position: absolute;
+	color: white;
+}
+
+
+
+#work  h3 a  {
+	top: 8vh;
+	left: 50%;
+	transform: translate(-50%,0);
+	text-align: center;
+	position: absolute;
+	color: #B0C4DE;
+	font-family: "UniversBO"; 
+	font-size: 3em;
+	top: 1em;
+
+}
+
+#header a:hover {
+	text-decoration: wavy underline;
+}
+
+#work a:hover {
+	text-decoration: wavy underline;
+}
+
+#side-bar {
+	width: 45vw;
+	position: fixed;
+/*	background-color: white;*/
+	z-index: 1;
+}
+
+#side-bar ul {
+/*	background-color: white;*/
+	position: absolute;
+	top:0.1vh;
+	width: 100vw;
+	text-align: center; 
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;}
+
+#side-bar li a {
+/*	background-color: white;*/
+	float: left;
+	display: block;
+	padding: 8px; 
+	color: black;
+	font-family: "UniversBO";
+	text-decoration: underline wavy;
+
+}
+
+#side-bar li a:hover {text-decoration: none;}
+
+
+
+#side-bar2 {
+	width: 45vw;
+	position: fixed;
+/*	background-color: white;*/
+	z-index: 1;
+}
+
+#side-bar2 ul {
+/*	background-color: white;*/
+	position: absolute;
+	top:0.1vh;
+	width: 100vw;
+	text-align: center; 
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;}
+
+#side-bar2 li a {
+/*	background-color: white;*/
+	float: left;
+	display: block;
+	padding: 8px; 
+	color: black;
+	font-family: "UniversBO";
+	text-decoration: underline wavy;
+
+}
+
+#side-bar2 li a:hover {text-decoration: none;}
+
+
+#key {
+	max-width: 65vw;
+	max-height: 65vh;
+	position: fixed;
+	top:55%;
+	left: 50%;
+	transform: translate(-50%, -55%);
+}
+
+#footer {
+	position: fixed;
+	bottom: .5vh;
+	text-align: right;
+	color: white;
+	padding-top: 1vh;
+}
+
+#projects ul {
+	list-style-type: none;
+	width: 65vw;
+}
+
+#projects {
+	list-style-type: none;
+	position: absolute;
+	text-align: left;
+	top: 19vh;
+	left: 4vw;
+}
+
+#projects li a{
+	display: block;
+	padding: 8px; 
+	color: black;
+	font-family: "UniversBC";
+	font-size: 1.8em;
+	line-height: 28pt;
+}
+
+.webDescription{
+	margin-left: 2vw;
+	font-family: "UniversC";
+	font-size: 1.25em;
+	line-height: 1.6em;
+}
+
+.webDescription span{
+	background-color: rgba(255,255,255,0.7);
+}
+
+.datLinks{
+	display: inline !important;
+	font-family: "UniversC" !important;
+	font-size: 1em !important;
+	line-height: 1.6em !important;
+}
+
+/*.link {
+	display: inline !important;
+	font-family: "UniversC" !important;
+	font-size: 1em !important;
+	line-height: 1.6em !important;
+}
+*/
+
+.left {
+	position: absolute;
+
+}
+
+.work {
+	background-color: white;
+
+}
+
+.title{
+	font-family: "UniversBC";
+	text-align: left;
+	font-size: 1.5em;
+	color: #666699;
+	margin-left: 1em;
+}
+
+#projects-type {
+	position: absolute;
+	display: block;
+}
+
+.projects {
+	position: absolute;
+	top: 10em;
+}
+
+.project-images{
+	max-width: 600px;
+	display: inline-block;
+
+}
+
+.extra {
+	max-width: 450px;
+}
+
+
+.tombstone{
+	text-align: left;
+	margin-left: 1.3em;
+	color: #666699;
+	opacity: .75;
+	font-family: "UniversBC";
+	font-size: 1.5em;
+}
+
+.description{
+	text-align: left;
+	margin-left: 2em;
+	color: #666699;
+	opacity: .75;
+	font-family: "UniversC";
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+/*branding page*/
+
+.brand {
+	background-color: #e8ecf4;
+	width: 100%;
+	overflow-x: hidden;
+
+}
+
+.brand2{
+	background-color: #e8ecf4;
+}
+
+.branding-projects{
+	height: 10em;
+	width: 100%;
+}
+
+.horizontal{
+  display: flex;
+  padding-left: 50px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+ } 
+
+.horizontal:hover{
+	cursor: ew-resize;
+} 
+
+.horizontal::-webkit-scrollbar {
+  height:7px;
+}
+
+.horizontal::-webkit-scrollbar-track {
+    background-color: rgba(12,12,12,0.1);
+}
+
+.horizontal::-webkit-scrollbar-thumb {
+  border: 7px dashed SlateBlue;
+}
+
+.project-brand{
+	max-width: 800px;
+	max-height: 600px;
+	display: inline-block;
+	padding: .5em;
+	margin-bottom: 1em;
+
+}
+
+.project-brand-mid{
+	max-width: 400px;
+	max-height: 600px;
+	display: inline-block;
+	padding: .5em;
+	margin-bottom: 1em;
+}
+
+/*.tombstone2{
+	position: absolute;
+	text-align: left;
+	font-family: "UniversBC";
+	font-size: 24pt;
+	background-color: #B0C4DE;
+	border: 5px solid #B0C4DE;
+	max-width: 450px;
+}
+
+.tombstone2.right{
+	margin-left: 200px;
+}
+
+.tombstone2:hover {
+	opacity: 0;
+}*/
+
+hr {
+	border: solid #B0C4DE;
+	background-color: #B0C4DE;
+	height: 0.35em;
+	opacity: 0.5;
+}
+
+h4 {
+	font-family: "UniversBO"; 
+	font-size: 2em;
+	text-align: left;
+	margin-left: 0.75em;
+}
+
+.info {
+	/*width: 30em;*/
+	font-family: "UniversBC"; 
+	font-size: 2em;
+	text-align: left;
+	margin-left: 1em;
+}
+
+.info a {
+	color: white;
+	text-decoration: wavy underline;
+}
+
+.info a:hover{
+	font-family: "UniversBO";
+}
+
+#text{
+	max-width: 70vw;
+	margin-top: 1.5em;
+	position: absolute;
+	top: 10em;
+}
+
+*,*::before,*::after {box-sizing:border-box;}
+
+body { font-family: sans-serif; line-height: 1; text-align:center;}
+
+li a:hover .iframe-preview {
+	text-decoration: none;
+    opacity:1;
+  } 
+
+.screen-preview{
+	background-color: white;
+	opacity: 0;
+	position: absolute;
+	top: 7vh;
+	left: 35vw;
+	width: 58vw;
+	height: 40vw;
+	border:4px solid rgba(255,255,255,.3);
+	transform-origin:center bottom;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
+}  
+
+.screen-preview img{
+	display: inline-block;
+	text-align: center;
+	max-width: 28vw;
+}
+
+.video-preview{
+	opacity: 0;
+	position: absolute;
+	top: 7vh;
+	left: 45vw;
+	/*width: 51vw;
+	height: 35vh;
+	border:4px solid rgba(255,255,255,.3);*/
+	transform-origin:center bottom
+
+}
+
+
+.beaker a:hover{
+		cursor: pointer;
+}
+
+.beaker:hover .video-preview{
+	text-decoration: none;
+    opacity:1;
+}
+
+
+#projects li a:hover{
+	text-decoration: underline wavy;
+}  
+
+#projects li a:active{
+	color:white;
+}  
+
+
+.iframe-preview {
+  opacity:0;
+  position: absolute;
+  left: 55vw;
+  width:25vw;
+  height:20vw;
+  border:4px solid rgba(255,255,255,.3);
+  overflow-x:hidden;
+  overflow-y:hidden;
+  transform-origin:center bottom;
+/*  transform: translateX(50vw) translateY(10px) scale(.9);*/
+  background-color: white;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, .3);
+}  
+  
+iframe {
+    transform:scale(.2);
+    transform-origin:0 0;
+  }
+
+/*
+@media only screen 
+  and (max-device-width: 375px) {
+  	#header h3 a {
+  		font-size: 1em;
+  	}
+  }*/
+
+.marquee {
+    width: 70vw;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+    color: black;
+}
+
+.marquee a{
+	color: white;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+
+}
+
+
+/*button go up*/
+
+#go-up {
+  background-color: white;
+  border: .1em solid #B0C4DE;
+  color: #B0C4DE;
+  border-radius:50%;
+  width: 3em;
+  height: 3em;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  right: 1vw;
+  bottom: 1vh;
+
+    display: inline-block;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#go-up:hover {
+  cursor: pointer;
+  background-color: #B0C4DE;
+  color: white;
+}
+#go-up:active {
+  background-color: #DEB0CB;
+  color: white;
+  border: .1em solid white;
+
+}
+
+#go-up:focus{
+	outline: none;
+}
+
+#go-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+
+
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
+
+/* Make it pretty */
+.home {
+    padding-left: 1.5em;
+    position: relative;
+    top: 85vh;
+    letter-spacing: 0.1vw;
+    font: 1em UniversBO, Sans-Serif;
+    background-color: rgba(255,255,255,0.3);
+}
+
+
+
+
+

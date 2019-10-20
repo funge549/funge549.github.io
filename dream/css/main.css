@@ -58,7 +58,7 @@ html, body {
 	font-family: 'Futura' , sans-serif;
 	font-size: 42px;
 	animation: fadeOut 3s;
-/*	animation-iteration-count: 1;*/
+	animation-iteration-count: infinite;
 	opacity: 0;
 }
 
