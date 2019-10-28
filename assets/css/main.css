@@ -9,8 +9,15 @@ html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 @font-face {font-family: "UniversBC"; src: url("../fonts/UniversLTStd-BoldCn.otf");}
 @font-face {font-family: "UniversC"; src: url("../fonts/UniversLTStd-Cn.otf");}
 
+@font-face {font-family: "Title"; src: url("../fonts/AkzidenzGrotesk-LightCondItalic.otf");}
 
-body {background-color: #B0C4DE;}
+/*body {background-color: #B0C4DE;}*/
+
+body {
+/*	background-image: url("../img/background3.png");
+*/	background-color: #B0C4DE;
+
+}
 
 #header{
 	color: white; 
@@ -48,9 +55,10 @@ body {background-color: #B0C4DE;}
 	text-align: center;
 	position: absolute;
 	color: #B0C4DE;
-	font-family: "UniversBO"; 
-	font-size: 3em;
+	font-family: "Title"; 
+	font-size: 4em;
 	top: 1em;
+	letter-spacing: 1pt;
 
 }
 
@@ -128,12 +136,13 @@ body {background-color: #B0C4DE;}
 
 
 #key {
-	max-width: 65vw;
-	max-height: 65vh;
+	min-width: 10vw;
+	max-width: 55vw;
+	min-height: 25vh;
 	position: fixed;
-	top:55%;
-	left: 50%;
-	transform: translate(-50%, -55%);
+	top:50%;
+	left: 25%;
+	transform: translate(0, -50%);
 }
 
 #footer {
@@ -453,7 +462,8 @@ iframe {
   }*/
 
 .marquee {
-    width: 70vw;
+	left: 2vw;
+    width: 55vw;
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;
