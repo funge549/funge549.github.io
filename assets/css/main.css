@@ -3,6 +3,11 @@
 html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 	padding: 0;
 	margin: 0;
+	cursor: url(../img/cursor-smaller.png), auto;
+}
+
+html:active{
+	cursor: url(../img/cursor-active.png), auto;
 }
 
 @font-face {font-family: "UniversBO"; src: url("../fonts/UniversLTStd-BoldCnObl.otf");}
@@ -16,7 +21,7 @@ html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 body {
 /*	background-image: url("../img/background3.png");
 */	background-color: #B0C4DE;
-
+	cursor: url(../img/cursor-smaller.png), auto;
 }
 
 #header{
@@ -24,6 +29,11 @@ body {
 	font-family: "UniversBO"; 
 	font-size: 3em;
 	top: 1em;
+	cursor: url(../img/cursor-smaller.png), auto;
+}
+
+#header:hover{
+	cursor: url(../img/cursor-active.png), auto;
 }
 
 #about{
@@ -75,7 +85,14 @@ body {
 	position: fixed;
 /*	background-color: white;*/
 	z-index: 1;
+	cursor: url(../img/cursor-smaller.png), auto;
 }
+
+#side-bar ul li a:hover {
+	cursor: url(../img/cursor-active.png), auto;
+}
+
+
 
 #side-bar ul {
 /*	background-color: white;*/
