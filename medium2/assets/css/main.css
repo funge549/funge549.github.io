@@ -1,0 +1,50 @@
+/*html, body {width: 100%; height: 100%;}*/
+
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {font-family: "Body"; src: url("../fonts/AkzidenzGrotesk-LightExtended.otf");}
+@font-face {font-family: "Italic"; src: url("../fonts/AkzidenzGrotesk-LightExtendedItalic.otf");}
+
+
+
+
+body {
+	background-color: white;
+}
+
+#opener{
+	font-family: "Body";
+	position: absolute; 
+	top: 50%;
+	left: 5vw;
+	transform: translate(0,-50%);
+	letter-spacing: 5pt;
+	text-transform: uppercase;
+	display: block
+}
+
+#opener:hover{
+
+}
+
+canvas {
+    border: 1px solid black;
+}
+/*a {
+    display: block;
+}*/
+/*
+#content{
+	display: none;
+}*/
+
+#image{
+	display: none
+}
+
+#footer{
+
+}

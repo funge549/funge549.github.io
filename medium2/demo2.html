@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>embroidery</title>
+	<meta charset="utf-8">	
+	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/fabric.min.js"></script>
+</head>
+<body>
+	<canvas id="c" width="500" height="500"></canvas>
+	<img src="assets/img/sample.png" id="image">
+
+	<script>
+		var canvas = window._canvas = new fabric.Canvas('c');
+
+		var rect = new fabric.Rect({
+		  left: 100,
+		  top: 100,
+		  fill: 'red',
+		  width: 20,
+		  height: 20
+		});
+
+		// "add" rectangle onto canvas
+		canvas.add(rect);
+
+		// jpeg dataURL with lower quality
+		fabric.log('jpeg dataURL with low quality: ', canvas.toDataURL({
+		    format: 'jpeg',
+		    quality: 0.3
+		}));
+
+
+	</script>
+</body>

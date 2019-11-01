@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>embroidery</title>
+	<meta charset="utf-8">	
+	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/fabric.min.js"></script>
+<!-- 	<script type="text/javascript" src="assets/js/FileSaver.js"></script>
+	<script type="text/javascript" src="assets/js/canvas-toBlob.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
+</head>
+<body>
+		<canvas id="c" width="500" height="500"></canvas>
+		<!-- <img src="assets/img/sample.png" id="image"> -->
+
+	<!-- 	<input id="download" type="button" value="save!"> -->	
+
+<!-- 	<div id="opener" onclick="displayEmbroidery()">
+		<h1>start patching</h1>	
+	</div>
+	<br> -->
+<!-- 	<div id="content">
+		<h1>adklsfjs</h1>
+		<h1>adklsfjs</h1>
+		<h1>adklsfjs</h1>
+	</div>	
+	<div id="footer">	
+	</div>	
+ -->
+	<script>
+
+		// create a wrapper around native canvas element (with id="c")
+		var canvas = new fabric.Canvas('c');
+		
+		var screen = document.getElementById("c")
+
+		// create a rectangle object
+		var rect = new fabric.Rect({
+		  left: 100,
+		  top: 100,
+		  fill: 'red',
+		  width: 20,
+		  height: 20
+		});
+
+		var img = document.createElement('img');
+		// have to be set before `src` attribute is set
+		img.crossOrigin = 'anonymous';
+
+		img.onload = function () {
+		  console.log('image loaded');
+		};
+		img.src = 'assets/img/sample.png';
+
+		var imgInstance = new fabric.Image(img,{
+		  left: 100,
+		  top: 100,
+		  angle: 30,
+		  opacity: 0.85
+		});
+
+		// "add" elements onto canvas
+		canvas.add(imgInstance)
+		canvas.add(rect);
+
+		var link = document.createElement('a');
+		    link.innerHTML = 'download image';
+		link.addEventListener('click', function(ev) {
+		    link.href = canvas.toDataURL();
+		    link.download = "mypainting.png";
+		}, false);
+		document.body.appendChild(link);
+
+
+		// var imgElement = document.getElementById("image");
+		// var imgInstance = new fabric.Image(imgElement, {
+		//   left: 100,
+		//   top: 100,
+		//   angle: 30,
+		//   opacity: 0.85
+		// });
+
+		// var imgInstance2 = new fabric.Image(imgElement, {
+		//   left: 100,
+		//   top: 100,
+		//   angle: 0,
+		//   opacity: 0.85
+		// });
+
+		// canvas.add(imgInstance);
+		// canvas.add(imgInstance2);
+
+
+		// canvas.selection = false; // disable group selection
+
+		// rect.set('selectable', false); // make object unselectable
+
+		// function displayEmbroidery() {
+		// document.getElementById("opener").style.display = "none";
+		// document.getElementById("content").style.display = "block";
+
+		// };
+
+	</script>	
+</body>
+</html>
