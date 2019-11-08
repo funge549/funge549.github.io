@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>embroidery</title>
+	<meta charset="utf-8">	
+	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id=wrapper>
+		<div id="opener" onclick="displayEmbroidery()">
+			<a href="./content.html"><h1>start patching</h1></a>	
+		</div>
+		<br>
+		<div id="footer">	
+		</div>
+	</div>	
+	<script>
+		$(document).mousemove(function(event) {
+		  windowWidth = $(window).width();
+		  windowHeight = $(window).height();
+		  
+		  mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+		  mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+
+		  console.log(mouseXpercentage,mouseYpercentage)
+		  
+		  $('#wrapper').css('background', 'radial-gradient(at ' + mouseXpercentage + '%' + mouseYpercentage + '%, #3498db, #9b59b6)');
+		});
+
+		// function displayEmbroidery() {
+		// document.getElementById("opener").style.display = "none";
+		// document.getElementById("content").style.display = "block";
+		// };
+
+
+
+	</script>	
+</body>
+</html>

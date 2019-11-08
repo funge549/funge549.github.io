@@ -1,4 +1,4 @@
-/*html, body {width: 100%; height: 100%;}*/
+x/*html, body {width: 100%; height: 100%;}*/
 
 html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 	padding: 0;
@@ -8,127 +8,143 @@ html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 @font-face {font-family: "Body"; src: url("../fonts/AkzidenzGrotesk-LightExtended.otf");}
 @font-face {font-family: "Italic"; src: url("../fonts/AkzidenzGrotesk-LightExtendedItalic.otf");}
 
-
-
-
 body {
-	background-color: white;
+	background-color: #f2f2f2;
+/*	background-color: #faf9f7;*/
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
-#opener{
-	font-family: "Body";
-	position: absolute; 
-	top: 50%;
-	left: 5vw;
-	transform: translate(0,-50%);
-	letter-spacing: 5pt;
-	text-transform: uppercase;
-	display: block
-}
 
-#opener h1{
-  color: black; 
-  margin: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 30em;
-  animation: type 3s steps(100, end); 
-  animation-iteration-count: 1;
-  text-decoration: underline black solid;
-}
-
-@keyframes type{ 
-  from { width: 0; } 
-}
-
-#opener h1:hover {
-	animation: click 2s;
-} 
-
-@keyframes click {
-	0% { opacity: 1; }
-	20% { opacity: .6 }
-	40% {opacity: .4}
-	60% {opacity: 0}
-	80% {opacity: .5}
-	100% {opacity: 1}
-}
-
-.workspace{
-	position: fixed;
-	margin-left: 15em; 
-	margin-top: 7em;
-	border: black solid .1em;
-}
-
-v {
-	font-family: "Italic";
-	position: fixed;
-	bottom: 3vh;
-	right: 5vw;
-}
-
-/*#opener h1:hover{
-	background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}*/
-
-/*canvas {
-    border: 1px solid black;
-}*/
-/*a {
-    display: block;
-}*/
-/*
-#content{
-	display: none;
-}*/
-
-#wrapper{
-	position:fixed;
- 	top:0px;
- 	left:0px;
- 	height:100%;
- 	width:100%;
- 	background: #9b59b6;
-  	background: radial-gradient(
-    	at center, #3498db, #9b59b6
-    );
-}
-
-#info{
+#header{
 	position: fixed;
 	top: 0;
 	left: 1vw;
-	width: 40vw;
+	width: 50vw;
 	font-family: "Body"
 }
 
-#info h1{
+#header h1{
 	letter-spacing: 5pt;
 }
 
-#info p{
-	width: 30vw;
+#info {
+	position: fixed;
+	position: absolute;
+	top:1vh;
+	right: 1vw;
 }
 
-#image{
-	display: none
-}
-
-#image2{
-	display: none
-}
-
-#image3{
-	display: none;
-	max-width: 300px;
+#info img{
+	width: 3vw;
 }
 
 #footer{
-	font-family: "Italic";
+	width: 5vw;
 	position: fixed;
 	bottom: 3vh;
-	right: 5vw;
+	right: 2vw;
 }
+
+.title{
+	width: 25vw;
+}
+
+.desc{
+	width: 5vw;
+	padding-top: 2vh;  
+}
+
+.draggable{
+	touch-action: none;
+  	user-select: none;
+/*  	max-height: 15%;*/
+	z-index: -1;
+	float:none;
+}
+
+.background{
+	max-width: 45%;
+}
+
+.flower{
+/*	position: absolute;
+	top: 0;
+	right: 0*/
+}
+
+#nav{
+	position: absolute;
+	top: 50%;
+}
+
+#nav img{
+	max-width: 5vw;
+}
+
+#library{
+	position: fixed;
+	top: 7vh;
+	width: 26vw;
+	height: 90vh;
+	background-color: white;
+	opacity: 1;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: none;
+	animation: showing 2s
+}
+
+@keyframes showing{ 
+  0% { 
+  		opacity: 0;
+  		width: 0vw;
+   } 
+  100% { 
+  	opacity: 0.9; 
+  	width: 26vw;
+  } 
+}
+
+#library img{
+	max-width: 6vw;
+	padding: 1vw; 
+	opacity: 1;
+}
+
+#library::-webkit-scrollbar {
+  height:7px;
+}
+
+#library::-webkit-scrollbar-track {
+    background-color: rgba(12,12,12,0.1);
+}
+
+#library::-webkit-scrollbar-thumb {
+  background-color: #d6a5a0;
+}
+
+.navigation{
+	position: absolute;
+	right: 0;
+}
+
+#information{
+	font-family: "Body";
+	font-size: 1.5em;
+	position: absolute;
+	top: 20vh;
+	left: 5vw;
+		display:none;
+}
+
+#information p{
+	width: 75%;
+	padding-top: .5em;
+	font-size: 1em;
+	line-height: 1.25em;
+
+
+}
+
+

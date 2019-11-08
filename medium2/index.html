@@ -1,41 +1,206 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>embroidery</title>
+	<title>(506) + (42) weaving</title>
 	<meta charset="utf-8">	
 	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
 	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/interact.min.js"></script>
+	<script type="text/javascript" src="assests/js/html2canvas.js"></script>
+
 </head>
 <body>
-	<div id=wrapper>
-		<div id="opener" onclick="displayEmbroidery()">
-			<a href="./content.html"><h1>start patching</h1></a>	
+		<div id="header">
+			<img class="title" src="assets/img/logo.png" alt="506+86 weaving">
 		</div>
-		<br>
-		<div id="footer">	
+		<div id="info" onclick="displayInfo()">
+			<img src="assets/img/info.png">
+		</div>	
+		<div id="nav" onclick="displayLibrary()">
+			<img src="assets/img/arrow.png">
 		</div>
+		<div id="library">
+			<img class="draggable" src="assets/img/1.png">
+			<img class="draggable" src="assets/img/2.png">
+			<img class="draggable" src="assets/img/3.png">
+			<img class="draggable" src="assets/img/4.png">
+			<img class="draggable" src="assets/img/5.png">
+			<img class="draggable" src="assets/img/6.png">
+			<img class="draggable" src="assets/img/7.png">
+			<img class="draggable" src="assets/img/8.png">
+			<img class="draggable" src="assets/img/9.png">
+			<img class="draggable" src="assets/img/10.png">
+			<img class="draggable" src="assets/img/11.png">
+			<img class="draggable" src="assets/img/12.png">
+			<img class="draggable" src="assets/img/13.png">
+			<img class="draggable" src="assets/img/14.png">
+			<img class="draggable" src="assets/img/15.png">
+			<img class="draggable" src="assets/img/16.png">
+			<img class="draggable" src="assets/img/17.png">
+			<img class="draggable" src="assets/img/18.png">
+			<img class="draggable" src="assets/img/flower1.png">
+			<img class="draggable" src="assets/img/flower2.png">
+			<img class="draggable" src="assets/img/flower3.png">
+			<img class="draggable" src="assets/img/flower4.png">
+			<img class="draggable" src="assets/img/flower5.png">
+			<img class="draggable" src="assets/img/flower6.png">
+			<img class="draggable" src="assets/img/flower7.png">
+			<img class="draggable navigation" onclick="displayNav()" src="assets/img/arrowleft.png">
+		</div>	
+		<div id="weaver">
+			<img class="draggable background"  id="image1">
+			<img class="draggable background" id="image2">
+			<img class="draggable flower" id="image3">
+		</div>
+		<div id="information">
+			<h3><strong>about 506 + 86 weaving</strong></h3>
+			<p>this site has been created as a vessel that will embody the two distinct cultures that I identify with, Costa Rican + Chinese. There are several motifs and imagery that drawn from these cultures and are reimagined as colourful embroideries. The colour palette was informed from the natural dyes used in Borucan textiles in the SouthWestern area of Costa Rica, as well as the Blue & White vases from 14th Century China.<br><br>This site wants to give other people the chance to experience of the mixing, matching and combining the many embroideries together and create their own visuals. <span  onclick="displayImages()"  style="text-decoration:underline; text-decoration-style: 1px;">So start weaving!</span></p>
+		</div>	
+	<div id="footer">	
+		<img class="desc shuffle" onClick="window.location.reload()" src="assets/img/shuffle.png" alt="save your patch">
+		<img class="desc screenshot" src="assets/img/screenshot.png" alt="save your patch">
 	</div>	
 	<script>
-		$(document).mousemove(function(event) {
-		  windowWidth = $(window).width();
-		  windowHeight = $(window).height();
-		  
-		  mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-		  mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
-
-		  console.log(mouseXpercentage,mouseYpercentage)
-		  
-		  $('#wrapper').css('background', 'radial-gradient(at ' + mouseXpercentage + '%' + mouseYpercentage + '%, #3498db, #9b59b6)');
-		});
-
-		// function displayEmbroidery() {
-		// document.getElementById("opener").style.display = "none";
-		// document.getElementById("content").style.display = "block";
-		// };
 
 
 
+		const position = { x: 0, y: 0 }
+
+		interact('.draggable').draggable({
+		  listeners: {
+		    start (event) {
+		      console.log(event.type, event.target)
+		    },
+		    move (event) {
+		      position.x += event.dx
+		      position.y += event.dy
+
+		      event.target.style.transform =
+		        `translate(${position.x}px, ${position.y}px)`
+		    },
+		  }
+		})
+
+		$(document).ready(function(){
+			var img = 'assets/img/1.png',	
+				img2 = 'assets/img/2.png',
+				img3 = 'assets/img/3.png',	
+				img4 = 'assets/img/4.png',
+				img5 = 'assets/img/5.png',
+				img6 = 'assets/img/6.png',	
+				img7 = 'assets/img/7.png',
+				img8 = 'assets/img/8.png',
+				img9 = 'assets/img/9.png',
+				img10 = 'assets/img/10.png',
+				img11 = 'assets/img/11.png',
+				img12 = 'assets/img/11.png',
+				img13 = 'assets/img/12.png',
+				img14 = 'assets/img/13.png',
+				img15 = 'assets/img/14.png',
+				img16 = 'assets/img/15.png',
+				img17 = 'assets/img/16.png',
+				img18 = 'assets/img/17.png',
+				img19 = 'assets/img/18.png',
+				img20 = 'assets/img/flower1.png',
+				img21 = 'assets/img/flower2.png',
+				img22 = 'assets/img/flower3.png',
+				img23 = 'assets/img/flower4.png',
+				img24 = 'assets/img/flower5.png',
+				img25 = 'assets/img/flower6.png',
+				img26 = 'assets/img/flower7.png';
+
+			
+
+			const images = [ img, img2, img3, img4, img5, img6, img7, img8, img9];
+
+			const images2 = [ img10, img11, img12, img13, img14, img15, img16, img17, img18, img19];
+
+			const flowers = [ img20, img21, img22, img23, img24, img25, img26];
+			
+			function randomImage(){
+				return images[Math.floor(Math.random()* images.length)];
+			}
+
+			function randomImage2(){
+				return images2[Math.floor(Math.random()* images2.length)];
+			}	
+
+			function randomImage3(){
+				return flowers[Math.floor(Math.random()* flowers.length)];
+			}			
+
+			console.log(randomImage())
+
+
+
+			// document.getElementById("key").innerHTML = ('<img src="' + randomImage())
+
+			document.getElementById('image1').src = randomImage();
+			document.getElementById('image2').src = randomImage2();
+			document.getElementById('image3').src = randomImage3();
+
+			$( ".shuffle").click(function() {
+			      onClick="document.location.reload(true)"
+
+			    });	
+
+		    });
+
+		    	function takeScreenshot(){
+				var element = $("#weaver");
+				html2canvas(element, {
+					background: '#FFFFFF',
+					onrendered:function(canvas){
+						var imgData = canvas.toDataURL('image/jpeg');
+						$ajax({
+							url:'save.php',
+							type:'post',
+							dataType:'text',
+							data:{
+								base64data:imgData
+							}
+						})
+					}
+				});
+			}
+
+			$(".screenshot").click(function() {
+			      takeScreenshot()
+			    });
+
+			function displayLibrary() {
+		    document.getElementById("library").style.display = "block";
+		    document.getElementById("nav").style.display = "none";
+			};
+
+			function displayNav() {
+		    document.getElementById("library").style.display = "none";
+		    document.getElementById("nav").style.display = "block";
+			};     	
+
+			function displayInfo() {
+		    document.getElementById("information").style.display = "block";
+		    document.getElementById("weaver").style.display = "none";
+		    document.getElementById("info").style.display = "none";
+		    document.getElementById("nav").style.display = "none";
+		    document.getElementById("footer").style.display = "none";
+			};  
+
+			function displayImages() {
+		    document.getElementById("information").style.display = "none";
+		    document.getElementById("weaver").style.display = "block";
+		    document.getElementById("info").style.display = "block";
+		    document.getElementById("nav").style.display = "block";
+		    document.getElementById("footer").style.display = "block";
+			};     	
+
+			// $("#nav").click(function(){
+			// 	$("#library").css({"display" : "visible"})
+			// })     
+		
+			
 	</script>	
 </body>
 </html>
