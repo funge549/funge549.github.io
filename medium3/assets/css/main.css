@@ -1,0 +1,327 @@
+/*html, body {width: 100%; height: 100%;}*/
+
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {font-family: "Body"; src: url("../fonts/Poppins-Medium.ttf");}
+@font-face {font-family: "Italic"; src: url("../fonts/Poppins-Italic.ttf");}
+@font-face {font-family: "Bold"; src: url("../fonts/Poppins-Bold.ttf");}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+/*	height: 100;
+	width: 100;*/
+	font-family: "Bold";
+  	background: linear-gradient(
+    	to right, #005677, #f68d2d
+    );
+}
+
+@keyframes fading{
+	100%{
+		opacity: 1
+
+	}
+	0%{
+		opacity: 0.8
+
+	}
+}
+
+#header{
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+	width: 50vw;
+	font-family: "Italic";
+	display: none;
+
+}
+
+#header img{
+	width: 10vw;
+}
+
+#header h2{
+	font-size: 1em;
+	letter-spacing: 1pt;
+}
+
+#info {
+	position: fixed;
+	position: absolute;
+	top:1vh;
+	right: 2vw;
+	font-size: 2em;
+}
+
+
+.title{
+	width: 25vw;
+}
+
+#opener {
+	font-size: 2.5em;
+	line-height: 1.7em;
+	font-family: "Italic";
+	position: absolute;
+}
+
+#opener .eng{
+	position: absolute;
+	top: 55vh;
+	left: 43vw;
+	width: 70vw;
+}
+
+#opener .esp{
+	position: absolute;
+	top: 10vh;
+	left: 3vw;
+	width: 70vw;
+}
+
+#opener span{
+	animation: fadeOut 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fadeOut{
+  100% {
+    opacity:1;
+  }
+  55%{
+  	opacity: 0.2;
+  }
+  0%{
+  	opacity: 1
+  }
+}
+
+
+#nav{
+	position: absolute;
+	top: 45vh;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+	
+}
+
+#nav button {
+	font-family: "Bold";
+	font-size: 2em;
+	padding: 0.8em;
+	margin: 1em;
+}
+
+#PreliminaryQuestion{
+	position: absolute;
+	top: 45vh;
+	font-family: "Body";
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 3em;
+	line-height: 1.1em;
+	display: none;
+	width: 75vw;
+}
+
+#PreliminaryQuestion h4{
+	padding-bottom: 3vh; 
+}
+
+#Numismatic{
+	position: absolute;
+	top: 6vh;
+	font-family: "Body";
+	font-size: 2.5em;
+	line-height: 1em;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%,0);
+	display: none;
+}
+
+#Numismatic button{
+	margin-bottom: 3vh;
+}
+
+button {
+	font-family: "Body";
+	font-size: 0.5em;
+	margin: 0.5em;
+	padding: 0.5em;
+	background-color: rgba(0, 85, 119,1);
+	
+}
+
+button:hover {
+	background-color: #f68d2d
+}
+
+button:focus{
+	outline: rgba(0, 85, 119,1);
+	border-color: rgba(0, 85, 119,1);
+}
+
+
+
+#submit{
+	position: fixed;
+	bottom: 3vh;
+	right: 3vw;
+	text-decoration: underline;
+	display: none;
+	font-family: "Bold";
+	font-size: 2.5em;
+}
+
+#submit:hover{
+	color: #fec52f
+}
+
+#scan{
+	font-size: 5em;
+	line-height: 1.7em;
+	font-family: "Body";
+	text-align: center;
+	height: 100vh;
+	display: none;
+}
+
+#scan h4{
+	width: 100vw;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#scan img{
+	position: absolute;
+	bottom: 1vh;
+	left: 50%;
+	transform: translate(-50%,0%);
+}
+
+#output{
+	position: absolute;
+	top: 30vh;
+	font-size: 2.7em;
+	line-height: 1.4em;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%,0);
+	display: none;
+}
+
+#output h2{
+	margin-bottom: 1vh;
+}
+
+#mobile{
+	position: absolute;
+	width: 100%;
+	top: 40vh;
+	left: 40vh;
+	font-size: 2.7em;
+	line-height: 1.4em;
+	text-align: center;
+	display: none;
+}
+
+#mobile .column{
+	float: left;
+	left: 50%;
+	margin-right: 15vw;
+}
+
+#mobile input{
+	width: 20vw;
+    height: 5vh;
+}
+
+#mobile #target{
+	font-family: "Body";
+	font-size: 0.5em;
+}
+
+.sent {
+	position: absolute;
+	display: block;
+	top: 25vh;
+	z-index: 1;
+	left: 29%;
+	background-color: #fec52f
+}
+
+#printing{
+	font-size: 3em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-text-fill-color: transparent;
+	display: none
+
+}
+
+#printing h4:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 15em;
+    white-space: nowrap;
+    background: -webkit-linear-gradient(#005677, #f68d2d);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    animation: loading 10s linear;
+}
+
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+#End {
+	font-size: 2.5em;
+	line-height: 2.1em;
+	width: 80vw;
+	position: absolute;
+	top: 25vh;
+	left: 3vw;
+	display: none;
+}
+
+#End span{
+	font-family: "Italic";
+	animation: fadeOut 3s;
+	animation-iteration-count: infinite;
+}
+/*
+.box {
+	position: absolute;
+	top: 60vh;
+	left:50%;
+	display: block;
+	width: 150px;
+	height: 200px;
+	background: white;
+	z-index: 1;
+}*/
+
+#footer{
+	position: fixed;
+	bottom: 2vh;
+	left: 2vw;
+}
+
+#footer img{
+	width: 8vw;
+}
