@@ -65,24 +65,46 @@ body {
 
 #opener {
 	font-size: 3em;
-	line-height: 1.5em;
+	line-height: 1.9em;
 	font-family: "Italic";
 	position: absolute;
-}
-
-#opener .eng{
-	position: absolute;
-	top: 55vh;
-	left: 50vw;
-	width: 70vw;
-}
-
-#opener .esp{
-	position: absolute;
-	top: 10vh;
+	top: 25vh;
 	left: 3vw;
-	width: 70vw;
+	overflow: hidden;
+	height: 510px;
+	width:1500px;
+	margin: 0 auto;
 }
+
+.slide-wrapper {
+  width: 6000px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 1500px;
+}
+
+.slide img{
+	max-width: 30vw
+}
+
+.slide .mobile {
+	max-width: 50vw
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -1500px;}
+  50% {margin-left: -1500px;}
+  60% {margin-left: -3000px;}
+  70% {margin-left: -3000px;}
+  80% {margin-left: -4500px;}
+  90% {margin-left: -4500px;}
+}
+
 
 #opener span{
 	animation: fadeOut 3s;
@@ -100,7 +122,6 @@ body {
   	opacity: 1
   }
 }
-
 
 #nav{
 	position: absolute;
@@ -177,6 +198,7 @@ button:focus{
 	display: none;
 	font-family: "Bold";
 	font-size: 2.5em;
+	display: none;
 }
 
 #submit:hover{
@@ -250,12 +272,26 @@ button:focus{
 }
 
 .sent {
-	position: absolute;
+	position: fixed;
 	display: block;
-	top: 25vh;
+	bottom: 3vh;
+	right: 3vw;
 	z-index: 1;
-	left: 29%;
-	background-color: #fec52f
+	background-color: #1f8c3c;
+	animation: moving 2s;
+	animation-iteration-count: 1;
+}
+
+@keyframes moving {
+	0% {
+        opacity: 0;
+    }
+	50% {
+        opacity: 0.45;
+    }
+    100% {
+    	opacity: 1;
+    }
 }
 
 #printing{

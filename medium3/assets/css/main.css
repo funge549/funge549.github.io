@@ -63,26 +63,49 @@ body {
 	width: 25vw;
 }
 
+
 #opener {
-	font-size: 2.5em;
-	line-height: 1.7em;
+	position: absolute;
 	font-family: "Italic";
-	position: absolute;
-}
-
-#opener .eng{
-	position: absolute;
-	top: 55vh;
-	left: 43vw;
-	width: 70vw;
-}
-
-#opener .esp{
-	position: absolute;
-	top: 10vh;
+	font-size: 2.5em;
+	line-height: 2.1em;
+	top: 25vh;
 	left: 3vw;
-	width: 70vw;
+	overflow: hidden;
+	height: 510px;
+	width:1444px;
+	margin: 0 auto;
 }
+
+.slide-wrapper {
+  width: 5776px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 1444px;
+}
+
+.slide img{
+	max-width: 30vw
+}
+
+.slide .mobile {
+	max-width: 50vw
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -1444px;}
+  50% {margin-left: -1444px;}
+  60% {margin-left: -2888px;}
+  70% {margin-left: -2888px;}
+  80% {margin-left: -4332px;}
+  90% {margin-left: -4332px;}
+}
+
 
 #opener span{
 	animation: fadeOut 3s;
@@ -179,6 +202,7 @@ button:focus{
 	display: none;
 	font-family: "Bold";
 	font-size: 2.5em;
+	display: none;
 }
 
 #submit:hover{
@@ -238,7 +262,7 @@ button:focus{
 #mobile .column{
 	float: left;
 	left: 50%;
-	margin-right: 15vw;
+	margin-right: 10vw;
 }
 
 #mobile input{
@@ -252,13 +276,28 @@ button:focus{
 }
 
 .sent {
-	position: absolute;
+	position: fixed;
 	display: block;
-	top: 25vh;
+	bottom: 3vh;
+	right: 3vw;
 	z-index: 1;
-	left: 29%;
-	background-color: #fec52f
+	background-color: #fec52f;
+	animation: moving 2s;
+	animation-iteration-count: 1;
 }
+
+@keyframes moving {
+	0% {
+        opacity: 0;
+    }
+	50% {
+        opacity: 0.45;
+    }
+    100% {
+    	opacity: 1;
+    }
+} 
+
 
 #printing{
 	font-size: 3em;
@@ -318,8 +357,12 @@ button:focus{
 
 #footer{
 	position: fixed;
-	bottom: 2vh;
-	left: 2vw;
+	bottom: 1vh;
+	left: 1vw;
+	width: 50vw;
+	font-family: "Italic";
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 #footer img{

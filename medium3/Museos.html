@@ -15,10 +15,25 @@
 		<!-- <div id="info" onclick="displayInfo()">
 			<i>i</i>
 		</div> -->
+
 		<div id="opener" onclick="displayLanguages()">
-			<h2 class="esp">¡Gracias por Visitar!<br> Crea tu propio Souvenir<br><span>Presiona para comenzar</span></h2>
-			<h2 class="eng">Thanks for visiting!<br> Customise Your Souvenir<br><span>Press to start</span></h2>
-		</div>	
+		  <div class="slide-wrapper">
+		    <div class="slide"><h1>¡Gracias por Visitar!<br> Crea tu propio Souvenir<br><span>Presiona para comenzar</span></h1></div>
+		    <div class="slide"><h1>Your Souvenir can look like this</h1><img src="assets/img/10mil.png"><img src="assets/img/10milb.png"></div>
+		    <div class="slide"><h1>Thanks for visiting!<br> Customise Your Souvenir<br><span>Press to start</span></h1></div>
+		    <div class="slide"><h1>Tu Souvenir puede ser así</h1><img class="mobile" src="assets/img/screensaver1.png"></div>
+		    <div class="slide"><h1>¡Gracias por Visitar!<br> Crea tu propio Souvenir<br><span>Presiona para comenzar</span></h1></div>
+		    <div class="slide"><h1>Tu Souvenir puede ser así</h1><img src="assets/img/25.png"><img src="assets/img/25b.png"></div>
+		  </div>
+		</div>
+
+		<!-- <div id="opener" onclick="displayLanguages()">
+			<div class="slide-opener">
+				<div class="slide"><h1 class="esp">¡Gracias por Visitar!<br> Crea tu propio Souvenir<br><span>Presiona para comenzar</span></h1></div>
+				 <div class="slide"><h1 class="eng">Thanks for visiting!<br> Customise Your Souvenir<br><span>Press to start</span></h1></div>
+			</div>
+		</div> -->	
+
 		<div id="nav">
 			<button onclick="displayEsp()">ESPAÑOL</button>
 			<button onclick="displayEng()"> ENGLISH</button>
@@ -47,8 +62,8 @@
 				<button class="option">People</button>
 				<br>
 			<h4>Which one do you prefer?</h4>
-				<button class="option">Black & White</button>
-				<button class="option">Multi-Color</button>
+				<button onclick="displaySubmit()" class="option">Black & White</button>
+				<button onclick="displaySubmit()" class="option">Multi-Color</button>
 			<br>			
 		</div>
 		<div id="submit" onclick="displayScan()">
@@ -64,6 +79,7 @@
 				<button onclick="displayPrint()">Printed Postcard</button>
 		</div>
 		<div id="mobile">
+
 			<div class="column">
 				<h4>Via Text Message</h4>
 				<form>
@@ -76,7 +92,7 @@
 					<input id="target" type="text">
 				</form>
 			</div>	
-			<button class="sent"onclick="displayEnd()">send!</button>
+			<button class="sent" onclick="displayEnd()">send!</button>
 		</div>	
 		<div id="printing"onclick="displayEnd()">
 			<h4 data-text="printing your souvenir">printing your souvenir</h4>
@@ -90,7 +106,8 @@
 			<p>this site has been created as a vessel that will embody the two distinct cultures that I identify with, Costa Rican + Chinese. There are several motifs and imagery that drawn from these cultures and are reimagined as colourful embroideries. The colour palette was informed from the natural dyes used in Borucan textiles in the SouthWestern area of Costa Rica, as well as the Blue & White vases from 14th Century China.<br><br>This site wants to give other people the chance to experience of the mixing, matching and combining the many embroideries together and create their own visuals. <span  onclick="displayImages()"  style="text-decoration:underline; text-decoration-style: 1px;">So start weaving!</span></p>
 		</div>	 -->
 	<div id="footer">	
-		<img src="assets/img/logo.png">
+		<h2>Museos del</h2>
+		<h2>Banco Central</h2>
 	</div>	
 
 	<script>
@@ -149,18 +166,24 @@
 			function displayNumismatic() {
 		    document.getElementById("PreliminaryQuestion").style.display = "none";
 		    document.getElementById("Numismatic").style.display = "block";
-		    document.getElementById("submit").style.display = "block";
 
 			};
 
 			function displayScan() {
 		    document.getElementById("Numismatic").style.display = "none";
-		    document.getElementById("submit").style.display = "none";
 		    document.getElementById("scan").style.display = "block";
+		    document.getElementById("submit").style.display = "none";
+
+			};
+
+			function displaySubmit() {
+		    document.getElementById("submit").style.display = "block";
+
 
 			};
 
 			function displayOutput() {
+			document.getElementById("submit").style.display = "none";
 		    document.getElementById("scan").style.display = "none";
 		    document.getElementById("output").style.display = "block";
 
