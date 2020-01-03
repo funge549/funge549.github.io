@@ -3,16 +3,16 @@
 html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
 	padding: 0;
 	margin: 0;
-	cursor: url(../img/cursor-smaller.png), auto;
+	cursor: url(../img/cursor.png), auto;
 }
 
 html:active{
 	cursor: url(../img/cursor-active.png), auto;
 }
 
-@font-face {font-family: "UniversBO"; src: url("../fonts/UniversLTStd-BoldCnObl.otf");}
-@font-face {font-family: "UniversBC"; src: url("../fonts/UniversLTStd-BoldCn.otf");}
-@font-face {font-family: "UniversC"; src: url("../fonts/UniversLTStd-Cn.otf");}
+@font-face {font-family: "AG-BO"; src: url("../fonts/AkzidenzGrotesk-BoldCondItalic.otf");}
+@font-face {font-family: "AG-BC"; src: url("../fonts/AkzidenzGrotesk-BoldCond.otf");}
+@font-face {font-family: "AG-C"; src: url("../fonts/AkzidenzGrotesk-Cond.otf");}
 
 @font-face {font-family: "Title"; src: url("../fonts/AkzidenzGrotesk-LightCondItalic.otf");}
 
@@ -26,7 +26,7 @@ body {
 
 #header{
 	color: white; 
-	font-family: "UniversBO"; 
+	font-family: "AG-BO"; 
 	font-size: 3em;
 	top: 1em;
 	cursor: url(../img/cursor-smaller.png), auto;
@@ -36,9 +36,17 @@ body {
 	cursor: url(../img/cursor-active.png), auto;
 }
 
+#header a img{
+	max-width: 200px; 
+	position: absolute; 
+	top: 30vh; 
+	left: 5vw;
+}
+
+
 #about{
 	color: white; 
-	font-family: "UniversBO"; 
+	font-family: "AG-BO"; 
 	font-size: 3em;
 	position: absolute;
 	top: 2em;
@@ -56,9 +64,11 @@ body {
 	color: white;
 }
 
+#work 	{
+	padding-bottom: 1vh
+}
 
-
-#work  h3 a  {
+#work  a  {
 	top: 8vh;
 	left: 50%;
 	transform: translate(-50%,0);
@@ -66,17 +76,32 @@ body {
 	position: absolute;
 	color: #B0C4DE;
 	font-family: "Title"; 
-	font-size: 4em;
-	top: 1em;
-	letter-spacing: 1pt;
+	font-size: 5em;
 
 }
+
+#web  a  {
+	top: 8vh;
+	left: 50%;
+	transform: translate(-50%,0);
+	text-align: center;
+	position: absolute;
+	color: white;
+	font-family: "Title"; 
+	font-size: 5em;
+
+}
+
 
 #header a:hover {
 	text-decoration: wavy underline;
 }
 
 #work a:hover {
+	text-decoration: wavy underline;
+}
+
+#web a:hover {
 	text-decoration: wavy underline;
 }
 
@@ -111,7 +136,7 @@ body {
 	display: block;
 	padding: 8px; 
 	color: black;
-	font-family: "UniversBO";
+	font-family: "AG-BO";
 	text-decoration: underline wavy;
 
 }
@@ -144,7 +169,7 @@ body {
 	display: block;
 	padding: 8px; 
 	color: black;
-	font-family: "UniversBO";
+	font-family: "AG-BO";
 	text-decoration: underline wavy;
 
 }
@@ -157,6 +182,7 @@ body {
 	max-width: 55vw;
 	min-height: 25vh;
 	position: fixed;
+	padding-left: 2vw;
 	top:50%;
 	left: 25%;
 	transform: translate(0, -50%);
@@ -179,7 +205,7 @@ body {
 	list-style-type: none;
 	position: absolute;
 	text-align: left;
-	top: 19vh;
+	top: 22vh;
 	left: 4vw;
 }
 
@@ -187,14 +213,14 @@ body {
 	display: block;
 	padding: 8px; 
 	color: black;
-	font-family: "UniversBC";
+	font-family: "AG-BC";
 	font-size: 1.8em;
 	line-height: 28pt;
 }
 
 .webDescription{
 	margin-left: 2vw;
-	font-family: "UniversC";
+	font-family: "AG-C";
 	font-size: 1.25em;
 	line-height: 1.6em;
 }
@@ -205,12 +231,12 @@ body {
 
 .datLinks{
 	display: inline !important;
-	font-family: "UniversC" !important;
+	font-family: "AG-C" !important;
 	font-size: 1em !important;
 	line-height: 1.6em !important;
 }
 
-/*.link {
+/*.a {
 	display: inline !important;
 	font-family: "UniversC" !important;
 	font-size: 1em !important;
@@ -229,7 +255,7 @@ body {
 }
 
 .title{
-	font-family: "UniversBC";
+	font-family: "AG-BC";
 	text-align: left;
 	font-size: 1.5em;
 	color: #666699;
@@ -243,7 +269,7 @@ body {
 
 .projects {
 	position: absolute;
-	top: 10em;
+	top: 12em;
 }
 
 .project-images{
@@ -262,18 +288,19 @@ body {
 	margin-left: 1.3em;
 	color: #666699;
 	opacity: .75;
-	font-family: "UniversBC";
+	font-family: "AG-BC";
 	font-size: 1.5em;
 }
 
 .description{
 	text-align: left;
-	margin-left: 2em;
+	margin-left: 1.6em;
 	color: #666699;
 	opacity: .75;
-	font-family: "UniversC";
-	font-size: 1em;
-	line-height: 1.4em;
+	font-family: "AG-C";
+	font-size: 1.2em;
+	line-height: 1.1em;
+	width: 75vw;
 }
 
 /*branding page*/
@@ -360,7 +387,7 @@ hr {
 }
 
 h4 {
-	font-family: "UniversBO"; 
+	font-family: "AG-BO"; 
 	font-size: 2em;
 	text-align: left;
 	margin-left: 0.75em;
@@ -368,7 +395,7 @@ h4 {
 
 .info {
 	/*width: 30em;*/
-	font-family: "UniversBC"; 
+	font-family: "AG-BC"; 
 	font-size: 2em;
 	text-align: left;
 	margin-left: 1em;
@@ -380,7 +407,7 @@ h4 {
 }
 
 .info a:hover{
-	font-family: "UniversBO";
+	font-family: "AG-BO";
 }
 
 #text{
@@ -514,7 +541,6 @@ iframe {
   position: fixed;
   right: 1vw;
   bottom: 1vh;
-
     display: inline-block;
   transition: background-color .3s, 
     opacity .5s, visibility .5s;
@@ -586,11 +612,16 @@ iframe {
     position: relative;
     top: 85vh;
     letter-spacing: 0.1vw;
-    font: 1em UniversBO, Sans-Serif;
+    font: 1em AG-BO, Sans-Serif;
     background-color: rgba(255,255,255,0.3);
+}
+/*
+.home a:hover {
+	cursor: url(../img/cursor.png), auto;
 }
 
 
+*/
 
 
 
