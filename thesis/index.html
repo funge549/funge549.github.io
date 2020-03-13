@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title> // </title>
+	<meta charset="utf-8">	
+	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://use.typekit.net/mia1umr.css">
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/circletype.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.fittext.js"></script>
+</head>
+<body>
+<!-- 		<div id="header">
+			<h2>506+86</h2>
+		</div> -->
+		<div id="calendar">
+			<!-- <div class="day"></div><div class="month"></div><div class="year"></div> -->
+		</div>	
+
+
+		<div id="nav">
+			<button onclick="displayEsp()">ESPAÑOL</button>
+			<button onclick="displayEng()">ENGLISH</button>
+			<button onclick="comingSoon()">中文</button>
+		</div>
+
+		<div id="soon">
+			<div>
+				<p onclick="exitAlert()">[X]</p>
+				<h2>對不貲<br>we're working on this page please come back later<br></h2>
+
+			</div>
+		</div>
+
+<!-- 		english -->
+
+		<div id="circle"></div>
+		<div id="counter">
+			<pre>– –start of the quiz</pre>
+		</div>
+		<div id="circle_Q2"></div>
+		<div id="counter_Q2">
+			<pre>– – question # two</pre>
+		</div>
+		<div id="circle_Q3"></div>
+		<div id="counter_Q3">
+			<pre>– – halfway through</pre>
+		</div>
+		<div id="circle_Q4"></div>
+		<div id="counter_Q4">
+			<pre>– – question # four</pre>
+		</div>
+		<div id="circle_Q5"></div>
+		<div id="counter_Q5">
+			<pre>– – last question</pre>
+		</div>
+
+		<div id="opener"onclick="displayQuestions()">
+			<h2 class="eng">WELCOME TO [506 + 86]</h2>
+			<br>
+			<p class="eng">A visual explanation of what  it is to be Latina (Costa Rican)  & Chinese (Cantonese) through meals and memories</p>
+			<br><br>
+			<span>let's start</span>
+		</div>
+		<div id="PreliminaryQuestion" class="quiz">
+			<h4>First things first,<br> are you familiar with either culture?</h4>
+				<button onclick="displayQ2()">Yes [to both]</button>
+				<button onclick="displayQ2()">Yes [Costa Rican]</button>
+				<button onclick="displayQ2()">Yes [Chinese]</button>
+				<button onclick="displayQ2()">No</button>	
+		</div>
+		<div id="MiniQuiz_1" class="quiz">
+			<h4>Which ones do you prefer?</h4>
+				<button onclick="displayQ3()">Sweet</button>
+				<button onclick="displayQ3()">Savoury</button>
+				<button onclick="displayQ3()">Sour</button>
+				<button onclick="displayQ3()">Spicy</button>
+				<br>
+		</div>
+		<div id="MiniQuiz_2" class="quiz">		
+			<h4>Do you like cooking?</h4>
+				<button onclick="displayQ4()">Yes</button>
+				<button onclick="displayQ4()">Not Really</button><br>
+				<button onclick="displayQ4()">No, but I like to eat</button>
+				<button onclick="displayQ4()">Love to cook</button>
+				<br>
+		</div>
+		<div id="MiniQuiz_3" class="quiz">		
+			<h4>Do you enjoy snacking?</h4>
+				<button onclick="displayQ5()">Yes</button>
+				<button onclick="displayQ5()">Not Really</button>
+				<button onclick="displayQ5()">Ocassionally</button>
+				<br>
+		</div>			
+		<div id="MiniQuiz_4" class="quiz">			
+			<h4>Which age group do you belong in?</h4>
+				<button onclick="displayOutput()">18 – 24</button>
+				<button onclick="displayOutput()">25 – 31</button>
+				<button onclick="displayOutput()">32 – 38</button>
+				<button onclick="displayOutput()">39 – 45</button>
+				<button onclick="displayOutput()">45+</button>
+				<br>		
+		</div>
+		<div id="output">
+			<h2>our food is ready for you to learn about it!</h2>
+			<div onclick="displaySoySauceBeef()" class="box1">
+				<img src="assets/img/meat.png">
+				<p>soy sauce beef</p>
+			</div>
+			<div onclick="displayVeggies()" class="box2">
+				<img src="assets/img/veggies.png">
+				<p>source of health, veggies</p>
+			</div>
+			<div onclick="displayRice()" class="box3">
+				<img src="assets/img/rice.png">
+				<p>a stable, a comfort</p>
+			</div>
+			<div onclick="displayVeggies()" class="box4">
+				<img src="assets/img/veggies.png">
+				<p>source of health, veggies</p>
+			</div>
+			<div onclick="displaySoySauceBeef()" class="box5">
+				<img src="assets/img/meat.png">
+				<p>soy sauce beef</p>
+			</div>
+			<div onclick="displaySoySauceBeef()" class="box6">
+				<img src="assets/img/meat.png">
+				<p>soy sauce beef</p>
+			</div>
+		</div>
+
+		<div id="RecipeNav" onclick="goBackToOutput()">
+			<h3>back</h3>
+		</div>
+		<div id="SoySauceBeef" class="recipe">
+			<h2 class="recipeHeader">soy sauce beef</h2>
+			<p class="recipeBody">I first started to make this dish once I moved to New York for college, as it was an easy way to safely cook beef and I was able to mix it with sauces that I already had at home. although pork and chicken are eaten more often in Chinese households, in Costa Rica and the USA beef is a lot more common choice of protein. thus, this dish is all about the combination of beef and savoury chinese flavours.</p>
+			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
+			<img src="assets/img/meat.png">
+		</div>	
+
+		<div id="veggies" class="recipe">
+			<h2>steamed napa cabbage</h2>
+			<p>This has always been in the table, whether it was my own home, 爺爺奶奶家 & 婆婆公公家 (grandparent's house) or going out to eat to our usual weekend Chinese restaurant. as a kid I wouldn't eat it, thinking the texture wasn't appetizing and that it was bland. but now if I don't eat veggies with my meals I feel that a part of it is missing. Napa cabbage is my favourite chinese vegetables as it has the perfect mix of soft leaves and crunch stem.</p>
+			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
+			<img src="assets/img/veggies.png">
+		</div>	
+
+		<div id="rice" class="recipe">
+			<h2>jasmine white rice</h2>
+			<p>When i was younger, I was a very picky eater and if there wasn't any dishes of my liking, I will only eat bowls of white rice [yes, just plain rice]. I'm that person that needs to have rice at least once a day, and if I don't, it's okay. But, I will certainly feel the need to have some. Jasmine rice is the perfect base to any cantonese meal. </p>
+			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
+			<img src="assets/img/rice.png">
+		</div>	
+		
+
+<!-- 		español -->
+
+		<div id="circleEsp"></div>
+		<div id="counterEsp">
+			<pre>– –comienzo del quiz</pre>
+		</div>
+		<div id="circle_Q2Esp"></div>
+		<div id="counter_Q2Esp">
+			<pre>– – pregunta # dos</pre>
+		</div>
+		<div id="circle_Q3Esp"></div>
+		<div id="counter_Q3Esp">
+			<pre>– – mita del camino</pre>
+		</div>
+		<div id="circle_Q4Esp"></div>
+		<div id="counter_Q4Esp">
+			<pre>– – pregunta # cuatro</pre>
+		</div>
+		<div id="circle_Q5Esp"></div>
+		<div id="counter_Q5Esp">
+			<pre>– – última pregunta</pre>
+		</div>
+		
+		<div id="openerESP" onclick="displayPreguntas()">
+			<h2>HOLA ESTO ES [506 + 86]</h2>
+			<br>
+			<p>Una exploración creativa de que significa ser Latina [Costa Ric] & China [Cantón] por medio de comidas y memorias</p>
+			<br><br>
+			<span>comenzemos</span>
+		</div>
+		<div id="PreguntasPreliminar" class="quizEsp">
+			<h4>Aclaremos algo,<br>¿tienes conocimiento sobre ambas culturas?</h4>
+				<button onclick="displayP2()">Sí  [las dos]</button>
+				<button onclick="displayP2()">Sí  [Costa Rica]</button>
+				<button onclick="displayP2()">Sí  [Cantón]</button>
+				<button onclick="displayP2()">No</button>	
+		</div>
+		<div id="MiniQuiz_1Esp" class="quizEsp">
+			<h4>¿Cuál Prefieres?</h4>
+				<button onclick="displayP3()">Dulce</button>
+				<button onclick="displayP3()">Salado</button>
+				<button onclick="displayP3()">Agrio</button>
+				<button onclick="displayP3()">Picante</button>
+				<br>
+		</div>
+		<div id="MiniQuiz_2Esp" class="quizEsp">		
+			<h4>¿Te gusta cocinar?</h4>
+				<button onclick="displayP4()">Sí</button>
+				<button onclick="displayP4()">La verdad, no</button><br>
+				<button onclick="displayP4()">No, pero me gusta comer</button>
+				<button onclick="displayP4()">Amo cocinar</button>
+				<br>
+		</div>
+		<div id="MiniQuiz_3Esp" class="quizEsp">		
+			<h4>¿Te gusta picar / merendar?</h4>
+				<button onclick="displayP5()">Sí</button>
+				<button onclick="displayP5()">La verdad, no</button>
+				<button onclick="displayP5()">De vez en cuando</button>
+				<br>
+		</div>			
+		<div id="MiniQuiz_4Esp" class="quizEsp">			
+			<h4>¿Con cuál grupo de edad correspondes?</h4>
+				<button onclick="displayOutputEsp()">18 – 24</button>
+				<button onclick="displayOutputEsp()">25 – 31</button>
+				<button onclick="displayOutputEsp()">32 – 38</button>
+				<button onclick="displayOutputEsp()">39 – 45</button>
+				<button onclick="displayOutputEsp()">45+</button>
+				<br>		
+		</div>
+		<div id="outputEsp">
+			<h2>¡nuestra comida está lista para probar!</h2>
+			<div onclick="displayLomoSalteado()" class="box1Esp">
+				<img src="assets/img/meat.png">
+				<p>lomo salteado</p>
+			</div>
+			<div onclick="displayVegetales()" class="box2Esp">
+				<img src="assets/img/veggies.png">
+				<p>fuente de nutrición, vegetales</p>
+			</div>
+			<div onclick="displayArroz()" class="box3Esp">
+				<img src="assets/img/rice.png">
+				<p>esencial, siempre ahí</p>
+			</div>
+			<div onclick="displayVegetales()" class="box4Esp">
+				<img src="assets/img/veggies.png">
+				<p>fuente de nutrición, vegetales</p>
+			</div>
+			<div onclick="displayLomoSalteado()" class="box5Esp">
+				<img src="assets/img/meat.png">
+				<p>lomo salteado</p>
+			</div>
+			<div onclick="displayLomoSalteado()" class="box6Esp">
+				<img src="assets/img/meat.png">
+				<p>lomo salteado</p>
+			</div>
+			<div onclick="displayVegetales()" class="box7Esp">
+				<img src="assets/img/veggies.png">
+				<p>fuente de nutrición, vegetales</p>
+			</div>
+			<div onclick="displayLomoSalteado()" class="box8Esp">
+				<img src="assets/img/meat.png">
+				<p>lomo salteado</p>
+			</div>
+			<div onclick="displayLomoSalteado()" class="box9Esp">
+				<img src="assets/img/meat.png">
+				<p>lomo salteado</p>
+			</div>
+		</div>
+
+		<div onclick="goBackToOutputEsp()" id="RecetaNav">
+			<h3>atrás</h3>
+		</div>
+		<div id="lomoSalteado" class="recipe">
+			<h2 class="recipeHeader">lomo salteado</h2>
+			<p class="recipeBody">cuando me mudé a Nueva York para comenzar mis estudios universitarios, comencé a cocinar mucho y este es uno de los primeros platillos que cociné. ya que es una forma fácil y segura de cocinar la carne de res, con ingredientes que ya tenía en la casa. aunque el cerdo y el pollo son más frecuentes en comidas chinas y costarricences, la carne de res es mucho más accesible y preferida por los estadounidenses. por ende, este platillo es la combinación de carne de res con sabores únicos a la cultura cantonés.</p>
+			<pre>esto es parte de "UNA COMIDA TRADICIONAL CANTONES" <br><a href="">encuentra la receta aquí</a></pre>
+			<img src="assets/img/meat.png">
+		</div>	
+
+		<div id="vegetales" class="recipe">
+			<h2 class="recipeHeader">mostaza china al wok</h2>
+			<p class="recipeBody">los vegetales al wok, son una constante en la mesa, sea mi casa o la de 爺爺奶奶 & 婆婆公公 (mis abuelos), o inclusive en el restaurante Chino, siempre van a haber vegetales. de niña nunca comía los vegetales, no me gustaba la textura de ella y no me sabía a nada gustoso. pero ahora, si no como vegetales con mi almuerzo o cena, siento que algo falta. la mostaza china es una de mis vegetales favoritos, ya que es una gran combinación de suaves hojas y crujientes tallos.</p>
+			<pre>esto es parte de "UNA COMIDA TRADICIONAL CANTONES" <br><a href="">encuentra la receta aquí</a></pre>
+			<img src="assets/img/veggies.png">
+		</div>	
+
+		<div id="arroz" class="recipe">
+			<h2 class="recipeHeader">arroz jazmín</h2>
+			<p class="recipeBody">____</p>
+			<pre>esto es parte de "UNA COMIDA TRADICIONAL CANTONES" <br><a href="">encuentra la receta aquí</a></pre>
+			<img src="assets/img/rice.png">
+		</div>	
+
+	
+		
+<!-- 		<div id="mobile">
+			<div class="column">
+				<h4>Via Text Message</h4>
+				<form>
+					<input id="target" type="text">
+				</form>
+			</div>
+			<div class="column">	
+				<h4>Via Email</h4>
+				<form>
+					<input id="target" type="text">
+				</form>
+			</div>	
+			<button class="sent"onclick="displayEnd()">send!</button>
+		</div>	
+		<div id="printing"onclick="displayEnd()">
+			<h4 data-text="printing your souvenir">printing your souvenir</h4>
+		</div>
+		<div id="End">
+			<h1>Thank You for visiting Museos del Banco Nacional<br> We hope you enjoy <br><span>Your Souvenir</span></h1>
+		</div>	 -->
+
+<!-- 		<div id="information">
+			<h3><strong>about 506 + 86 weaving</strong></h3>
+			<p>this site has been created as a vessel that will embody the two distinct cultures that I identify with, Costa Rican + Chinese. There are several motifs and imagery that drawn from these cultures and are reimagined as colourful embroideries. The colour palette was informed from the natural dyes used in Borucan textiles in the SouthWestern area of Costa Rica, as well as the Blue & White vases from 14th Century China.<br><br>This site wants to give other people the chance to experience of the mixing, matching and combining the many embroideries together and create their own visuals. <span  onclick="displayImages()"  style="text-decoration:underline; text-decoration-style: 1px;">So start weaving!</span></p>
+		</div>	 -->
+	<div id="footer">	
+	</div>	
+
+	<script>
+
+		function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+		$( document ).ready(function() {
+			// $( "body" ).click(function() {
+			// 	  $(this).css({
+			// 	  	'background':'#9999FF',
+			// 	  	'animation': 'fading 5s'
+			// 	  })
+			// 	});
+
+			const mm = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+			];
+			var today = new Date(),
+				dd = today.getDate(),
+				yyyy = today.getFullYear();
+				// city = data.name;
+			if(mm<10) {
+			    mm = '0'+mm
+			} 
+			month = mm[today.getMonth()]
+			today = dd  +  + yyyy;
+			var date = $("<div/>"); 
+	 		date.addClass("day");
+	 		$("#calendar").append(dd + " ");
+	 		$("#calendar").append(month + " ");
+	 		$("#calendar").append(yyyy + " ");
+
+		    // $(".option").click(function(){
+		    // 	$(this).css({
+		    // 		'background-color': '#fec52f'
+		    // 	})
+		    // })
+		    
+		    var counter = new CircleType(document.getElementById('counter'))
+			  	.radius(55);
+
+			var counter2 = new CircleType(document.getElementById('counter_Q2'))
+			  	.radius(55);
+
+			var counter3 = new CircleType(document.getElementById('counter_Q3'))
+			  	.radius(55); 
+
+			var counter4 = new CircleType(document.getElementById('counter_Q4'))
+			  	.radius(55);   
+
+			var counter5 = new CircleType(document.getElementById('counter_Q5'))
+			  	.radius(55); 
+
+			var counter = new CircleType(document.getElementById('counterEsp'))
+			  	.radius(55);
+
+			var counter2 = new CircleType(document.getElementById('counter_Q2Esp'))
+			  	.radius(55);
+
+			var counter3 = new CircleType(document.getElementById('counter_Q3Esp'))
+			  	.radius(55); 
+
+			var counter4 = new CircleType(document.getElementById('counter_Q4Esp'))
+			  	.radius(55);   
+
+			var counter5 = new CircleType(document.getElementById('counter_Q5Esp'))
+			  	.radius(55);   	    			 	
+
+			// $(counter.element).fitText();
+
+		 //    $("#MiniQuiz_4").click(function(){
+			// 	$("#circle_Q5").css({"background-color" : "rgba(255,255,255,0.5)"})
+			// });
+
+			}
+		    
+		);
+
+			function comingSoon() {
+				document.getElementById("soon").style.display = "block";
+			}
+
+			function exitAlert() {
+				document.getElementById("soon").style.display = "none";
+			}
+
+		//english
+
+			function displayEng(){
+				document.getElementById("nav").style.display = "none";
+				document.getElementById("opener").style.display = "block";	
+			    document.getElementById("PreliminaryQuestion").style.display = "none";
+			    document.body.style.background = "linear-gradient(125deg, #9999cc, #9999ff)";
+			    document.body.style.animation = "fading 5s";	
+
+			}
+
+			function displayQuestions() {
+				document.getElementById("counter").style.opacity = "1";	
+				document.getElementById("circle").style.opacity = "1";	
+			    document.getElementById("PreliminaryQuestion").style.display = "block";
+			    document.getElementById("opener").style.display = "none";
+			};
+
+			function displayQ2() {
+				document.getElementById("circle_Q2").style.opacity = "1";	
+				document.getElementById("counter_Q2").style.opacity = "1";
+				document.getElementById("counter").style.opacity = "0";			
+			    document.getElementById("MiniQuiz_1").style.display = "block";
+			    document.getElementById("PreliminaryQuestion").style.display = "none";
+
+			};
+
+			function displayQ3() {
+				document.getElementById("circle_Q3").style.opacity = "1";	
+				document.getElementById("counter_Q3").style.opacity = "1";
+				document.getElementById("counter_Q2").style.opacity = "0";		
+			    document.getElementById("MiniQuiz_1").style.display = "none";
+			    document.getElementById("MiniQuiz_2").style.display = "block";
+
+			};
+
+			function displayQ4() {
+				document.getElementById("circle_Q4").style.opacity = "1";	
+				document.getElementById("counter_Q4").style.opacity = "1";
+				document.getElementById("counter_Q3").style.opacity = "0";	
+			    document.getElementById("MiniQuiz_2").style.display = "none";
+			    document.getElementById("MiniQuiz_3").style.display = "block";
+
+			};
+
+			function displayQ5() {
+				document.getElementById("circle_Q5").style.opacity = "1";			
+				document.getElementById("counter_Q5").style.opacity = "1";
+				document.getElementById("counter_Q4").style.opacity = "0";
+			    document.getElementById("MiniQuiz_3").style.display = "none";
+			    document.getElementById("MiniQuiz_4").style.display = "block";
+			};
+
+			function displayOutput() {
+			    document.getElementById("MiniQuiz_4").style.display = "none";
+			    document.getElementById("output").style.display = "block";
+				document.getElementById("circle").style.opacity = "0";		    
+			    document.getElementById("circle_Q2").style.opacity = "0";	
+			    document.getElementById("circle_Q3").style.opacity = "0";	
+			    document.getElementById("circle_Q4").style.opacity = "0";	
+			    document.getElementById("circle_Q5").style.opacity = "0";	
+				document.getElementById("counter_Q5").style.opacity = "0";
+			};
+
+			function displaySoySauceBeef() {
+				document.getElementById("output").style.display = "none";
+				document.getElementById("SoySauceBeef").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+
+			}
+
+			function displayVeggies(){
+				document.getElementById("output").style.display = "none";
+				document.getElementById("veggies").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+			}
+
+			function displayRice(){
+				document.getElementById("output").style.display = "none";
+				document.getElementById("rice").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+			}
+
+			function goBackToOutput(){
+				document.getElementById("output").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "none";
+				document.getElementById("rice").style.display = "none";
+				document.getElementById("veggies").style.display = "none";
+				document.getElementById("SoySauceBeef").style.display = "none";
+			}
+
+			
+
+		//español	
+
+			function displayEsp(){
+				document.getElementById("nav").style.display = "none";
+				document.getElementById("openerESP").style.display = "block";	
+			    document.getElementById("PreguntasPreliminar").style.display = "none";
+			    document.body.style.background = "linear-gradient(125deg, #99CCFF, #89d2f6)";
+			    document.body.style.animation = "fading 5s";	
+
+			}
+
+			function displayPreguntas() {
+				document.getElementById("counterEsp").style.opacity = "1";	
+				document.getElementById("circleEsp").style.opacity = "1";	
+			    document.getElementById("PreguntasPreliminar").style.display = "block";
+			    document.getElementById("openerESP").style.display = "none";
+			};
+
+			function displayP2() {
+				document.getElementById("circle_Q2Esp").style.opacity = "1";	
+				document.getElementById("counter_Q2Esp").style.opacity = "1";
+				document.getElementById("counterEsp").style.opacity = "0";			
+			    document.getElementById("MiniQuiz_1Esp").style.display = "block";
+			    document.getElementById("PreguntasPreliminar").style.display = "none";
+
+			};
+
+			function displayP3() {
+				document.getElementById("circle_Q3Esp").style.opacity = "1";	
+				document.getElementById("counter_Q3Esp").style.opacity = "1";
+				document.getElementById("counter_Q2Esp").style.opacity = "0";		
+			    document.getElementById("MiniQuiz_1Esp").style.display = "none";
+			    document.getElementById("MiniQuiz_2Esp").style.display = "block";
+
+			};
+
+			function displayP4() {
+				document.getElementById("circle_Q4Esp").style.opacity = "1";	
+				document.getElementById("counter_Q4Esp").style.opacity = "1";
+				document.getElementById("counter_Q3Esp").style.opacity = "0";	
+			    document.getElementById("MiniQuiz_2Esp").style.display = "none";
+			    document.getElementById("MiniQuiz_3Esp").style.display = "block";
+
+			};
+
+			function displayP5() {
+				document.getElementById("circle_Q5Esp").style.opacity = "1";			
+				document.getElementById("counter_Q5Esp").style.opacity = "1";
+				document.getElementById("counter_Q4Esp").style.opacity = "0";
+			    document.getElementById("MiniQuiz_3Esp").style.display = "none";
+			    document.getElementById("MiniQuiz_4Esp").style.display = "block";
+
+			};
+
+			function displayOutputEsp() {
+			    document.getElementById("MiniQuiz_4Esp").style.display = "none";
+			    document.getElementById("outputEsp").style.display = "block";
+				document.getElementById("circleEsp").style.opacity = "0";		    
+			    document.getElementById("circle_Q2Esp").style.opacity = "0";	
+			    document.getElementById("circle_Q3Esp").style.opacity = "0";	
+			    document.getElementById("circle_Q4Esp").style.opacity = "0";	
+			    document.getElementById("circle_Q5Esp").style.opacity = "0";	
+				document.getElementById("counter_Q5Esp").style.opacity = "0";
+			};
+
+			function displayLomoSalteado() {
+				document.getElementById("outputEsp").style.display = "none";
+				document.getElementById("lomoSalteado").style.display = "block";
+				document.getElementById("RecetaNav").style.display = "block";
+
+			}
+
+			function displayVegetales(){
+				document.getElementById("outputEsp").style.display = "none";
+				document.getElementById("vegetales").style.display = "block";
+				document.getElementById("RecetaNav").style.display = "block";
+			}
+
+			function displayArroz(){
+				document.getElementById("outputEsp").style.display = "none";
+				document.getElementById("arroz").style.display = "block";
+				document.getElementById("RecetaNav").style.display = "block";
+			}
+
+			function goBackToOutputEsp(){
+				document.getElementById("outputEsp").style.display = "block";
+				document.getElementById("RecetaNav").style.display = "none";
+				document.getElementById("arroz").style.display = "none";
+				document.getElementById("vegetales").style.display = "none";
+				document.getElementById("lomoSalteado").style.display = "none";
+			}
+
+			// function displayMobile() {
+		 //    document.getElementById("output").style.display = "none";
+		 //    document.getElementById("mobile").style.display = "block";
+			// };
+
+
+			// function displayPrint() {
+		 //    document.getElementById("output").style.display = "none";
+		 //    document.getElementById("printing").style.display = "block";
+			// };
+
+			// function displayEnd() {
+		 //    document.getElementById("mobile").style.display = "none";
+		 //    document.getElementById("printing").style.display = "none";
+		 //    document.getElementById("End").style.display = "block";
+			// };
+			
+			// $("#nav").click(function(){
+			// 	$("#library").css({"display" : "visible"})
+			// })     
+		
+			
+	</script>	
+</body>
+</html>

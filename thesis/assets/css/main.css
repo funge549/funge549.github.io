@@ -1,0 +1,969 @@
+/*html, body {width: 100%; height: 100%;}*/
+
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select{
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {font-family: "Body"; src: url("../fonts/WorkSans-Medium.ttf");}
+@font-face {font-family: "Calendar"; src: url("../fonts/WorkSans-Regular.ttf");}
+@font-face {font-family: "Bold"; src: url("../fonts/WorkSans-SemiBold.ttf");}
+
+
+body {
+	/*overflow-y: hidden;*/
+	overflow-x: hidden;
+/*	height: 100;
+	width: 100;*/
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+  	background: linear-gradient(125deg, #99ccff, #89d2f6, #9999cc, #9999ff);
+    animation: bgMove 16s ease infinite;
+    background-size: 600% 600%;
+
+}
+
+@keyframes bgMove {
+    0%{background-position:22% 0%}
+    50%{background-position:79% 100%}
+    100%{background-position:22% 0%}
+}
+
+
+@keyframes fading{
+	100%{
+		opacity: 1
+
+	}
+	0%{
+		opacity: 0.8
+
+	}
+}
+
+#calendar{
+	position: fixed;
+	right: 2vw;
+	top: 4vh;
+	text-align: center;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	z-index: 1;
+	opacity: 0.7;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+/*.day{
+	position: fixed;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+.month{
+	position: absolute;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+.year{
+	position: absolute;
+	font-size: 1.5em;
+	line-height: 0.7em;
+}*/
+
+#header{
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+	width: 50vw;
+
+}
+
+#header img{
+	width: 10vw;
+}
+
+#info {
+	position: fixed;
+	position: absolute;
+	top:1vh;
+	right: 2vw;
+	font-size: 2em;
+}
+
+
+.title{
+	width: 25vw;
+}
+
+#soon {
+	width: 30vw;
+	height: 20vh;
+	border-radius: .5em;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	background-color: rgba(255,255,255,0.95);
+	text-align: center;
+	box-shadow: 10px 10px 5px #9999CC;
+	display: none;
+}
+
+#soon h2{
+	position: relative;
+	top: 3vh;
+/*	left: 50%;
+	transform: translate(-50%,-50%);*/
+}
+
+#soon p {
+	font-size: 0.7em;
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+}
+
+#soon h2:hover {
+	cursor: default;
+}
+
+#soon p:hover {
+	cursor: pointer;
+}
+
+#nav{
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	transform: translate(-45%,-45%);
+	
+}
+
+#nav button {
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	font-size: 2em;
+	padding: 0.8em;
+	margin: 1em;
+}
+
+button {
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 0.5em;
+	margin: 0.5em;
+	padding: 0.5em;
+	background-color: rgba(255,255,255,0.1);
+    );
+	
+}
+
+button:hover {
+	background-color: rgba(255,255,255,0.6)
+}
+
+button:focus{
+	outline: rgba(0, 85, 119,1);
+	border-color: rgba(0, 85, 119,1);
+}
+
+#opener {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	margin: 0 auto;
+	display: none;
+}
+
+#opener h2{
+	font-size: 3em;
+	letter-spacing: 1pt;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+#opener p {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	width: 55vw;
+}
+
+#opener span{
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	letter-spacing: .5em;
+	animation: fadeOut 3s;
+	animation-iteration-count: infinite;
+}
+
+#openerESP {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	margin: 0 auto;
+	display: none;
+}
+
+#openerESP h2{
+	font-size: 3em;
+	letter-spacing: 1pt;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+#openerESP p {
+	width: 42vw;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	width: 55vw;
+}
+
+#openerESP span{
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	letter-spacing: .5em;
+	animation: fadeOut 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fadeOut{
+  100% {
+    opacity:1;
+  }
+  55%{
+  	opacity: 0.2;
+  }
+  0%{
+  	opacity: 1
+  }
+}
+
+/*#PreliminaryQuestion{
+	position: absolute;
+	font-family: "Body", sans-serif;
+	text-align: center;
+	font-size: 3em;
+	line-height: 1.1em;
+	display: none;
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 75vw;
+}*/
+
+#circle {
+	position: fixed;
+	left: 3vw;
+	top: 6vh;
+	height: 135px;
+	width: 135px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#circleEsp {
+	position: fixed;
+	left: 3vw;
+	top: 6vh;
+	height: 135px;
+	width: 135px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counterEsp {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+@keyframes rotation{
+  100% {
+    transform: rotate(360deg)
+  }
+
+}
+
+#counter pre {
+	font-size: 2em;
+}
+
+#counterEsp pre {
+	font-size: 2em;
+}
+
+#circle_Q2 {
+	position: fixed;
+	left: 3.5vw;
+	top: 6.5vh;
+	height: 115px;
+	width: 115px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q2 {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q2 pre {
+	font-size: 2em;
+}
+
+#circle_Q3 {
+	position: fixed;
+	left: 4vw;
+	top: 7vh;
+	height: 95px;
+	width: 95px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q3 {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q3 pre {
+	font-size: 2em;
+}
+
+#circle_Q4 {
+	position: fixed;
+	left: 4.5vw;
+	top: 7.5vh;
+	height: 75px;
+	width: 75px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q4 {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q4 pre {
+	font-size: 2em;
+}
+
+#circle_Q5 {
+	position: fixed;
+	left: 5vw;
+	top: 8vh;
+	height: 55px;
+	width: 55px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q5 {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q5 pre {
+	font-size: 2em;
+}
+
+#circle_Q2Esp {
+	position: fixed;
+	left: 3.5vw;
+	top: 6.5vh;
+	height: 115px;
+	width: 115px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q2Esp {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q2Esp pre {
+	font-size: 2em;
+}
+
+#circle_Q3Esp {
+	position: fixed;
+	left: 4vw;
+	top: 7vh;
+	height: 95px;
+	width: 95px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q3Esp {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q3Esp pre {
+	font-size: 2em;
+}
+
+#circle_Q4Esp {
+	position: fixed;
+	left: 4.5vw;
+	top: 7.5vh;
+	height: 75px;
+	width: 75px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q4Esp {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q4Esp pre {
+	font-size: 2em;
+}
+
+#circle_Q5Esp {
+	position: fixed;
+	left: 5vw;
+	top: 8vh;
+	height: 55px;
+	width: 55px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0
+}
+
+#counter_Q5Esp {
+	position: fixed;
+	left: 7vw;
+	top: 4vh;
+	transform: rotate(75deg);
+	opacity: 0;
+	animation: rotation linear infinite 35s;
+}
+
+#counter_Q5Esp pre {
+	font-size: 2em;
+}
+
+.quiz{
+	position: absolute;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	text-align: center;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-45%);
+	display: none;
+}
+
+.quiz h4{
+	padding-bottom: 2vh;
+}
+
+.quiz button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.quiz button:hover{
+	background-color: rgba(153,204,255,0.3);
+}
+
+.quizEsp{
+	position: absolute;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	text-align: center;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-45%);
+	display: none;
+}
+
+.quizEsp h4{
+	padding-bottom: 2vh;
+}
+
+.quizEsp button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.quizEsp button:hover{
+	background-color: rgba(50, 114, 217,0.3);
+}
+
+#MiniQuiz_2 button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_2 button:hover{
+	background-color: rgba(153,204,255,0.3);
+}
+
+#MiniQuiz_3 button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_3 button:hover{
+	background-color: rgba(153,204,255,0.3);
+}
+
+#MiniQuiz_4 button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_4 button:hover{
+	background-color: rgba(153,204,255,0.3);
+}
+
+/*s*/
+
+#MiniQuiz_2Esp button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_2Esp button:hover{
+	background-color: rgba(50, 114, 217,0.3);
+}
+
+#MiniQuiz_3Esp button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_3Esp button:hover{
+	background-color: rgba(50, 114, 217,0.3);
+}
+
+#MiniQuiz_4Esp button{
+	margin-bottom: 3vh;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#MiniQuiz_4Esp button:hover{
+	background-color: rgba(50, 114, 217,0.3);
+}
+
+
+#output{
+/*	position: absolute;
+	height: 100vh;
+	width: 100vw ;
+	overflow-y: visible;*/
+	display: none;
+}
+
+#output h2{
+	position: fixed;
+	left: 2vw;
+	top: 4vh;
+	z-index: 2;
+
+}
+
+#output img{
+	width: 20vw;
+}
+
+.box1{
+	position: absolute;
+	top: 10vh;
+	left: 7vw
+}
+
+.box2{
+	position: absolute;
+	left: 35vw;
+	top: 20vh;
+}
+
+.box3{
+	position: absolute;
+	left: 65vw;
+	top: 17vh;
+}
+
+.box4{
+	position: absolute;
+	left: 15vw;
+    top: 60vh;
+}
+
+.box5{
+	position: absolute;
+	left: 65vw;
+	top: 80vh;
+}
+
+.box6{
+	position: absolute;
+	left: 5vw;
+	top: 110vh;
+}
+
+#output p{
+	position: relative;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1em;
+    letter-spacing: 0.2em;
+    top: -35vh;
+    left: 17vw;
+    width: 15vw;
+    color: white;
+
+}
+
+#output p:hover{
+	color: black;
+	cursor:pointer;
+}
+
+
+#outputEsp{
+/*	height: 100vh;
+	width: 100vw ;*/
+	display: none;
+}
+
+#outputEsp h2{
+	position: fixed;
+	left: 2vw;
+	top: 4vh;
+	z-index: 2;
+
+}
+
+#outputEsp img{
+	width: 20vw;
+}
+
+.box1Esp{
+	position: absolute;
+	top: 10vh;
+	left: 7vw
+}
+
+.box2Esp{
+	position: absolute;
+	left: 35vw;
+	top: 20vh;
+}
+
+.box3Esp{
+	position: absolute;
+	left: 65vw;
+	top: 17vh;
+}
+
+.box4Esp{
+	position: absolute;
+	left: 15vw;
+    top: 60vh;
+}
+
+.box5Esp{
+	position: absolute;
+	left: 65vw;
+	top: 80vh;
+}
+
+.box6Esp{
+	position: absolute;
+	left: 5vw;
+	top: 110vh;
+}
+
+.box7Esp{
+	position: absolute;
+	left: 50vw;
+	top: 140vh;
+}
+
+.box8Esp{
+	position: absolute;
+	left: 7vw;
+	top: 170vh;
+}
+
+.box9Esp{
+	position: absolute;
+	left: 55vw;
+	top: 190vh;
+}
+
+#outputEsp p{
+	position: relative;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1em;
+    letter-spacing: 0.2em;
+    top: -35vh;
+    left: 17vw;
+    width: 15vw;
+    color: white;
+
+}
+
+#outputEsp p:hover{
+	color: black;
+	cursor:pointer;
+}
+
+#RecipeNav{
+	position: absolute;
+	top: 4vh;
+	left: 2vw;
+	display: none;
+
+}	
+
+#RecipeNav :hover{
+	cursor: pointer;
+}
+
+#RecipeNav h3{
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: .4em
+}
+
+#RecipeNav h3:hover{
+	color: white
+}
+
+#RecetaNav{
+	position: absolute;
+	top: 4vh;
+	left: 2vw;
+	display: none;
+
+}
+
+#RecetaNav :hover{
+	cursor: pointer;
+}	
+
+#RecetaNav h3{
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: .4em
+}
+
+#RecetaNav h3:hover{
+	color: white
+}
+
+#SoySauceBeef{
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+}
+
+#veggies {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#rice {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#lomoSalteado{
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+}
+
+#vegetales {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#arroz {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+
+.recipe h2 {
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5em
+}
+
+.recipe p {
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1.3em;
+	width: 50vw
+}
+
+.recipe img{
+	width: 35vw;
+	position: absolute;
+	top: 20vh;
+	left: 55vw;
+}
+
+.recipe pre {
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+
+}
+
+.recipe a{
+	color: white;
+	opacity: 0.8
+}
+
+#footer{
+	position: fixed;
+	bottom: 1vh;
+	left: 1vw;
+	width: 50vw;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+#footer img{
+	width: 8vw;
+}
