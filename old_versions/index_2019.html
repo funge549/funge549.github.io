@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung</title>
+	<meta charset="utf-8">	
+	<link href='./assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="side-bar">
+		<ul>
+			<li><a href="esfz/branding.html">Branding</a></li>	
+			<li><a href="esfz/web.html">Websites</a></li>
+			<li><a href="esfz/type.html">Typography</a></li>
+		</ul>
+	</div>
+	
+	<div id="header">
+		<a href="esfz/about.html"><img src="./assets/img/logo2.png"></a>
+		<!-- <h3><a href="esfz/about.html">Evelin Susan Fung Zhong</a></h3> -->
+	</div>
+	<br>	
+	<div>
+		<img id="key">
+	</div>
+	<div>
+		<p class="home marquee">
+			<a href="http://www.evelinfung.com/f18js/final/index.html" target="blank_">weather app</a> /
+			<a href="http://www.evelinfung.com/esfz/branding.html#CostaDulce" target="blank_">Costa Dulce Chocolates</a> /
+			<a href="http://www.evelinfung.com/esfz/type.html#Honda" target="blank_">Honda Costa Rica</a> /
+			<a href="./obsessions/index.html" target="blank_">overheard</a> /
+			<a href="http://www.evelinfung.com/esfz/type.html#FancyFree" target="blank_">Fancy Free Book</a> /
+			<a href="http://www.evelinfung.com/esfz/type.html#Mogul" target="blank_">Mogul Typeface</a> /
+			<a href="http://www.evelinfung.com/f18js/instrument/index.html" target="blank_">vent your emotions</a> /
+			<a href="./personal-journey/index.html" target="blank_">personal journey</a> /
+			<!-- <a href="" target="blank_">project number 1</a> / -->
+			<a href="./click-click/index.html" target="blank_">click click</a> /
+			<a href="http://www.evelinfung.com/esfz/branding.html#21" target="blank_">21º perfume packaging</a> /
+			<a href="http://www.evelinfung.com/f18js/pattern/index_move.html" target="blank_">dynamic pattern </a> /
+			<a href="./masterpiece/index.html" target="blank_">1997_</a> /
+			<!-- <a href="">project number 1</a> / -->
+			<a href="./dream/index.html" target="blank_">dream</a> /
+		</p>
+	</div>	
+	<div id="footer">	
+		<pre> &#169; 2016 – 2019 evelin fung</pre> 
+	</div>	
+
+	<script>
+
+		$(document).ready(function(){
+
+
+			var img = './assets/img/aware5.png',	
+				// img1 = './assets/img/look.jpg',
+				img2 = './assets/img/mw2.png',
+				img3 = './assets/img/trust2.jpg',	
+				img4 = './assets/img/wikibook6.png',
+				img5 = './assets/img/mw6.png',
+				img6 = './assets/img/network1.png',	
+				img7 = './assets/img/21h.jpg',
+				img8 = './assets/img/cones.jpg',
+				img9 = './assets/img/fitted8.jpg',
+				img10 = './assets/img/mogul3.jpg',
+				img11 = './assets/img/times3.jpg';
+				// img13 = './assets/img/times3.jpg';
+			
+
+			const images = [ img, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11];
+			
+			function randomImage(){
+				return images[Math.floor(Math.random()* images.length)];
+			}
+
+			console.log(randomImage())
+
+
+
+			// document.getElementById("key").innerHTML = ('<img src="' + randomImage())
+
+			document.getElementById('key').src = randomImage();
+
+
+			//can't let people right click on images
+
+			 $("#key").on("contextmenu",function(e){
+		       return false;
+		    }); 
+			
+		})
+
+
+
+	</script>	
+</body>
+</html>
