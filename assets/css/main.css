@@ -24,12 +24,44 @@ body {
 	cursor: url(../img/cursor-smaller.png), auto;
 }
 
+/*new*/
+#list-projects a{
+	color: white;
+	text-decoration: none;
+}
+
+#list-projects h1{
+	font-family: "AG-BO";
+	text-decoration: underline;
+}
+
+#list-projects h2{
+	font-family: "AG-C";
+	font-weight: 250;
+}
+
+
+
+@keyframes movingLogo {
+    0%   { right:5vw; }
+    100% { right: 75vw }
+}
+
+
 #header{
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 23vw;
+	height: 100%;
 	color: white; 
 	font-family: "AG-BO"; 
 	font-size: 3em;
-	top: 1em;
+/*	top: 1em;*/
 	cursor: url(../img/cursor-smaller.png), auto;
+	padding:0;
+	margin:0;
 }
 
 #header:hover{

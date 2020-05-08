@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung</title>
+	<meta charset="utf-8">	
+	<link href='./assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+
+	<div id="title">
+		<h2>製造哥斯達黎加【made in costa rica】</h2>
+	</div>
+	<div id="themes">
+		<h4>Book / Interaction / Typography / Tradition / Culture / Food</h4>
+	</div>	 
+	<div id="wrapper">
+		<h2>This project is the BFA Communication Design senior thesis project presented in May 2020. It is composed of a series of printed recipe books alongside an interactive website. Each component showcases black and white line illustrations and playful text set in a grotesk sans serif. This collection of recipes and tips illustrate clearly each step of the cooking process while highlighting staple foods from Costa Rican and Chinese cuisines. This project breaks from the classic cooking book norms while allowing me to explore and share my cultures and traditions through a new lens. </h2>
+		<img class="fullBleed" src="./assets/img/thesis1.jpg">
+		<h2>This collection shows the nuances and tricks of cooking while showcasing family recipes that haven’t been documented before.The physical book holds all the recipes together through either purple or blue embroidery strands, each representing one of the cultures, that allow the books to be easily removed and used when cooking.</h2>
+		<img class="fullBleed" src="./assets/img/thesis8.gif">
+		<img class="min" src="./assets/img/thesis9.png">
+		<img class="min" src="./assets/img/thesis10.png">
+		<img class="min" src="./assets/img/thesis8.png">
+		<img class="min" src="./assets/img/thesis11.png">
+		<h2>Through an interactive online quiz users will be able to learn about these cultures and how they have been woven together as one.  Moreover, this site gives access to the online version of the book. </h2>
+		<img class="fullBleed" src="./assets/img/thesis7.gif">
+		<img class="min" src="./assets/img/thesis4.png">
+		<img class="min" src="./assets/img/thesis5.png">
+	</div>	
+
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			var today = new Date(),
+				n = today.getHours(),
+
+				wrapper = document.getElementById("wrapper").querySelectorAll("a"),
+				header = document.getElementById("header").querySelectorAll("a"),
+				i,
+				blue = getRandomInt(64,84),
+				blue2 = getRandomInt(124,164),
+				blue3 = getRandomInt(184,224),
+				blue4 = getRandomInt(164,224),
+				blue5 = getRandomInt(200,254),
+				blue6 = getRandomInt(50,110),
+
+				color = "rgb(" + "0" + ",0," + blue +")" ,
+				color2 = "rgb(" + "0," + "67," + blue2 +")" ,
+				color3 = "rgb(" + "0," + "0," + blue3 +")" ,
+				color4 = "rgb(" + "0"+ ",0," + blue4 +")" ,
+				color5 = "rgb(" + "76"+ ",84," + blue5 +")" ,
+				color6 = "rgb(" + "0" + ",0," + blue6 +")" ;
+
+
+			document.body.style.backgroundColor = "#ededed";	
+
+
+			if (n <=3){
+				document.body.style.color = color;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color;
+				};			
+				console.log("all nighter?")  ;
+			}else if(n <=7){
+				document.body.style.color = color2;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color2;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color2;
+				};
+				console.log("good morning")  ;
+			}else if(n <=11){
+				document.body.style.color = color3;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color3;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color3;
+				};
+				console.log("time for lunch?") ;
+			}else if(n <=15){
+				document.body.style.color = color4;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color4;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color4;
+				};
+				console.log("coffee break!");
+			}else if(n <=19){
+				document.body.style.color = color5;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color5;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color5;
+				};
+				console.log("time to clock out!");
+			}else if (n <=23){
+				document.body.style.color = color6;
+				for (i = 0; i < wrapper.length; i++) {
+ 					wrapper[i].style.color = color6;
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color6;
+				};
+				console.log("are you also a night ow;l?")
+			}
+
+
+
+
+			//can't let people right click on images
+
+			 $("#key").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

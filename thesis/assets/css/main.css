@@ -18,7 +18,7 @@ body {
 	font-family: roc-grotesk-wide, sans-serif;
 	font-weight: 600;
 	font-style: normal;
-  	background: linear-gradient(125deg, #99ccff, #89d2f6, #9999cc, #9999ff);
+  	background: linear-gradient(125deg, #9EC9ED, #A29DCD);
     animation: bgMove 16s ease infinite;
     background-size: 600% 600%;
 
@@ -46,6 +46,20 @@ body {
 	position: fixed;
 	right: 2vw;
 	top: 4vh;
+	text-align: center;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	z-index: 1;
+	opacity: 0.7;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+#clock {
+	position: fixed;
+	right: 2vw;
+	top: 7vh;
 	text-align: center;
 	font-family: roc-grotesk-wide, sans-serif;
 	font-weight: 400;
@@ -177,19 +191,20 @@ button:focus{
 #opener {
 	position: absolute;
 	text-align: center;
-	top: 50%;
-	left: 50%;
+	top: 45%;
+	left:50%;
 	transform: translate(-50%,-50%);
 	overflow: hidden;
 	margin: 0 auto;
 	display: none;
+	color: white
 }
 
 #opener h2{
 	font-size: 3em;
 	letter-spacing: 1pt;
 	font-family: roc-grotesk-wide, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	font-style: normal;
 }
 
@@ -208,21 +223,29 @@ button:focus{
 	font-style: normal;
 	font-size: 1.5em;
 	line-height: 1.2em;
-	letter-spacing: .5em;
+	letter-spacing: .3em;
+	text-decoration: underline;
+	padding: 0.5em;
 	animation: fadeOut 3s;
 	animation-iteration-count: infinite;
+}
+
+#opener img {
+	max-width: 20vw;
+
 }
 
 #openerESP {
 	position: absolute;
 	text-align: center;
-	top: 50%;
-	left: 50%;
+	top: 45%;
+	left:50%;
 	transform: translate(-50%,-50%);
 	overflow: hidden;
 	margin: 0 auto;
 	display: none;
-}
+	color: white;
+}	
 
 #openerESP h2{
 	font-size: 3em;
@@ -253,15 +276,37 @@ button:focus{
 	animation-iteration-count: infinite;
 }
 
+#openerESP img {
+	max-width: 20vw;
+
+}
+
+#openerESP h2{
+	font-size: 3em;
+    letter-spacing: 1pt;
+    font-family: roc-grotesk-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 @keyframes fadeOut{
   100% {
     opacity:1;
   }
-  55%{
+  60%{
   	opacity: 0.2;
   }
+  40%{
+  	opacity:1;
+  	color: white
+  }
+  20%{
+  	opacity: 0.2
+  }
   0%{
-  	opacity: 1
+  	opacity: 1;
+  	color: black
   }
 }
 
@@ -540,6 +585,7 @@ button:focus{
 	font-family: roc-grotesk-wide, sans-serif;
 	font-weight: 400;
 	font-style: normal;
+	width: 65vw;
 	font-size: 2.5em;
 	line-height: 1em;
 	text-align: center;
@@ -646,7 +692,7 @@ button:focus{
 }
 
 
-#output{
+#outputONE{
 /*	position: absolute;
 	height: 100vh;
 	width: 100vw ;
@@ -654,55 +700,32 @@ button:focus{
 	display: none;
 }
 
-#output h2{
+#outputONE h2{
 	position: fixed;
 	left: 2vw;
 	top: 4vh;
 	z-index: 2;
-
+	
 }
 
-#output img{
-	width: 20vw;
+#outputONE h4{
+	position: fixed;
+	left: 2vw;
+	top: 8vh;
+	z-index: 2;
+	font-weight: 400;
 }
 
-.box1{
-	position: absolute;
-	top: 10vh;
-	left: 7vw
+#outputONE h4 a{
+	text-decoration:underline; 
 }
 
-.box2{
-	position: absolute;
-	left: 35vw;
-	top: 20vh;
+#outputONE h4 a:hover{
+	cursor: pointer;
+	color: white
 }
 
-.box3{
-	position: absolute;
-	left: 65vw;
-	top: 17vh;
-}
-
-.box4{
-	position: absolute;
-	left: 15vw;
-    top: 60vh;
-}
-
-.box5{
-	position: absolute;
-	left: 65vw;
-	top: 80vh;
-}
-
-.box6{
-	position: absolute;
-	left: 5vw;
-	top: 110vh;
-}
-
-#output p{
+#outputONE p{
 	position: relative;
 	font-family: roc-grotesk-wide, sans-serif;
 	font-weight: 400;
@@ -717,9 +740,133 @@ button:focus{
 
 }
 
-#output p:hover{
+#outputONE p:hover{
 	color: black;
 	cursor:pointer;
+}
+
+#outputONE img{
+	width: 20vw;
+}
+
+#outputTWO{
+/*	position: absolute;
+	height: 100vh;
+	width: 100vw ;
+	overflow-y: visible;*/
+	display: none;
+}
+
+#outputTWO h2{
+	position: fixed;
+	left: 2vw;
+	top: 4vh;
+	z-index: 2;
+	
+}
+
+#outputTWO h4{
+	position: fixed;
+	left: 2vw;
+	top: 8vh;
+	z-index: 2;
+	font-weight: 400;
+}
+
+#outputTWO h4 a{
+	text-decoration:underline; 
+}
+
+#outputTWO h4 a:hover{
+	cursor: pointer;
+	color: white
+}
+
+#outputTWO p{
+	position: relative;
+	font-family: roc-grotesk-wide, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	line-height: 1em;
+    letter-spacing: 0.2em;
+    top: -35vh;
+    left: 17vw;
+    width: 15vw;
+    color: white;
+
+}
+
+#outputTWO p:hover{
+	color: black;
+	cursor:pointer;
+}
+
+#outputTWO img{
+	width: 20vw;
+}
+
+
+.box1{
+	position: absolute;
+	top: 16vh;
+	left: 7vw
+}
+
+.box2{
+	position: absolute;
+	left: 65vw;
+	top: 12vh;
+}
+
+.box2-1{
+	position: absolute;
+	left: 45vw;
+	top: 16vh;
+}
+
+.box3{
+	position: absolute;
+	left: 30vw;
+    top: 45vh;
+}
+
+.box4{
+	position: absolute;
+	left: 55vw;
+	top: 80vh;
+}
+
+.box5{
+	position: absolute;
+	left: 1vw;
+	top: 97vh;
+}
+
+.box6{
+	position: absolute;
+	left: 45vw;
+	top: 135vh;
+}
+
+.box6-1{
+	position: absolute;
+	left: 30vw;
+	top: 135vh;
+}
+
+.filler1 {
+	position: absolute;
+	left: 5vw;
+	top: 95vh;
+	transform: rotate(90deg);
+}
+
+.filler2 {
+	position: absolute;
+	left: 75vw;
+	top: 45vh;
+	transform: rotate(30deg);
 }
 
 
@@ -755,20 +902,20 @@ button:focus{
 
 .box3Esp{
 	position: absolute;
-	left: 65vw;
+	left: 60vw;
 	top: 17vh;
 }
 
 .box4Esp{
 	position: absolute;
-	left: 15vw;
+	left: 25vw;
     top: 60vh;
 }
 
 .box5Esp{
 	position: absolute;
 	left: 65vw;
-	top: 80vh;
+	top: 120vh;
 }
 
 .box6Esp{
@@ -813,6 +960,23 @@ button:focus{
 #outputEsp p:hover{
 	color: black;
 	cursor:pointer;
+}
+
+#outputEsp h4{
+	position: fixed;
+	left: 2vw;
+	top: 8vh;
+	z-index: 2;
+	font-weight: 400;
+}
+
+#outputEsp h4 a{
+	text-decoration:underline; 
+}
+
+#outputEsp h4 a:hover{
+	cursor: pointer;
+	color: white
 }
 
 #RecipeNav{
@@ -880,6 +1044,42 @@ button:focus{
 }
 
 #rice {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#cake {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#hkCoffee {
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#peachTea{
+	position: absolute;
+	top: 15vh;
+	left: 5vw;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#crocante{
 	position: absolute;
 	top: 15vh;
 	left: 5vw;

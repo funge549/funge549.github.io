@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title> // </title>
+	<title>Made in Costa Rica</title>
 	<meta charset="utf-8">	
 	<link href='assets/css/main.css' media='all' rel='stylesheet' type='text/css' />
-	<link rel="icon" href="assets/img/favicon2.png" type="image/x-icon" />
+	<link rel="icon" href="assets/img/icon.png" type="image/x-icon" />
 	<link rel="stylesheet" href="https://use.typekit.net/mia1umr.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
@@ -12,13 +12,15 @@
 	<script type="text/javascript" src="assets/js/jquery.fittext.js"></script>
 </head>
 <body>
-<!-- 		<div id="header">
+		<!-- <div id="header">
 			<h2>506+86</h2>
 		</div> -->
 		<div id="calendar">
-			<!-- <div class="day"></div><div class="month"></div><div class="year"></div> -->
-		</div>	
 
+		</div>
+		<div id="clock">
+
+		</div>	
 
 		<div id="nav">
 			<button onclick="displayEsp()">ESPAÑOL</button>
@@ -29,7 +31,7 @@
 		<div id="soon">
 			<div>
 				<p onclick="exitAlert()">[X]</p>
-				<h2>對不貲<br>we're working on this page please come back later<br></h2>
+				<h2>不好意思 工作仍在进行中, 跟大家道歉！<br>we're working on this page please come back later<br></h2>
 
 			</div>
 		</div>
@@ -57,13 +59,12 @@
 			<pre>– – last question</pre>
 		</div>
 
-		<div id="opener"onclick="displayQuestions()">
-			<h2 class="eng">WELCOME TO [506 + 86]</h2>
-			<br>
-			<p class="eng">A visual explanation of what  it is to be Latina (Costa Rican)  & Chinese (Cantonese) through meals and memories</p>
-			<br><br>
-			<span>let's start</span>
+		<div id="opener">
+			<h2 class="eng">WELCOME TO <br></h2><img src="assets/img/thesisLogos-04.png"><p class="eng">an online library of anecdotes and recipes that try to embody what it  means to be Latina 【Costa Rican】  & Chinese【Cantonese】</p>
+			<br><br><br>
+			<span onclick="displayQuestions()">let's start</span>
 		</div>
+
 		<div id="PreliminaryQuestion" class="quiz">
 			<h4>First things first,<br> are you familiar with either culture?</h4>
 				<button onclick="displayQ2()">Yes [to both]</button>
@@ -81,10 +82,9 @@
 		</div>
 		<div id="MiniQuiz_2" class="quiz">		
 			<h4>Do you like cooking?</h4>
-				<button onclick="displayQ4()">Yes</button>
+				<button onclick="displayQ4()">Yes, I love to</button>
 				<button onclick="displayQ4()">Not Really</button><br>
 				<button onclick="displayQ4()">No, but I like to eat</button>
-				<button onclick="displayQ4()">Love to cook</button>
 				<br>
 		</div>
 		<div id="MiniQuiz_3" class="quiz">		
@@ -96,18 +96,19 @@
 		</div>			
 		<div id="MiniQuiz_4" class="quiz">			
 			<h4>Which age group do you belong in?</h4>
-				<button onclick="displayOutput()">18 – 24</button>
-				<button onclick="displayOutput()">25 – 31</button>
+				<button onclick="displayOutputTWO()">18 – 24</button>
+				<button onclick="displayOutputONE()">25 – 31</button>
 				<button onclick="displayOutput()">32 – 38</button>
 				<button onclick="displayOutput()">39 – 45</button>
 				<button onclick="displayOutput()">45+</button>
 				<br>		
 		</div>
-		<div id="output">
-			<h2>our food is ready for you to learn about it!</h2>
+		<div id="outputONE">
+			<h2>everything has been prepared for you to learn about it!</h2>
+			<h4><a onclick="displayQuestions()">yes:Costa Rica</a> > <a onclick="displayQ2()">savoury food</a> > <a onclick="displayQ3()">love cooking</a> > <a onclick="displayQ4()">love snacks</a> > <a onclick="displayQ5()">25–31</a></h4>
 			<div onclick="displaySoySauceBeef()" class="box1">
 				<img src="assets/img/meat.png">
-				<p>soy sauce beef</p>
+				<p>soy sauce stir fry beef</p>
 			</div>
 			<div onclick="displayVeggies()" class="box2">
 				<img src="assets/img/veggies.png">
@@ -115,46 +116,104 @@
 			</div>
 			<div onclick="displayRice()" class="box3">
 				<img src="assets/img/rice.png">
-				<p>a stable, a comfort</p>
+				<p>a staple: steamed rice</p>
 			</div>
-			<div onclick="displayVeggies()" class="box4">
+			<div onclick="displayPuffs()" class="box4">
 				<img src="assets/img/veggies.png">
-				<p>source of health, veggies</p>
+				<p>quick & filling fried rice</p>
 			</div>
 			<div onclick="displaySoySauceBeef()" class="box5">
-				<img src="assets/img/meat.png">
-				<p>soy sauce beef</p>
-			</div>
-			<div onclick="displaySoySauceBeef()" class="box6">
-				<img src="assets/img/meat.png">
-				<p>soy sauce beef</p>
+				<img style="width:25vw" src="assets/img/puffs.png">
+				<p>sweet potato crispy puffs</p>
 			</div>
 		</div>
+		<div id="outputTWO">
+			<h2>everything has been prepared for you to learn about it!</h2>
+			<h4><a onclick="displayQuestions()">no</a> > <a onclick="displayQ2()">sweet food</a> > <a onclick="displayQ3()">i don't cook</a> > <a onclick="displayQ4()">love snacks</a> > <a onclick="displayQ5()">18–24</a></h4>
+			<div onclick="displayHKCoffee()" class="box1">
+				<img src="assets/img/coffeeTea.png">
+				<p>HK style coffee</p>
+			</div>
+			<div onclick="displayCake()" class="box2-1">
+				<img src="assets/img/bundtCake.png">
+				<p>grandma's fluffy cake</p>
+			</div>
+			<div onclick="displayCrocante()" class="box6-1">
+				<img src="assets/img/crocante.png">
+				<p>sweet tooth, crocantes</p>
+			</div>
+			<div onclick="displayPeachTea()" class="box4">
+				<img style="width:30vw" src="assets/img/IcedTea.png">
+				<p>peach iced tea</p>
+			</div>
+			<div class="filler1">
+				<img src="assets/img/lemon.png">
+			</div>	
+			<div class="filler2">
+				<img src="assets/img/peach.png">
+			</div>	
 
-		<div id="RecipeNav" onclick="goBackToOutput()">
+		</div>
+
+
+
+		<div id="RecipeNav" onclick="goBackToOutputONE()">
 			<h3>back</h3>
 		</div>
 		<div id="SoySauceBeef" class="recipe">
 			<h2 class="recipeHeader">soy sauce beef</h2>
-			<p class="recipeBody">I first started to make this dish once I moved to New York for college, as it was an easy way to safely cook beef and I was able to mix it with sauces that I already had at home. although pork and chicken are eaten more often in Chinese households, in Costa Rica and the USA beef is a lot more common choice of protein. thus, this dish is all about the combination of beef and savoury chinese flavours.</p>
+			<p class="recipeBody"> This dish was created once I moved to New York City for college. The first ingredients I bought were soy sauce and sesame oil, as they are staples for Cantonese meals. By using combining these sauces and meat, we get this savoury and fragrant protein based meal.
+			<br>
+			Although pork and chicken are more often eaten in Chinese households, in Costa Rica and the USA beef is a lot more common choice of protein.</p>
 			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
 			<img src="assets/img/meat.png">
 		</div>	
-
 		<div id="veggies" class="recipe">
 			<h2>steamed napa cabbage</h2>
-			<p>This has always been in the table, whether it was my own home, 爺爺奶奶家 & 婆婆公公家 (grandparent's house) or going out to eat to our usual weekend Chinese restaurant. as a kid I wouldn't eat it, thinking the texture wasn't appetizing and that it was bland. but now if I don't eat veggies with my meals I feel that a part of it is missing. Napa cabbage is my favourite chinese vegetables as it has the perfect mix of soft leaves and crunch stem.</p>
+			<p>This dish is always present in the dining table, whether it is at my home, 爺爺奶奶家 & 婆婆公公家 (grandparent's house) or going out to eat to our usual weekend Chinese restaurant. 
+				<br>
+			As a kid I wouldn't eat it, the texture wasn't the greatest and that it wasn't appetizing. But now if I don't eat these veggies with my meals I feel that the meal isn't complete. Napa cabbage is my favourite chinese vegetables as it is the perfect mix of soft leaves and crunchy stem.</p>
 			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
 			<img src="assets/img/veggies.png">
 		</div>	
-
 		<div id="rice" class="recipe">
 			<h2>jasmine white rice</h2>
-			<p>When i was younger, I was a very picky eater and if there wasn't any dishes of my liking, I will only eat bowls of white rice [yes, just plain rice]. I'm that person that needs to have rice at least once a day, and if I don't, it's okay. But, I will certainly feel the need to have some. Jasmine rice is the perfect base to any cantonese meal. </p>
+			<p>When i was younger, I was a very picky eater and if there wasn't any dishes that suited my childish taste buds, I will only eat bowls of white rice [yes, just plain rice]. Thankfully, white rice was always an option in any restaurant or house in Costa Rica.	
+			I'm that person that needs to have rice at least once a day, and if I don't, it's okay. But my body will start to crave for it.
+			<br>
+			Steamed white jasmine rice is the perfect base to any Cantonese meal. It's the bridge betwen savoury, spicy, sour flavours from all meals. Nowadays, I'm also eating rice with mixed grains and beans it; a good way to have extra nutrition in it too! </p>
 			<pre>this is part of "A TRADITIONAL CANTONESE MEAL" <br><a href="">find the recipe here </a></pre>
 			<img src="assets/img/rice.png">
 		</div>	
-		
+		<div id="cake" class="recipe">
+			<h2 class="recipeHeader">grandma's fluffy cake</h2>
+			<p class="recipeBody">This fluffy treat is perfect for ‘hora de café’ or as a quick and light breakfast. It has been my mission since a teenager to get the correct recipe and measurements. But 奶奶 has always said that she just throws all the ingredients together and the cake is done like that. It wasn’t until my 哥哥【go go, eldest cousin】decided to bake the cake with her. He was able to note down all the measurements and little tricks she does.
+			</p>
+			<pre>this is part of the first cook book collection,<br><a href="">find the recipe here</a></pre>
+			<img src="assets/img/bundtCake.png">
+		</div>
+		</div>
+		<div id="hkCoffee" class="recipe">
+			<h2 class="recipeHeader">HK style coffee</h2>
+			<p class="recipeBody">Most people know about Hong Kong style milk tea, but there is a tastier local favourite,<br> 鴛鴦【yuenyeun】. This drink is 3 parts coffee and 7 parts milk tea. It's the perfect combination of bitter coffee and sweetened milk. The best way to drink this is to place the drink's glass in an ice bath, allowing the drink to be chilled but avoiding watering it down. Enjoy it during 'coffee time' as a energizer drink or as a weekend treat after a long week.</p>
+			<pre>this is part of the "DRINK MENU"<br><a target="_blank" href="assets/img/MadeInChina_HongKongTea.pdf" download="Hong Kong Style Coffee" >find the recipe here</a></pre>
+			<img style="top: -10vh; width: 25vw" src="assets/img/coffeeTea.png">
+		</div>
+		<div id="peachTea" class="recipe">
+			<h2 class="recipeHeader">peach iced Tea</h2>
+			<p class="recipeBody"> .</p>
+			<pre>this is part of the "DRINK MENU"<br><a href="">find the recipe here </a></pre>
+			<img src="assets/img/IcedTea">
+		</div>
+		<div id="crocante" class="recipe">
+			<h2 class="recipeHeader">sweet tooth crocante</h2>
+			<p class="recipeBody">In any school party or gathering, someone will always offer to bring crocantes and those will be the first to be gone, no matter what. At first, it seemed too hard to create these snacks, but after making them a couple of times it is one of the easiest recipes of this collection.
+			<br>
+			The crunchy cereal mixed with the delightfulness of the dulce de leche, creates a perfect bite everytime. It’s a quick snack to make and it will suit to almost everyone’s taste.
+			</p>
+			<pre>this is part of the first cook book collection,<br><a target="_blank" href="assets/pdf/MadeInCostaRica_Crocante.pdf" download="Sweet Tooth Crocantes" >find the recipe here </a></pre>
+			<img src="assets/img/crocante.png">
+		</div>				
 
 <!-- 		español -->
 
@@ -179,6 +238,13 @@
 			<pre>– – última pregunta</pre>
 		</div>
 		
+
+		<div id="openerESP">
+			<h2 class="eng">HOLA <br></h2><img src="assets/img/thesisLogos-04.png"><p class="eng">Una exploración creativa de que significa ser Latina 【Costa Rica】 & Chinese【Cantonese】por medio de comidas y memorias</p>
+			<br><br><br>
+			<span onclick="displayPreguntas()">let's start</span>
+		</div>
+
 		<div id="openerESP" onclick="displayPreguntas()">
 			<h2>HOLA ESTO ES [506 + 86]</h2>
 			<br>
@@ -227,17 +293,14 @@
 		</div>
 		<div id="outputEsp">
 			<h2>¡nuestra comida está lista para probar!</h2>
+			<h4><a onclick="displayQuestions()">no</a> > <a onclick="displayQ2()">prefiero: salado</a> > <a onclick="displayQ3()">amo cocinar</a> > <a onclick="displayQ4()">no pico bocadillos</a> > <a onclick="displayQ5()">32–38</a></h4>
 			<div onclick="displayLomoSalteado()" class="box1Esp">
 				<img src="assets/img/meat.png">
-				<p>lomo salteado</p>
-			</div>
-			<div onclick="displayVegetales()" class="box2Esp">
-				<img src="assets/img/veggies.png">
-				<p>fuente de nutrición, vegetales</p>
+				<p>casado típico</p>
 			</div>
 			<div onclick="displayArroz()" class="box3Esp">
-				<img src="assets/img/rice.png">
-				<p>esencial, siempre ahí</p>
+				<img src="assets/img/arrozConPollo.png">
+				<p>clásico, arroz con pollow</p>
 			</div>
 			<div onclick="displayVegetales()" class="box4Esp">
 				<img src="assets/img/veggies.png">
@@ -248,21 +311,16 @@
 				<p>lomo salteado</p>
 			</div>
 			<div onclick="displayLomoSalteado()" class="box6Esp">
-				<img src="assets/img/meat.png">
-				<p>lomo salteado</p>
+				<img style="width: 25vw;" src="assets/img/puffs.png">
+				<p>empanadas de camote</p>
 			</div>
-			<div onclick="displayVegetales()" class="box7Esp">
-				<img src="assets/img/veggies.png">
-				<p>fuente de nutrición, vegetales</p>
-			</div>
-			<div onclick="displayLomoSalteado()" class="box8Esp">
-				<img src="assets/img/meat.png">
-				<p>lomo salteado</p>
-			</div>
-			<div onclick="displayLomoSalteado()" class="box9Esp">
-				<img src="assets/img/meat.png">
-				<p>lomo salteado</p>
-			</div>
+			<div style="position: absolute;top: 145vh;left: 35vw;transform: rotate(-60deg);">
+				<img src="assets/img/cilantro.png">
+			</div>	
+			<div style="position: absolute;left: 65vw; top: 45vh; width:15vw">
+				<img src="assets/img/chilies.png">
+			</div>	
+			
 		</div>
 
 		<div onclick="goBackToOutputEsp()" id="RecetaNav">
@@ -338,18 +396,30 @@
 			];
 			var today = new Date(),
 				dd = today.getDate(),
-				yyyy = today.getFullYear();
+				yyyy = today.getFullYear(),
+				hh = today.getHours(),
+				min = today.getMinutes();
+
 				// city = data.name;
 			if(mm<10) {
 			    mm = '0'+mm
-			} 
+			}
+
 			month = mm[today.getMonth()]
+
+			min = (min < 10) ? '0' + min : min;
+
+
 			today = dd  +  + yyyy;
 			var date = $("<div/>"); 
 	 		date.addClass("day");
 	 		$("#calendar").append(dd + " ");
 	 		$("#calendar").append(month + " ");
 	 		$("#calendar").append(yyyy + " ");
+	 		$("#clock").append(hh+" "+ ":");
+	 		$("#clock").append(" " + min + " ");
+
+	 		console.log(dd)
 
 		    // $(".option").click(function(){
 		    // 	$(this).css({
@@ -421,6 +491,8 @@
 				document.getElementById("circle").style.opacity = "1";	
 			    document.getElementById("PreliminaryQuestion").style.display = "block";
 			    document.getElementById("opener").style.display = "none";
+			    document.getElementById("outputONE").style.display = "none";
+
 			};
 
 			function displayQ2() {
@@ -429,6 +501,7 @@
 				document.getElementById("counter").style.opacity = "0";			
 			    document.getElementById("MiniQuiz_1").style.display = "block";
 			    document.getElementById("PreliminaryQuestion").style.display = "none";
+			    document.getElementById("outputONE").style.display = "none";
 
 			};
 
@@ -438,6 +511,7 @@
 				document.getElementById("counter_Q2").style.opacity = "0";		
 			    document.getElementById("MiniQuiz_1").style.display = "none";
 			    document.getElementById("MiniQuiz_2").style.display = "block";
+			    document.getElementById("outputONE").style.display = "none";
 
 			};
 
@@ -447,6 +521,7 @@
 				document.getElementById("counter_Q3").style.opacity = "0";	
 			    document.getElementById("MiniQuiz_2").style.display = "none";
 			    document.getElementById("MiniQuiz_3").style.display = "block";
+			    document.getElementById("outputONE").style.display = "none";
 
 			};
 
@@ -456,11 +531,12 @@
 				document.getElementById("counter_Q4").style.opacity = "0";
 			    document.getElementById("MiniQuiz_3").style.display = "none";
 			    document.getElementById("MiniQuiz_4").style.display = "block";
+			    document.getElementById("outputONE").style.display = "none";
 			};
 
-			function displayOutput() {
+			function displayOutputONE() {
 			    document.getElementById("MiniQuiz_4").style.display = "none";
-			    document.getElementById("output").style.display = "block";
+			    document.getElementById("outputONE").style.display = "block";
 				document.getElementById("circle").style.opacity = "0";		    
 			    document.getElementById("circle_Q2").style.opacity = "0";	
 			    document.getElementById("circle_Q3").style.opacity = "0";	
@@ -469,32 +545,74 @@
 				document.getElementById("counter_Q5").style.opacity = "0";
 			};
 
+			function displayOutputTWO(){
+				document.getElementById("MiniQuiz_4").style.display = "none";
+			    document.getElementById("outputTWO").style.display = "block";
+				document.getElementById("circle").style.opacity = "0";		    
+			    document.getElementById("circle_Q2").style.opacity = "0";	
+			    document.getElementById("circle_Q3").style.opacity = "0";	
+			    document.getElementById("circle_Q4").style.opacity = "0";	
+			    document.getElementById("circle_Q5").style.opacity = "0";	
+				document.getElementById("counter_Q5").style.opacity = "0";
+			}
+
 			function displaySoySauceBeef() {
-				document.getElementById("output").style.display = "none";
+				document.getElementById("outputONE").style.display = "none";
 				document.getElementById("SoySauceBeef").style.display = "block";
 				document.getElementById("RecipeNav").style.display = "block";
 
 			}
 
 			function displayVeggies(){
-				document.getElementById("output").style.display = "none";
+				document.getElementById("outputONE").style.display = "none";
 				document.getElementById("veggies").style.display = "block";
 				document.getElementById("RecipeNav").style.display = "block";
 			}
 
 			function displayRice(){
-				document.getElementById("output").style.display = "none";
+				document.getElementById("outputONE").style.display = "none";
 				document.getElementById("rice").style.display = "block";
 				document.getElementById("RecipeNav").style.display = "block";
 			}
 
-			function goBackToOutput(){
-				document.getElementById("output").style.display = "block";
+			function displayCake() {
+				document.getElementById("outputTWO").style.display = "none";
+				document.getElementById("cake").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+
+			}
+
+			function displayHKCoffee(){
+				document.getElementById("outputTWO").style.display = "none";
+				document.getElementById("outputTWO").style.opacity = "0";
+				document.getElementById("hkCoffee").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+			}
+
+			function displayPeachTea(){
+				document.getElementById("outputTWO").style.display = "none";
+				document.getElementById("peachTea").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+			}
+
+			function displayCrocante(){
+				document.getElementById("outputTWO").style.display = "none";
+				document.getElementById("crocante").style.display = "block";
+				document.getElementById("RecipeNav").style.display = "block";
+			}
+
+
+
+
+			function goBackToOutputONE(){
+				document.getElementById("outputONE").style.display = "block";
 				document.getElementById("RecipeNav").style.display = "none";
 				document.getElementById("rice").style.display = "none";
 				document.getElementById("veggies").style.display = "none";
 				document.getElementById("SoySauceBeef").style.display = "none";
 			}
+
+
 
 			
 

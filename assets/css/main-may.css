@@ -1,0 +1,186 @@
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select, {
+	padding: 0;
+	margin: 0;
+	cursor: url(../img/cursor.png), auto;
+}
+
+html:active{
+	cursor: url(../img/cursor-active.png), auto;
+}
+
+@font-face {font-family: "AG-BO"; src: url("../fonts/AkzidenzGrotesk-BoldCondItalic.otf");}
+@font-face {font-family: "AG-BC"; src: url("../fonts/AkzidenzGrotesk-BoldCond.otf");}
+@font-face {font-family: "AG-C"; src: url("../fonts/AkzidenzGrotesk-Cond.otf");}
+@font-face {font-family: "Title"; src: url("../fonts/AkzidenzGrotesk-LightCondItalic.otf");}
+@font-face {font-family: "AG-LC"; src: url("../fonts/AkzidenzGrotesk-LightCond.otf");}
+
+body{
+	height: 100%;
+	width: 100vw;
+	overflow-x: hidden;
+	background-color: #CCCCCC
+
+}
+
+#header{
+	text-align: left;
+	font-family: "AG-BO"; 
+	z-index: 1;
+	margin: 1em auto;
+	margin-left: 2em;
+
+}
+
+#header:hover{
+	cursor: url(../img/cursor-active.png), auto;
+}
+
+
+#header h1 a {
+	text-decoration: none;
+	font-size: 2em;
+}
+
+#header h2 a{
+	font-size: 1.5em
+}
+
+#title {
+	font-family: "AG-LC";
+	margin: 1em auto;
+	margin-left: 2em;
+    max-width: 80vw
+}
+
+#title h2{
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#title h2{
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#themes {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    max-width: 11vw;
+
+}
+
+#themes h4 {
+	font-family: "AG-LC";
+	font-size: 1.75em;	
+
+}
+
+#content{
+/*	position: absolute;*/
+	font-family: "AG-LC";
+	margin: 1em auto;
+	margin-left: 2em;
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content h2{
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+
+}
+
+#content h1{
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+}
+
+#content h2 a{
+	font-family: "AG-C";
+	text-decoration: none
+}
+
+#wrapper {
+	font-family: "AG-LC";
+	margin: 1em auto;
+	margin-left: 2em;
+    max-width: 80vw
+}
+
+#wrapper h2{
+	font-size: 2em;
+	letter-spacing: 0.05em;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#wrapper .min{
+	max-width: 37vw
+}
+
+#wrapper .fullBleed{
+	max-width: 80vw
+}
+
+
+.bold {
+	font-family: "AG-C";
+	color: black;
+}
+
+.one{
+	max-width: 25vw;
+	max-height: 25vw;
+    visibility: hidden; 
+    position: absolute;
+    top: 35vh;
+    left: 30vw;
+    z-index: -1;
+    filter: grayscale(100%);
+    opacity: 0.5;
+
+}
+
+.two{
+	max-width: 25vw;
+	max-height: 25vw;
+	position: absolute;
+	visibility: hidden;
+	top: 5vh;
+    left: 2vw;
+	z-index: -2;
+	filter: grayscale(100%);
+	opacity: 0.5;
+
+}
+
+.three{
+	max-width: 20vw;
+	max-height: 20vw;
+	position: absolute;
+	visibility: hidden;
+	top: 3vh;
+    left: 50vw;
+	z-index: -3;
+	filter: grayscale(100%);
+	opacity: 0.5;
+
+}
+
+.visible  {
+	visibility: visible !important;
+	display: block;
+}
+
+#footer{
+	position: fixed;
+	bottom: -1vh;
+	margin-left: 1em;
+	opacity: .5
+}
