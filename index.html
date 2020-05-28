@@ -7,11 +7,18 @@
 	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./assets/js/moment.js"></script>
+	<script type="text/javascript" src="./assets/js/moment-timezone-with-data.min.js"></script>
 </head>
 <body>
 	<div id="header">
 		<h1><a href="esfz/about.html">Evelin Susan Fung Zhong</a></h1>
 	</div>
+
+	<div id="location">
+		<p class="hour"></p>
+	</div>	
+
 	<div id="content">
 		<h2>is a graphic designer interested in creating multidisciplinary systems and projects that showcase her cultural heritage and perspective. She focuses on 
 
@@ -45,39 +52,154 @@
 			<a class="systems">systems</a>, 
 			<a class="culture">culture</a>, 
 			<a class="food">food</a>, 
-			<a class="weather">weather</a>   
+			<a class="weather">weather.</a>   
 
-			Currently working as an interactive designer for <a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a>, in projects like 
-			<span class="exBrand exSystems">Organikos</span>, 
-			<span class="exBook">A History of Orchids</span> & 
-			<span class="exBrand">Honda 70 Aniversario</span>.
+			Has worked as an interactive designer for <a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a>, in projects like 
+			<a href="" class="org"><span class="exBrand exSystems">Organikos</span></a>,
+			<a href="" class="nv"><span class="exBrand">NuVision</span></a>, 
+			<a href="" class="orc"><span class="exBook">A History of Orchids</span> </a>& 
+			<a href="" class="h70"><span class="exBrand">Honda 70 Aniversario</span></a>.
 		<br><br>
 		PROJECTS:
 		<br>
-		<a href="./madeincostarica.html" class="exBook exWeb exType exTradition exCulture exFood"> Made In Costa Rica</a>, 
-		<span class="exBrand exSystems exCulture exFood">Pechá Tea</span>, 
-		<span class="exSystems exInteraction exCulture exWeather">your souvenir</span>,
-		<span class="exWeb">Dream</span>, 
-		<span class="exBook exType exTradition">Familia Fung: Ancestry Book</span>, 
-		<span class="exInteraction">506 + 82 WEAVING</span>,
-		<span class="exBrand exSystems exFood">Rebranding: Sundaes & Cones</span>, 
-		<span class="exWeb exWeather">my weather</span>, 
-		<span class="exBook exCulture">Fancy Free</span>, 
-		<span class="exWeb">Social Network</span>, 
-		<span class="exBook exType exSystems exWeather">MW: zines</span>, 
-		<span class="exBrand">fitted</span>, 
-		<span class="exBook exType">HONESTY & RELATABILITY</span>, 
-		<span class="exWeb">Overheard</span>, 
-		<span class="exWeb exTradition exFood">The Coffee Source</span>, 
-		<span class="exWeb">1997–</span>, 
-		<span class="exBrand exSystems">21º</span>, 
-		<span class="exType">Mogul Typeface</span>, 
-		<span class="exWeb">click click</span>, 
-		<span class="exBook">Colours of Times</span>, 
-		<span class="exType">NYT Op-Ed</span>.
+		<a href="./madeincostarica.html" class="micr"><span class="exBook exWeb exType exTradition exCulture exFood"> Made In Costa Rica</span></a>, 
+		<a href="" class="pt"><span class="exBrand exSystems exCulture exFood">Pechá Tea</span></a>, 
+		<a href="" class="ys"><span class="exSystems exInteraction exCulture exWeather">your souvenir</span></a>,
+		<a href="" class="dr"><span class="exWeb">Dream</span></a>, 
+		<a href="" class="ffab"><span class="exBook exType exTradition">Familia Fung: Ancestry Book</span></a>, 
+		<a href="" class="506"><span class="exInteraction">506 + 82 WEAVING</span></a>,
+		<a href="" class="rsc"><span class="exBrand exSystems exFood">Rebranding: Sundaes & Cones</span></a>, 
+		<a href="" class="mw-site"><span class="exWeb exWeather">my weather</span></a>, 
+		<a href="" class="ff"><span class="exBook exCulture">Fancy Free</span></a>, 
+		<a href="" class="sn"><span class="exWeb">Social Network</span></a>, 
+		<a href="" class="mw-zines"><span class="exBook exType exSystems exWeather">MW: zines</span></a>, 
+		<a href="" class="ftt"><span class="exBrand">fitted</span></a>, 
+		<a href="" class="hr"><span class="exBook exType">HONESTY & RELATABILITY</span></a>, 
+		<a href="" class="oh"><span class="exWeb">Overheard</span></a>, 
+		<a href="" class="tcs"><span class="exWeb exTradition exFood">The Coffee Source</span></a>, 
+		<a href="" class="1997"><span class="exWeb">1997–</span></a>, 
+		<a href="" class="21"><span class="exBrand exSystems">21º</span></a>, 
+		<a href="" class="mt"><span class="exType">Mogul Typeface</span></a>, 
+		<a href="" class="cc"><span class="exWeb">click click</span></a>, 
+		<a href="" class="ct"><span class="exBook">Colours of Times</span></a>, 
+		<a href="" class="nyt"><span class="exType">NYT Op-Ed</span></a>.
+
+
+		<!-- <a href="" class="own"><span class="">Order With Me</span></a> -->
+		<!-- add food ordering -->
+		<!-- <a href="" class="fp"><span class="">Fruit Postcards</span></a> -->
+		<!-- fruit postcards -->
+		<!-- <a href="" class="0605"><span class="">06:05 a lifetime's playlist</span></a> -->
+		<!-- thesis -->
+
+		<br><br>
+		EDUCATION:<BR>
+		BFA in Communication Design, Parsons School of Design, NY (2020) <BR>
+		IB DIPLOMA + IGCSE Certificate, British School of Costa Rica (2012–2015)
+		<br><br>
+		EXPERIENCE:<BR>
+		<a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a> <br>
+		&emsp;Senior Interactive Designer (09/2018–05/2020) @ Remotely<br>
+		&emsp;&emsp;Effie Awards Costa Rica for <a href="" class="h70"><span class="exBrand">Honda 70 Aniversario</span></a> (2019) <br>
+		&emsp;Graphic Design Intern (05/2018–08/2018) @ Costa Rica
+		<br><br>
+		CONTACT:<BR>
+		fungevelin@gmail.com <BR>
 		</h2>
+
+
+		<div class="micr-ex proj">
+			<img src="./assets/img/thesis2.png" class="proj-img">
+			<img src="./assets/img/thesis5.png" class="proj-img">
+			<img src="./assets/img/thesis10.png" class="proj-img">
+		</div>	
+
+		<div class="pt-ex proj">
+			<img src="./assets/img/tea3.jpg" class="proj-img">
+			<img src="./assets/img/tea2.jpg" class="proj-img">
+			<img src="./assets/img/tea.jpg" class="proj-img">
+		</div>	
+
+		<div class="ffab-ex proj">
+			<img src="./assets/img/fung4.jpg" class="proj-img">
+			<img src="./assets/img/fung.jpg" class="proj-img">
+			<img src="./assets/img/fung2.jpg" class="proj-img">
+		</div>
+
+		<div class="rsc-ex proj">
+			<img src="./assets/img/cones.jpg" class="proj-img">
+			<img src="./assets/img/cones3.jpg" class="proj-img">
+			<img src="./assets/img/cones6.jpg" class="proj-img">
+		</div>	
+
+		<div class="ff-ex proj">
+			<img src="./assets/img/fancy4.jpg" class="proj-img">
+			<img src="./assets/img/fancy.jpg" class="proj-img">
+			<img src="./assets/img/fancy6.jpg" class="proj-img">
+		</div>	
+
+		<div class="sn-ex proj">
+			<img src="./assets/img/network1.png" class="proj-img">
+			<img src="./assets/img/network4.png" class="proj-img">
+			<img src="./assets/img/network5.png" class="proj-img">
+		</div>	
+
+		<div class="mw-zines-ex proj">
+			<img src="./assets/img/mw1.png" class="proj-img">
+			<img src="./assets/img/mw2.png" class="proj-img">
+			<img src="./assets/img/mw6.png" class="proj-img">
+		</div>	
+
+		<div class="ftt-ex proj">
+			<img src="./assets/img/fitted.jpg" class="proj-img">
+			<img src="./assets/img/fitted7.jpg" class="proj-img">
+			<img src="./assets/img/fitted10.jpg" class="proj-img">
+		</div>	
+
+		<div class="hr-ex proj">
+			<img src="./assets/img/relatability2.jpg" class="proj-img">
+			<img src="./assets/img/relatability3.jpg" class="proj-img">
+			<img src="./assets/img/relatability4.jpg" class="proj-img">
+		</div>	
+
+		<div class="21-ex proj">
+			<img src="./assets/img/21c.jpg" class="proj-img">
+			<img src="./assets/img/21d.jpg" class="proj-img">
+		</div>	
+
+		<div class="mt-ex proj">
+			<img src="./assets/img/mogul2.jpg" class="proj-img">
+			<img src="./assets/img/mogul4.jpg" class="proj-img">
+			<img src="./assets/img/mogul5.jpg" class="proj-img">
+		</div>
+
+		<div class="ct-ex proj">
+			<img src="./assets/img/times.jpg" class="proj-img">
+			<img src="./assets/img/times3.jpg" class="proj-img">
+			<img src="./assets/img/times5.jpg" class="proj-img">
+		</div>
+
+		<div class="nyt-ex proj">
+			<img src="./assets/img/oped3.jpg" class="proj-img">
+			<img src="./assets/img/oped2.jpg" class="proj-img">
+		</div>
+
+		<div class="orc-ex proj">
+			<img src="./assets/img/orquidea-layout.png" class="proj-img">
+			<img src="./assets/img/orquidea-cover3.png" class="proj-img">
+			<img src="./assets/img/orquidea3.png" class="proj-img">
+		</div>
+
+		<div class="h70-ex proj">
+			<img src="./assets/img/honda3.png" class="proj-img">
+			<img src="./assets/img/honda4.png" class="proj-img">
+		</div>
+
+		<div class="look-ex proj">
+			<img src="./assets/img/look.jpg" class="proj-img">
+			<img src="./assets/img/look1.jpg" class="proj-img">
+		</div>	
 	</div>
-	<br><br><br><br><br><br><br><br>
 	<div id="footer">	
 		<pre> 2016 – 2020 evelin fung</pre> 
 	</div>
@@ -88,12 +210,47 @@
 
 		$(document).ready(function(){
 
+			console.log("welcome to my site!")
+			console.log("for more info fungevelin@gmail.com")
+
+			var now = moment().tz("America/Los_Angeles").format("h:mma");
+
+
+			console.log(now)
+
+			$(".hour").append("currently in california & it is " + now)
+
+
+			//moment.tz.setDefault("America/New_York");
+
+
+			// function calcTime(city, offset) {
+
+			//     var d = new Date(),
+			// 		utc = d.getTime() + (d.getTimezoneOffset() * 60000),
+			// 		nd = new Date(utc + (3600000*offset));
+
+			//     return "Evelin is currently in " + city + " is " + nd.toLocaleString();
+
+			// }
+
+			// console.log(calcTime('LA', '-7'));
+
+
 			function getRandomInt(min, max) {
 				return Math.floor(Math.random() * (max - min)) + min;
 			}
 
 			var today = new Date(),
-				n = today.getHours();
+				n = today.getHours(),
+				min = today.getMinutes();
+
+			min = (min < 10) ? '0' + min : min;
+			
+			// $(".hour").append("[" + "&#8194;" + n+" "+ ":");
+	 		// 	$(".hour").append(" " + min + "" + "&#8194;" +"]");	
+	 		// $(".hour").append((calcTime('LA', '-7')));	
+
 
 			var concepts = document.getElementById("content").querySelectorAll("a"),
 				header = document.getElementById("header").querySelectorAll("a"),
@@ -121,7 +278,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color;
 				};			
-				console.log("all nighter?")  ;
+				console.log("color setting: all nighter?")  ;
 			}else if(n <=7){
 				document.body.style.color = color2;
 				for (i = 0; i < concepts.length; i++) {
@@ -130,7 +287,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color2;
 				};
-				console.log("good morning")  ;
+				console.log("color setting: good morning")  ;
 			}else if(n <=11){
 				document.body.style.color = color3;
 				for (i = 0; i < concepts.length; i++) {
@@ -139,7 +296,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color3;
 				};
-				console.log("time for lunch?") ;
+				console.log("color setting: time for lunch?") ;
 			}else if(n <=15){
 				document.body.style.color = color4;
 				for (i = 0; i < concepts.length; i++) {
@@ -148,7 +305,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color4;
 				};
-				console.log("coffee break!");
+				console.log("color setting: coffee break!");
 			}else if(n <=19){
 				document.body.style.color = color5;
 				for (i = 0; i < concepts.length; i++) {
@@ -157,7 +314,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color5;
 				};
-				console.log("time to clock out!");
+				console.log("color setting: time to clock out!");
 			}else if (n <=23){
 				document.body.style.color = color6;
 				for (i = 0; i < concepts.length; i++) {
@@ -166,7 +323,7 @@
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color6;
 				};
-				console.log("are you also a night owl?")
+				console.log("color setting: are you also a night owl?")
 			}
 
 			// if (n <=3){
@@ -195,21 +352,12 @@
 			// 	return images[Math.floor(Math.random()* images.length)];
 			// }
 
-			var bolder = document.getElementById("content").querySelectorAll("a")
-
-			for (b = 1; b < bolder.length; b++) {
- 					bolder[0].style.fontFamily = "AG-C";
- 					bolder[1].style.fontFamily = "AG-C";
- 					bolder[2].style.fontFamily = "AG-C";
- 					bolder[3].style.fontFamily = "AG-C";
- 					bolder[4].style.fontFamily = "AG-C";
-				};
-
 			//branding
 
 			var changeBrand = $(".brand");
 
 			changeBrand.click(function() {
+				changeBrand.toggleClass("bold");
 				$(".exBrand").toggleClass("bold");
 			})
 
@@ -252,6 +400,7 @@
 			var changeUI = $(".interaction");
 
 			changeUI.click(function() {
+				changeUI.toggleClass("bold");
 				$(".exInteraction").toggleClass("bold");
 			})
 
@@ -294,6 +443,7 @@
 			var changeType = $(".type");
 
 			changeType.click(function() {
+				changeType.toggleClass("bold");
 				$(".exType").toggleClass("bold");
 			})
 
@@ -337,6 +487,7 @@
 			var changeWeb = $(".web");
 
 			changeWeb.click(function() {
+				changeWeb.toggleClass("bold");
 				$(".exWeb").toggleClass("bold");
 			})
 
@@ -379,6 +530,7 @@
 			var changeBook = $(".book");
 
 			changeBook.click(function() {
+				changeBook.toggleClass("bold");
 				$(".exBook").toggleClass("bold");
 			})
 
@@ -416,37 +568,117 @@
 			document.getElementById('bK').src = randomImageK2();
 			document.getElementById('cK').src = randomImageK3();
 
-			//interest
+			// interest
 
 			$(".tradition").click(function() {
-				$(".exTradition").toggleClass("bold");
+				$(".tradition").toggleClass("bold-interest");
+				$(".exTradition").toggleClass("bold-interest");
 			})
 
 			$(".systems").click(function() {
-				$(".exSystems").toggleClass("bold");
+				$(".systems").toggleClass("bold-interest");
+				$(".exSystems").toggleClass("bold-interest");
 			})
 
 			$(".culture").click(function() {
-				$(".exCulture").toggleClass("bold");
+				$(".culture").toggleClass("bold-interest");
+				$(".exCulture").toggleClass("bold-interest");
 			})
 
 			$(".food").click(function() {
-				$(".exFood").toggleClass("bold");
+				$(".food").toggleClass("bold-interest");
+				$(".exFood").toggleClass("bold-interest");
 			})
 
 			$(".weather").click(function() {
-				$(".exWeather").toggleClass("bold");
+				$(".weather").toggleClass("bold-interest");
+				$(".exWeather").toggleClass("bold-interest");
+			})
+
+			//projects
+
+			$(".micr").hover(function(){
+				$(".micr-ex").toggleClass("visible");
+
+			})
+
+			$(".pt").hover(function(){
+				$(".pt-ex").toggleClass("visible");
+
+			})
+
+			$(".ffab").hover(function(){
+				$(".ffab-ex").toggleClass("visible");
+
+			})
+
+			$(".rsc").hover(function(){
+				$(".rsc-ex").toggleClass("visible");
+
+			})
+
+			$(".ff").hover(function(){
+				$(".ff-ex").toggleClass("visible");
+
+			})
+
+			$(".sn").hover(function(){
+				$(".sn-ex").toggleClass("visible");
+
+			})
+
+			$(".mw-zines").hover(function(){
+				$(".mw-zines-ex").toggleClass("visible");
+
+			})
+
+			$(".ftt").hover(function(){
+				$(".ftt-ex").toggleClass("visible");
+
+			})
+
+			$(".hr").hover(function(){
+				$(".hr-ex").toggleClass("visible");
+
+			})
+
+			$(".21").hover(function(){
+				$(".21-ex").toggleClass("visible");
+
+			})
+
+			$(".mt").hover(function(){
+				$(".mt-ex").toggleClass("visible");
+
+			})
+
+			$(".ct").hover(function(){
+				$(".ct-ex").toggleClass("visible");
+
+			})
+
+			$(".nyt").hover(function(){
+				$(".nyt-ex").toggleClass("visible");
+
+			})
+
+			$(".orc").hover(function(){
+				$(".orc-ex").toggleClass("visible");
+
+			})
+
+			$(".h70").hover(function(){
+				$(".h70-ex").toggleClass("visible");
+
+			})
+
+			$(".look").hover(function(){
+				$(".look-ex").toggleClass("visible");
+
 			})
 
 
 
-
-			//can't let people right click on images
-
-			 $("#key").on("contextmenu",function(e){
-		       return false;
-		    });
-			
 		})
 
 
