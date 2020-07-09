@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // FACO HONDA</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="Inh70">
+		<h2>FACO HONDA</h2><br>
+		<h4>Exploration of large scale and printed visuals for autmobiles // Advertising </h4>
+		<h4>Client:&#8201;<a href="https://www.hondacostarica.com/" target="_blank"> FACO</a>&#8201; Collaboration with&#8201; <a href="http://elastica.nu/" target="_blank"> &#60;elastica&#62;</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/honda.png">
+		<p class="Inh70">FACO Honda Costa Rica launched a summer campaign to celebrate the company’s 70 Anniversary in 2018. My role was to design eight different billboards that were displayed for 3 months in different metropolitan areas of Costa Rica. Alongside a published ad in the country's main newspaper 'La Nación'. The main purpose of this campaign was to promote the special offers on all their available models. Thus, the layout of designs created an emphasis on the sale price and the car itself.</p>
+		<img class="fullBleed" src="../assets/img/honda2.png">
+		<p class="Inh70">These billboards and printed ad were part of a bigger summer campaign that included social media initiatives and a series of short films revolving around influential athlete, Lobito Fonseca. This all rounded campaign was showcased at the Costa Rican Effie Awards were it was awarded the Bronze recognition for the category of Brand Content & Management in 2019.</p>
+		<img class="min" src="../assets/img/honda4.png">&#8201;
+		<img class="min" src="../assets/img/honda3.png">
+		<br><br>
+	</div>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../oraganikos.html">Organikos</a></h2></div>	
+		<div class="next"><h2><a href="./sundaes&cones.html">sundaes & cones</a></h2></div>		
+		<div class="next"><h2><a href="./pechaTea.html">Pechá Tea</a></h2></div>
+	</div>
+	<br><br>
+	
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 2400 || document.documentElement.scrollTop > 2400) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

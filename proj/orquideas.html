@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // orquídeas</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InO">
+		<h2>A History of Orchids in South America</h2><br>
+		<h4>Exploration of large scale and printed visuals for autmobiles // Advertising </h4>
+		<h4>Client: Carlos Ossenbach &#8201; Collaboration with&#8201; <a href="http://elastica.nu/" target="_blank"> &#60;elastica&#62;</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/orquidea-layout.png">
+		<p class="InO">Carlos Ossenbach is a reknown researcher that focus on the research and study of various orchids in American continent. For his next series "A History of Orchids in South America”, we designed the  covers for the three different books that make up the volume. There were three design proposals that all showcased Mrs. Ossenbach's paintings and archive botanical drawings of orchids.
+		<h3 class="InO">first proposals</h3>
+		<p class="InO">Each design proposal offered a different layout and typeface pairing, although the first book proposals showcased paintings and the illustrations the author felt that they were too modern and bold for the book's content. Thus the final proposal was selected, as it was the perfect combination of a full bleed painting with a geometric sans serif typeface. </p>
+		<img class="fullBleed" src="../assets/img/orquidea1.png"><br>
+		<img class="fullBleed" src="../assets/img/orquidea2.png"><br>
+		<img class="fullBleed" src="../assets/img/orquidea3.png">
+		<h3 class="InO">final lineup</h3>
+		<img class="fullBleed" src="../assets/img/orquidea-cover.png">
+		<img class="fullBleed" src="../assets/img/orquidea-cover2.png">
+		<img class="fullBleed" src="../assets/img/orquidea-cover3.png">
+		<br><br>
+	</div>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../madeincostarica.html">Made In Costa Rica</a></h2></div>	
+		<div class="next"><h2><a href="./familiaFung.html">Familia Fung</a></h2></div>
+		<div class="next"><h2><a href="./fancyFree.html">Fancy Free</a></h2></div>
+	</div>
+	<br><br>
+
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 5400 || document.documentElement.scrollTop > 5400) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // rebranding: sundaes & cones</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InRsc">
+		<h2>rebranding: sundaes & cones</h2><br>
+		<h4>Exploration of Branding through an existing restaurant // Identity Design </h4>
+		<h4>Intructor:&#8201;<a href="http://www.chelseaatwell.com/" target="_blank"> Chelsea Atwell</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/cones1.png">
+		<p class="InRsc">This project was created for ‘Topics: Branding” course taken in 2018. This class delved into the design process that is needed to create a complete brand system, from the mood boards to logo design and visual assets creation. This project goal was to rebrand an existing restaurants from the ground up.</p>
+		<img class="fullBleed" src="../assets/img/cones.jpg">
+		<img class="fullBleed" src="../assets/img/cones2.jpg">
+		<p class="InRsc">Sundaes & Cones is an ice cream parlour in the East Village that offers both classic American and novelty Asian inspired flavours. After creating a new brand strategy and defining their brand personality (honest, creative and playful). The designing of the logo and assets was based on these insights and new creative direction. The brand applications go from using the typographic pattern on their waffle cones to rethinking the store’s floor plan.</p>
+		<img class="min" src="../assets/img/cones3.jpg">
+		<img class="min" src="../assets/img/cones4.jpg">
+		<img class="min" src="../assets/img/cones6.jpg">
+		<img class="min" src="../assets/img/cones8.jpg">
+		<img class="min" src="../assets/img/cones5.jpg">
+		<img class="min" src="../assets/img/cones7.jpg">
+		<br><br>
+	</div>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../madeincostarica.html">Made In Costa Rica</a></h2></div>	
+		<div class="next"><h2><a href="./pechaTea.html">Pechá Tea</a></h2></div>
+		<div class="next"><h2><a href="./owm.html">Order With Me</a></h2></div>
+	</div>
+	<br><br>	
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

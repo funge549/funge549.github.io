@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // social network</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InSn">
+		<h2>social network</h2><br>
+		<h4>Exploration of social network interfaces // Interaction Design & Programming</h4>
+		<h4>Intructors:&#8201;<a href="https://lukas.eigler-harding.com" target="_blank">Lukas Eigler-Harding</a>+<a href="https://callil.com/" target="_blank"> Callil Capuozzo.</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/network1.png">
+		<p class="InSn">This project was a semester long process for ‘Collab: Social Networks’, a class focused a hands-on look at how social networks and user interfaces influence our understanding of content. The goal for the class was to build a prototype P2P social network using Beaker Browser. This project tested the barriers of what is a social network, the necessities of users and what you can offer as a ‘developer’.</p>
+		<img class="min" src="../assets/img/network2.png">
+		<img class="min" src="../assets/img/network4.png">
+		<br>
+		<button><a class="InSn" href="dat://1c7f3fd2ff1475a1ff2bfda3661fb0e4964e1f0173a1afb55e139acba29b2b32/" target="_blank">visit the dat site</a></button><br>
+
+		<h3>social network features</h3>
+		<p class="InSn">Apart from customising the look of my own page, I developed two features that can user from the network can then add. dat.signatures lets the user create a signature that would work as a mark or identifier once other users pull your content. dat.emoticons allows users to express themselves through another medium: text based emoticons. </p>
+		<img class="frame" src="../assets/img/dat3.png">
+		<img class="frame" src="../assets/img/dat2.png">
+		<img class="frame" src="../assets/img/dat1.png">
+		<button class="InSn"><a class="InSn" href="http://www.evelinfung.com/datFeatures/featureSignatures/index.html" target="_blank">dat.signatures docs</a></button> <br><br>
+		<img class="frame" src="../assets/img/dat5.png">
+		<img class="frame" src="../assets/img/dat4.png">
+		<br>
+		<button class="InSn"><a class="InSn" href="http://www.evelinfung.com/datFeatures/featureEmoticons/" target="_blank">dat.emoticons docs</a></button>
+		<br><br>
+		<div id="other">
+			<div class="next ej"><h2>more projects:</h2></div>
+			<div class="next"><h2><a href="./myWeather.html">my weather</a></h2></div>	
+			<div class="next"><h2><a href="./yourSouvenir.html">your souvenir</a></h2></div>
+			<div class="next"><h2><a href="./dream.html">Dream</a></h2></div>
+		</div>		
+	</div>
+	<br><br>
+
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

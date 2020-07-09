@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // mogul typeface</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InMt">
+		<h2>Mogul Typeface</h2><br>
+		<h4>Exploration of letterforms and type // Type Design</h4>
+		<h4>Intructor:&#8201;<a href="https://www.terminaldesign.com/" target="_blank"> James Montablo</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/mogul-1.jpg">
+		<p class="InMt">This project was for ‘Typeface Design’(2019). This class focused on constructing and designing of a Latin Typeface using the program FontLab VI for the duration of the semester.
+		<br><br>
+		Mogul was designed to be both a text and display typeface that  is enjoyable to read. It features wide lowercases, high contrast  in each glyph, thin and elegant serifs and rounder forms. To showcase this typeface, the specimen features extracts from the thirteenth chapter of The Little Prince by Antoine de Saint-Exupéry in four  different languages.</p>
+		<br>
+		<img class="fullBleed" src="../assets/img/mogul-2.jpg">
+		<img class="fullBleed" src="../assets/img/mogul3.jpg">
+		<img class="fullBleed" src="../assets/img/mogul4.jpg">
+		<img class="fullBleed" src="../assets/img/mogul5.jpg">
+		<img class="fullBleed" src="../assets/img/mogul6.jpg">
+	</div>
+	<br><br>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../fancyFree.html">Fancy Free</a></h2></div>	
+		<div class="next"><h2><a href="./familiaFung.html">Familia Fung</a></h2></div>
+		<div class="next"><h2><a href="./clickclick.html">click click</a></h2></div>
+	</div>
+	<br><br>
+	
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 4200 || document.documentElement.scrollTop > 4200) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // dream</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InDream">
+		<h2>[in]finite dream </h2><br>
+		<h4>Exploration of Interactivity through a dreamy space // Interaction Design </h4>
+		<h4>Intructors:&#8201;<a href="https://www.labud.nyc/" target="_blank"> Nika & Dylan Fisher</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/dream6.png">
+		<p class="InDream">This project was created for ‘Studio: Interaction’ course taken by in 2018.</a> This class focused in creating interactive concepts and techniques for websites. This project’s goal was to create a space that reflects a dream or a dreamy space. This site creates an immersive and expressive platform where the user is able to ‘get lost’ in an infinity of squares.</p>
+		<button class="InDream"><a href="../dream/index.html" target="_blank">live site link here</a></button>
+		<br><br>
+		<img class="min" src="../assets/img/dream5.png">
+		<img class="min" src="../assets/img/dream1.png">
+		<img class="min" src="../assets/img/dream3.png">
+		<img class="min" src="../assets/img/dream2.png">
+		<p class="InDream">In Manhattan one is surrounded by endless amounts of grids: the street system, the window structure at The MET and the lines created throughout the Brooklyn Bridge. “Dream” grasps that grid concept alongside mathematical grids and patterns (eg. Fibonacci Sequence) through a clickable / tappable interfaces that encourages the user to continue displaying an endless amount of squares. The user can continue to create an infinity amount of compositions and combinations. Through a bright and pastel colour palette, “Dream” hopes to create delightfulness and an escape for the user.  This site was created using HTML, CSS & Jquery.</p>
+		<img class="fullBleed" src="../assets/img/dream4.png">
+		<button class="InDream"><a href="../dream/index.html" target="_blank">live site link here</a></button>
+		<br><br>
+	</div>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../socialNetwork.html">Social Network</a></h2></div>	
+		<div class="next"><h2><a href="./myWeather.html">my weather</a></h2></div>
+		<div class="next"><h2><a href="./owm.html">Order With Me</a></h2></div>
+	</div>
+	<br><br>
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 2900 || document.documentElement.scrollTop > 2900) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // Familia Fung</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InFung">
+		<h2>Familia Fung [Ancestry Book]</h2><br>
+		<h4>Exploration of Identity & Tradition // Book Design </h4>
+		<h4>Intructor:&#8201;<a href="http://www.wehavephotoshop.com/" target="_blank"> Andrew Schurtz</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="min" src="../assets/img/fung6.jpg"> &#8201; <img class="min" src="../assets/img/fung5.jpg">
+		<p class="InFung">This project was created for ‘Book Design’ course taken in 2019. This class delved into all the aspects that are needed in the production of books. This book was a self-lead project, which focused in the redesigning my family’s ancestry book published in 2006 and make the new book easier to understand for my family members who do not read Chinese.</p>
+		<br>
+		<img class="fullBleed" src="../assets/img/fung.jpg"><br><br>
+		<img class="fullBleed" src="../assets/img/fung2.jpg"><br><br>
+		<p class="InFung">The first aspect I tackle was to focus on my direct family line and go as back as my grandfather’s grandfather. Then I gather all their names and meanings, alongside any available information on their lives. The book commemorates each family member by giving each a page, where their names, pronunciations and information are displayed. Each page also contains a numerical identification to learn which generation each person belongs to. In the second section, the informational section on the most used names and teaches the user how to write these Chinese characters.</p>
+		<img class="fullBleed" src="../assets/img/fung3.jpg"><br><br>
+		<img class="fullBleed" src="../assets/img/fung4.jpg">
+	</div>
+	<br><br>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../madeincostarica.html">Made In Costa Rica</a></h2></div>	
+		<div class="next"><h2><a href="./fancyFree.html">Fancy Free</a></h2></div>
+		<div class="next"><h2><a href="./mogulTypeface.html">Mogul Typeface</a></h2></div>
+	</div>
+	<br><br>
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+			function showMore() {
+				if(document.body.scrollTop > 3700 || document.documentElement.scrollTop > 3700) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

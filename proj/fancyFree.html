@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // FANCY FREE</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InFf">
+		<h2>FANCY FREE</h2><br>
+		<h4>Exploration of redesigning an existing book // Book Design </h4>
+		<h4>Intructor:&#8201;<a href="http://www.wehavephotoshop.com/" target="_blank"> Andrew Schurtz</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/fancy.jpg">
+		<p class="InFf">This project was created for ‘Book Design’(2019). This class delved into all the aspects that are needed in the production of books. This project focused on the remaking of an existing catalogue found at the Strand Bookstore. The chosen item was a Spring 2013 Barneys New York show look book, named ‘Fancy Free’ and included photographs taken by Ilan Rubin.
+</p>
+		<br><br>
+
+		<img class="fullBleed" src="../assets/img/fancy6.jpg">
+		<img class="fullBleed" src="../assets/img/fancy3.jpg">
+		<img class="fullBleed" src="../assets/img/fancy4.jpg">
+		<p class="InFf">As a way to revamp this catalogue, the spreads included a more dynamic and loose grid system for the photographs and captions as this created a highly visual contrast to the tight grid that was kept constant in the original look book. By having a new clear hierarchy which was paired with a modern grotesk typeface, created a new focus on the catalogue: the excessive high prices of the shoes and to take a stab into the concept of luxury and exclusivity. To tie in the whole concept, a retro and groovy type exploration was printed on a silver metallic paper which alluded to the original material used on the catalogue’s cover.</p>
+		<img class="min" src="../assets/img/fancy2.jpg">
+		<img class="min" src="../assets/img/fancy5.jpg">
+		<img class="min" src="../assets/img/fancy7.jpg">
+		<img class="min" src="../assets/img/fancy8.jpg">
+	</div>
+	<br><br>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../mogulTypeface.html">Mogul Typeface</a></h2></div>	
+		<div class="next"><h2><a href="./clickclick.html">click click</a></h2></div>
+		<div class="next"><h2><a href="./orquideas.html">Orquídeas</a></h2></div>
+	</div>
+	<br><br>	
+
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+			function showMore() {
+				if(document.body.scrollTop > 4000 || document.documentElement.scrollTop > 4000) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+	</script>	
+</body>
+</html>
