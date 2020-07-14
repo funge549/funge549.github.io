@@ -14,13 +14,80 @@ body{
 	height: 100%;
 	width: 100vw;
 	overflow-x: hidden;
-	background-color: #CCCCCC
+	background-color: rgba(205,209,209);
+/*	background-color: rgba(204,204,204);*/
 
 }
 
 a:hover {
 	cursor: pointer;
 }
+
+
+/*@keyframes showing{
+	from {top: 0
+
+	}
+	to{ top: 500px
+
+	}
+}*/
+
+#cover {
+	font-family: "AG-BO"
+}
+
+#cover h1{
+	animation: showing 2s ; 
+	animation-iteration-count: 1; 
+	animation-delay: 5s; 
+}
+
+.salt{
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(205,209,209); 
+	z-index: 1; 
+	position: absolute;
+	bottom: 0vh; 
+	left:0;
+	animation: showing 2s ; 
+	animation-iteration-count: 1;
+	animation-delay: 5s 
+}
+
+.x {
+	text-align: center;
+	position: absolute;
+	width: 100vw;
+	font-size: 4em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.x h1:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 25em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 9s linear;
+}
+
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+
+}
+
+/*@keyframes showing{
+	from {opacity: 1;}
+    to {opacity: 0;}
+}
+*/
 
 #header{
 	text-align: left;
@@ -41,7 +108,6 @@ a:hover {
 	color: black;
 	opacity: 1;
 }
-
 
 #header h1 {
 	font-size: 4em;
@@ -77,7 +143,6 @@ a:hover {
     margin: 0em 0em 0em 0em;
 }
 
-
 #location {
 	position: fixed;
 	top: 0;
@@ -92,6 +157,66 @@ a:hover {
 
 #location p{
 	font-size: 1.5em
+}
+
+#picture-view{
+
+	position: fixed;
+	bottom: 2vh;
+	right: 1vw;
+}
+
+#picture-view img{
+	max-width: 5vw;
+	transition: transform 15s ease-in-out;
+}
+
+#picture-view p {
+	visibility: hidden;
+	font-family: "AG-C";
+	text-align: center;
+	margin: .5em;
+	color: white;
+	text-decoration: underline;
+
+}
+
+#picture-view:hover p{
+	visibility: visible;     
+}
+
+div#picture-view:hover img {
+	transform: rotate(360deg);
+}
+
+#text-view{
+	display: none;
+	position: fixed;
+	bottom: 2vh;
+	right: 1vw;
+}
+
+#text-view img{
+	max-width: 5vw;
+	transition: transform 15s ease-in-out;
+}
+
+#text-view p {
+	visibility: hidden;
+	font-family: "AG-C";
+	text-align: center;
+	margin: .5em;
+	color: white;
+	text-decoration: underline;
+
+}
+
+#text-view:hover p{
+	visibility: visible;     
+}
+
+div#text-view:hover img {
+	transform: rotate(360deg);
 }
 
 #copy {
@@ -129,12 +254,74 @@ a:hover {
 }
 
 #content h2 a{
-	text-decoration: none
+	text-decoration: none;
+	/*color: #FF6666;*/
+	/*color: IndianRed;*/
+	color: SteelBlue;
+	/*color: teal*/
+
 }
+
+#content h2 a {
+	color: SteelBlue
+}
+
 
 #content h2 a:hover{
 	text-decoration: underline;
 }
+
+#picture-content img{
+	max-width: 35vw;
+	max-height: 45vh;
+
+/*	filter: grayscale(30%);*/
+}
+
+
+#picture-content { 
+	display: none;
+	width: 100%; 
+	height: 100%; 
+	position: relative; 
+
+}
+
+#picture-content .image {
+	position: relative;
+	float: left;
+	width: 40vw;
+	height: 50vh;
+	padding-bottom: 5vh;
+}
+
+.left{
+	margin-left: 3vw;
+}
+
+#picture-content h3{
+	font-family: "AG-BO";
+	font-size: 1.5em;
+	color: SteelBlue;
+	text-decoration: none;
+}
+
+#picture-content a {
+	text-decoration: none
+}
+
+#picture-content a h3:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+/*#side-bar{
+	width: 15vw;
+	height: 100vw;
+	position: fixed;
+	right: 0;
+	top: 11vh;
+}*/
 
 #wrapper {
 	font-family: "AG-LC";
