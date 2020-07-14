@@ -160,7 +160,6 @@ a:hover {
 }
 
 #picture-view{
-
 	position: fixed;
 	bottom: 2vh;
 	right: 1vw;
@@ -851,6 +850,98 @@ button:hover {
 
 button:hover a{
 	color: white;
+}
+
+/*mobile*/
+
+@media only screen 
+  and (min-device-width: 350px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+  	#header h1{
+  		font-size: 6em;
+  	}
+
+  	#content h2{
+  		font-size: 3.5em
+  	}
+
+  	#location{
+  		opacity: 1;
+  		width: 30vw;
+  	}
+
+  	#picture-view img{
+  		max-width: 15vw;
+  	}
+
+  	#picture-view p{
+  		font-size: 2em
+  	}
+
+  	#text-view img{
+  		max-width: 15vw;
+  	}
+
+  	#text-view p{
+  		font-size: 2em
+  	}
+
+  	#picture-content a{
+  		font-size: 2em
+  	}
+
+  	#picture-content .image {
+  		width: 80vw;
+  		height: 35vh;
+  		margin-left: 3vw;
+  	}
+
+  	#picture-content img{
+  		max-width: 80vw;
+  	}
+
+  	#footer {
+  		bottom: 0;
+  	}
+
+  	#header h2 a {
+  		font-size: 2em;
+  	}
+
+  	#title h2{
+  		font-size: 6em
+  	}
+
+  	#title h4{
+  		font-size: 3em;
+  	}
+
+  	button {
+  		font-size: 2em;
+  		width: 21vw;
+  	}
+
+  	#wrapper p{
+  		font-size: 3em;
+  		max-width: 65vw;
+  	}
+
+  	#wrapper .min{
+  		max-width: 75vw;
+  	}
+
+  	.next {
+  		width: 20vw;
+  		margin-right: 2em;
+  	}
+
+  	.next h2{
+  		font-size: 3em;
+  	}
+
+
 }
 
 
