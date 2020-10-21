@@ -1,6 +1,7 @@
-html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select, {
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select,  {
 	padding: 0;
 	margin: 0;
+
 }
 
 
@@ -39,7 +40,7 @@ a:hover {
 	}
 }*/
 
-#cover {
+/*#cover {
 	font-family: "AG-BO";
 
 }
@@ -90,7 +91,7 @@ a:hover {
         max-width: 0;
     }
 
-}
+}*/
 
 /*@keyframes showing{
 	from {opacity: 1;}
@@ -103,6 +104,7 @@ a:hover {
 	font-family: "AG-BO"; 
 	z-index: 1;
 	margin-left: 2em;
+		margin-top: 2em;
 }
 
 .sticky{
@@ -120,12 +122,30 @@ a:hover {
 
 #header h1 {
 	font-size: 4em;
+
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 #header h2 a{
 	font-size: 1.5em;
 	color: white;
 	opacity: .5;
+}
+
+.location {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
+	width: 20vw;
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 0.67em;
+	margin-right: .5em;
+/*	background-color: white;*/
+	font-family: "AG-C";
+	opacity: 0.7;
 }
 
 #title {
@@ -152,21 +172,6 @@ a:hover {
     margin: 0em 0em 0em 0em;
 }
 
-#location {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	width: 20vw;
-	text-align: center;
-/*	background-color: white;*/
-	font-family: "AG-C";
-	opacity: 0.4;
-}
-
-#location p{
-	font-size: 1.5em
-}
 
 #picture-view{
 	position: fixed;
@@ -864,7 +869,44 @@ button:hover a{
 /*mobile*/
 
 @media only screen 
-  and (min-device-width: 350px) 
+  and (min-device-width: 320px)
+    and (max-device-width: 650px)  {
+  	#picture-view img{
+  		max-width: 15vw;
+  	}
+  	#picture-view p{
+  		font-size: 2em
+  	}
+
+  	#text-view img{
+  		max-width: 15vw;
+  	}
+
+  	#text-view p{
+  		font-size: 2em
+  	}
+  	#picture-content a{
+  		font-size: 2em
+  	}
+
+  	#picture-content .image {
+  		width: 80vw;
+  		height: 35vh;
+  		margin-left: 3vw;
+  	}
+
+  	#picture-content img{
+  		max-width: 80vw;
+  	}
+
+  	#starshine {
+  		height: 100vh;
+  	}
+
+  }
+
+@media only screen 
+  and (min-device-width: 375px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
 
@@ -950,6 +992,9 @@ button:hover a{
   		font-size: 3em;
   	}
 
+  	#starshine {
+  		height: 100vh;
+  	}
 
 }
 
@@ -1008,8 +1053,31 @@ background-size: 100% 100%;
   -moz-animation: glitter 5s linear 0s infinite normal;
   -ms-animation: glitter 5s linear 0s infinite normal;
   -o-animation: glitter 5s linear 0s infinite normal;
-
 }
+
+
+.shine.smallMobile {
+  width: 25px;
+  height: 25px;
+  animation: glitter 6s linear 0s infinite normal;
+  -webkit-animation: glitter 6s linear 0s infinite normal;
+  -moz-animation: glitter 8s linear 0s infinite normal;
+  -ms-animation: glitter 8s linear 0s infinite normal;
+  -o-animation: glitter 8s linear 0s infinite normal;
+}
+
+.shine.mediumMobile {
+  width: 40px;
+  height: 40px;
+  animation: glitter 14s linear 0s infinite normal;
+  -webkit-animation: glitter 14s linear 0s infinite normal;
+  -moz-animation: glitter 18s linear 0s infinite normal;
+  -ms-animation: glitter 18s linear 0s infinite normal;
+  -o-animation: glitter 18s linear 0s infinite normal;
+}
+
+
+
 
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {

@@ -22,11 +22,12 @@
 
 	<div id="header">
 		<h1>Evelin Susan Fung Zhong</h1>
+		<div class="location">
+			<p>currently in california & it is <span id="time"></span></p>
+		</div>
 	</div>
 
-	<div id="location">
-		<p>currently in california & it is <span id="time"></span></p>
-	</div>
+
 
 	<div id="picture-view">
 		<p>visual</p>
@@ -930,11 +931,13 @@
 
 		var body = $('#starshine'),
 		    	starry = $('.starry.shine'),
-		    	stars =  40,
-		    	sparkle = 1;
+		    	stars =  100,
+		    	sparkle = 20;
 		  
 		    
-		  var size = 'small';
+		  var size = 'small',
+		 		sizeMobile = 'smallMobile';
+
 		  var createStar = function() {
 		    starry.clone().removeAttr('id').css({
 		      top: (Math.random() * 200) + 'vh',
@@ -943,20 +946,43 @@
 		      mozAnimationDelay: (Math.random() * sparkle) + 's'
 		    }).addClass(size).appendTo(body);
 		  };
-		 
-		  for(var i = 0; i < stars; i++) {
-		    if(i % 2 === 0) {
-		      size = 'small';
-		    } else if(i % 3 === 0) {
-		      size = 'medium';
-		    }else if (i % 4 === 0) {
-		    	size ='large'
-		    }
-		    
-		    createStar();
-		  }
 
-		})
+		   var createStarM = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(sizeMobile).appendTo(body);
+		  };
+
+		  	if(window.matchMedia("(max-width: 767px)").matches){
+       			for(var i = 0; i < stars; i++) {
+       			  if(i % 2 === 0) {
+       			    size = 'smallMobile';
+       			  } else if(i % 3 === 0) {
+       			    size = 'mediumMobile';
+       			  }else if (i % 4 === 0) {
+       			  	size ='largeMobile'
+       			  }
+       			 	createStarM();
+       			}
+    		} else{
+        		for(var i = 0; i < stars; i++) {
+        		  if(i % 2 === 0) {
+        		    size = 'small';
+        		  } else if(i % 3 === 0) {
+        		    size = 'medium';
+        		  }else if (i % 4 === 0) {
+        		  	size ='large'
+        		  }
+        		  
+        		  createStar();
+        		}
+    		}
+
+
+		})  	
 
 
 
