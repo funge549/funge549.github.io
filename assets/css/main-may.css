@@ -871,6 +871,19 @@ button:hover a{
 @media only screen 
   and (min-device-width: 320px)
     and (max-device-width: 650px)  {
+
+  	#content {
+  		font-family:"AG-C";
+  	}
+
+  	#wrapper p {
+  		font-family:"AG-C";
+  	}
+
+  	#title h4 {
+  		font-family:"AG-C";
+  	}
+
   	#picture-view img{
   		max-width: 15vw;
   	}
@@ -914,8 +927,20 @@ button:hover a{
   		font-size: 6em;
   	}
 
+  	#content {
+  		font-family:"AG-C";
+  	}
+
   	#content h2{
-  		font-size: 3.5em
+  		font-size: 3.5em;
+  	}
+
+  	#title h4 {
+  		font-family:"AG-C";
+  	}
+
+  	#wrapper p h4{
+  		font-family:"AG-C";
   	}
 
   	#location{
