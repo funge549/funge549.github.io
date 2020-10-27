@@ -184,7 +184,7 @@ a:hover {
 	transition: transform 15s ease-in-out;
 }
 
-#picture-view p {
+/*#picture-view p {
 	visibility: hidden;
 	font-family: "AG-C";
 	text-align: center;
@@ -192,15 +192,51 @@ a:hover {
 	color: white;
 	text-decoration: underline;
 
-}
-
-#picture-view:hover p{
-	visibility: visible;     
-}
+}*/
 
 div#picture-view:hover img {
 	transform: rotate(360deg);
 }
+
+#circle {
+	position: fixed;
+	bottom: 2vh;
+	right: 1vw;
+	height: 70px;
+	width: 70px;
+	border: 3px solid rgba(255,255,255,0.5);
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0;
+	display: block
+
+}
+
+#counter {
+	position: fixed;
+	bottom: 0;
+	right: 4vw;
+	transform: rotate(75deg);
+	font-size: 1em;
+	font-family: "AG-C";
+	text-align: center;
+	display: block;
+/*animation: rotation linear infinite 35s;   */
+
+}
+
+#counter:hover {
+	color: white
+}
+
+
+@keyframes rotation{
+  100% {
+    transform: rotate(360deg)
+  }
+
+}
+
 
 #text-view{
 	display: none;
@@ -1082,8 +1118,8 @@ background-size: 100% 100%;
 
 
 .shine.smallMobile {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   animation: glitter 6s linear 0s infinite normal;
   -webkit-animation: glitter 6s linear 0s infinite normal;
   -moz-animation: glitter 8s linear 0s infinite normal;
@@ -1092,8 +1128,8 @@ background-size: 100% 100%;
 }
 
 .shine.mediumMobile {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   animation: glitter 14s linear 0s infinite normal;
   -webkit-animation: glitter 14s linear 0s infinite normal;
   -moz-animation: glitter 18s linear 0s infinite normal;

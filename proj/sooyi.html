@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // sooyi</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InYS">
+		<h2>sooyi_beads</h2><br>
+		<h4>Exploration of Branding and Self-Entrepreneur</h4>
+		<h4>Collaboration:&#8201;with Stephanie Yoon</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/sooyi/one.gif">
+		<p class="InYS">This project was created honestly out of boredom between two recent college graduates. We decided to turn our hobby into a micro company on Instagram where we explore the materiality of beads and explore different aesthetics on our feed.</p>
+		<img class="frame" src="../assets/img/sooyi/bakery8.gif">
+		<img class="frame" src="../assets/img/sooyi/bakery9.gif">
+		<br><br>
+		<img class="frame" src="../assets/img/sooyi/bakery10.gif">
+		<img class="frame" src="../assets/img/sooyi/bakery11.gif">
+
+		<p class="InYS">Sooyi is all about expressing yourself and feeling good, I have created several edits and gifs to be used in the Instagram Stories as well in the feed. This has given me the chance to create a new brand system and be more creative with both the product and the posts.</p>
+		<img class="frame" src="../assets/img/sooyi/bakery1.jpg">
+		<img class="frame" src="../assets/img/sooyi/bakery2.jpg">
+		<img class="frame" src="../assets/img/sooyi/bakery3.jpg">
+		<br><br>
+		<img class="frame" src="../assets/img/sooyi/bakery4.jpg">
+		<img class="frame" src="../assets/img/sooyi/bakery5.jpg">
+		<img class="frame" src="../assets/img/sooyi/bakery6.jpg">
+		<p class="InYS"><a href="http://www.instagram.com/sooyi_beads" target="_blank">CHECK THE INSTAGRAM!</a></p>
+
+		<div id="other">
+			<div class="next ej"><h2>more projects:</h2></div>
+			<div class="next"><h2><a href="./owm.html">Order With Me</a></h2></div>
+			<div class="next"><h2><a href="./clickclick.html">click click</a></h2></div>
+			<div class="next"><h2><a href="./myWeather.html">my weather</a></h2></div>	
+		</div>
+	</div>
+
+	<div id="footer">	
+		<pre> 2016 – 2020 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

@@ -9,6 +9,8 @@
 	<script type="text/javascript" src="./assets/js/moment.js"></script>
 	<script type="text/javascript" src="./assets/js/moment-timezone-with-data.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/circletype.min.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.fittext.js"></script>
 </head>
 <body>
 	
@@ -27,12 +29,13 @@
 		</div>
 	</div>
 
-
+	<div id="circle"></div>
+		<div id="counter">
+			<pre>&#10051;visual&#10051;view </pre>
+		</div>
 
 	<div id="picture-view">
-		<p>visual</p>
 		<img src="./assets/img/flowerBlue.png">
-		<p>view</p>
 	</div>
 
 	<div id="text-view">
@@ -397,7 +400,10 @@
 	 			$("#picture-content").css("display", "block");
 	 			$("#text-view").css("display", "block")
 	 			$("#content").css("display", "none");
-	 			$("#picture-view").css("display", "none")
+	 			$("#picture-view").css("display", "none");
+	 			$("#circle").css("display", "none");
+	 			$("#counter").css("display", "none")
+
 
 			})
 
@@ -405,7 +411,9 @@
 	 			$("#content").css("display", "block");
 	 			$("#picture-view").css("display", "block")
 	 			$("#picture-content").css("display", "none");
-	 			$("#text-view").css("display", "none")
+	 			$("#text-view").css("display", "none");
+	 			$("#circle").css("display", "block");
+	 			$("#counter").css("display", "block")
 
 			})	
 
@@ -980,6 +988,9 @@
         		  createStar();
         		}
     		}
+
+    	 var counter = new CircleType(document.getElementById('counter'))
+			  	.radius(45);	
 
 
 		})  	
