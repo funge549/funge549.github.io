@@ -878,6 +878,12 @@ button:hover a{
   		height: 100px;
   	}
 
+  	#counter-picture{
+  		bottom: 2vh;
+  		right: 8vw;
+  		font-size: 1.5em
+  	}
+
   	#picture-view img{
   		max-width: 15vw;
   	}
@@ -892,18 +898,31 @@ button:hover a{
   	#text-view p{
   		font-size: 2em
   	}
-  	#picture-content a{
-  		font-size: 2em
+
+  	#picture-content h1 {
+    	font-family: "AG-C";
+    	font-size: 3em;
+ 	}
+
+  	#click-image p{
+  		font-size: 1.5em;
+  		bottom: 4vh;
+  		right: 2vw;
   	}
 
-  	#picture-content .image {
+/*  	#picture-content .image {
   		width: 80vw;
   		height: 35vh;
   		margin-left: 3vw;
-  	}
+  	}*/
 
-  	#picture-content img{
+/*  	#picture-content img{
   		max-width: 80vw;
+  	}
+*/
+  	#picture-content img{
+
+  		max-height: 20vh;
   	}
 
   	#starshine {
@@ -947,6 +966,12 @@ button:hover a{
   		height: 100px;
   	}
 
+  	#counter-picture{
+  		bottom: 2vh;
+  		right: 8vw;
+  		font-size: 1.5em
+  	}
+
   	#picture-view img{
   		max-width: 15vw;
   	}
@@ -967,7 +992,17 @@ button:hover a{
   		font-size: 2em
   	}
 
-  	#picture-content .image {
+  	#click-image p{
+  		font-size: 1.5em;
+  		bottom: 4vh;
+  		right: 2vw;
+  	}
+
+  	#picture-content img{
+  		max-height: 20vh;
+  	}
+
+  /*	#picture-content .image {
   		width: 80vw;
   		height: 35vh;
   		margin-left: 3vw;
@@ -975,7 +1010,12 @@ button:hover a{
 
   	#picture-content img{
   		max-width: 80vw;
-  	}
+  	}*/
+
+  	#picture-content h1 {
+    	font-family: "AG-C";
+    	font-size: 3em;
+ 	}
 
   	#footer {
   		bottom: 0;
