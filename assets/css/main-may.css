@@ -22,7 +22,6 @@ body{
 	background-image: none;
 	margin: 0;
 	padding: 0;
-/*	background-color: rgba(204,204,204);*/
 
 }
 
@@ -162,7 +161,6 @@ a:hover {
 	height: 120px;
 	width: 120px;
 	display: none;
-	color: SteelBlue;;
 }
 
 #click-img p{
@@ -177,7 +175,9 @@ a:hover {
 
 #click-img p:hover {
 	color: white;
-	cursor: pointer
+	cursor: pointer;
+	background-color: rgba(70,130,180,.5);
+	width: 6vw
 }
 
 #text-view{
@@ -241,54 +241,81 @@ a:hover {
 	color: SteelBlue
 }
 
-
 #content h2 a:hover{
 	text-decoration: underline;
 }
 
-#picture-content img{
-	max-width: 35vw;
-	max-height: 45vh;
-
-/*	filter: grayscale(30%);*/
+.image {
+	margin-bottom: 4em
 }
 
-
-#picture-content { 
+#picture-content{
 	display: none;
-	width: 100%; 
-	height: 100%; 
-	position: relative; 
-
-}
-
-#picture-content .image {
-	position: relative;
-	float: left;
-	width: 40vw;
 	height: 50vh;
-	padding-bottom: 5vh;
+	padding-top: 5vh;
+	margin-left: 2em;
 }
 
-.left{
+#picture-content img {
+	max-width: 60vw;
+	max-height: 60vh;
+	padding-bottom: 5vh;
+	margin: 0 2vw 0 0;
+}
+
+/*.left{
 	margin-left: 3vw;
 }
-
-#picture-content h3{
-	font-family: "AG-BO";
-	font-size: 1.5em;
-	color: SteelBlue;
+*/
+#picture-content h1{
+	font-family: "AG-LC";
+	font-size: 3em;
 	text-decoration: none;
+	margin:0;
+	color:SteelBlue;
+}
+
+#picture-content p {
+	font-family: "AG-LC";
+	font-size: 1.5em;
+	width: 75vw;
+	text-decoration: none;
+	margin: 0;
+	padding-bottom: 2vh;
 }
 
 #picture-content a {
 	text-decoration: none
 }
 
-#picture-content a h3:hover {
+#picture-content a :hover {
 	text-decoration: underline;
 	color: white;
 }
+
+
+.horizontal{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+ } 
+
+.horizontal:hover{
+	cursor: ew-resize;
+} 
+
+.horizontal::-webkit-scrollbar {
+  height:7px;
+}
+
+.horizontal::-webkit-scrollbar-track {
+    background-color: rgba(12,12,12,0.1);
+}
+
+.horizontal::-webkit-scrollbar-thumb {
+  border: 7px dashed rgba(70,130,180,0.8);
+}
+
 
 /*#side-bar{
 	width: 15vw;
