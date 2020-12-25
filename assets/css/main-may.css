@@ -1077,10 +1077,10 @@ button:hover a{
   position: absolute;
   top: 50%;
   left: 50%;
- background-image: url("../img/star2.png");
-background-repeat: no-repeat;
-background-position:center;
-background-size: 100% 100%;
+  background-image: url("../img/star2.png");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 100% 100%;
   overflow: hidden;
   z-index: 2;
   color: tansparent;
