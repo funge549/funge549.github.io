@@ -4,7 +4,6 @@ html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select,  {
 
 }
 
-
 @font-face {font-family: "AG-BO"; src: url("../fonts/AkzidenzGrotesk-BoldCondItalic.otf");}
 @font-face {font-family: "AG-BC"; src: url("../fonts/AkzidenzGrotesk-BoldCond.otf");}
 @font-face {font-family: "AG-C"; src: url("../fonts/AkzidenzGrotesk-Cond.otf");}
@@ -566,7 +565,6 @@ p.InFung{
     flex-wrap: wrap;
 }
 
-
 #title.InFung h4{
 	color: black;
 }
@@ -781,7 +779,6 @@ p.InO{
 	position: absolute;
 	padding-bottom: 5vh; 
 	left: 2em;
-
 }
 
 .ej{
@@ -853,6 +850,24 @@ button:hover {
 
 button:hover a{
 	color: white;
+}
+
+/*404 error*/
+
+.fourofour{
+	overflow-y:hidden;
+}
+
+#wrapper.error h1{
+	font-size: 3em;
+}
+
+#wrapper.error h2{
+	font-size: 2em;
+}
+
+a.link{
+	color: SteelBlue;
 }
 
 /*mobile*/
