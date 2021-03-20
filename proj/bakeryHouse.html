@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // bakery house</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InBh">
+		<h2>Bakery House</h2><br>
+		<h4> Visual Designer // Branding & Web Design </h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/organikos.png">
+		<p class="InBh">Organikos is a coffee specialty brand that launched in 2019 with hopes to introduce sustainably grown coffee from small scale Costa Rican farmers to consumers in North America and Europe. The brand’s identity was designed by fellow co-worker Roberto Leitón.My role was to translate the initial designs to practical and readable labels for the coffee bags and possible merchandise.</p>
+		<img class="min" src="../assets/img/organikos-04.png">
+		<img class="min" src="../assets/img/organikos-03.png">
+		<img class="min" src="../assets/img/organikos-01.png">
+		<img class="min" src="../assets/img/organikos-02.png">
+		<p class="InBh">Each of their coffees has a unique profile, whether it's a lemon + orange decaf or their specialty house blend from Costa Rica's Central Valley. It was pertinent for the labels to reflect the variety of coffees while still maintaning an uniform look. After several rounds of colour picking, seeking for the perfect layout and multiple feedback meetings with the clients; the final label system was created. The system consists on having all the brand elements on the top, while having all the coffee traits and descriptors in the bottom half. Each coffee is differentiated by it’s label colour and an iconic badge descriptor in the bottom right corner. </p>
+		<img class="fullBleed" src="../assets/img/org-1.png">
+		<br><br>
+	</div>
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="../madeincostarica.html">Made In Costa Rica</a></h2></div>	
+		<div class="next"><h2><a href="./pechaTea.html">Pechá Tea</a></h2></div>
+		<div class="next"><h2><a href="./owm.html">Order With Me</a></h2></div>
+	</div>
+	<br><br>
+	<div id="footer">	
+		<pre> 2016 – 2021 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+
+			function showMore() {
+				if(document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

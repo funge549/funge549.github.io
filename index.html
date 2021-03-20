@@ -144,7 +144,7 @@
 	</div>
 
 	<div id="content"> 
-		<h2>is a graphic designer interested in creating multidisciplinary systems and projects that showcase her cultural heritage and perspective. She focuses on
+		<h2>is an interactive and visual designer interested in creating multidisciplinary systems and projects that showcase her cultural heritage and perspective. She focuses on
 
 			<a class="brand">Branding</a>,
 			<img id="aB" class="one"> 
@@ -213,6 +213,8 @@
 		IB DIPLOMA + IGCSE Certificate, British School of Costa Rica (2012–2015)
 		<br><br>
 		EXPERIENCE:<BR>
+		<a href="./proj/bakeryHouse" target="_blank">Bakery House</a><br>
+		&emsp;Visual Designer (09/2020–now)<br>
 		<a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a> <br>
 		&emsp;Senior Interactive Designer (09/2018–05/2020) @ Remotely<br>
 		&emsp;&emsp;Effie Awards Costa Rica for <a href="./proj/honda.html" class="h70"><span class="exBrand">Honda 70 Aniversario</span></a> (2019) <br>
@@ -332,9 +334,6 @@
 		$(document).ready(function(){
 			console.log("welcome to my site!")
 			console.log("for more info fungevelin@gmail.com")
-			// var now = moment().tz("America/Los_Angeles").format("h:mma");
-			// console.log(now)
-			// $(".hour").append("currently in california & it is " + now)
 			function date_time() {
 			  now = moment().tz("America/Los_Angeles").format("h:mma");
 			  document.getElementById('time').innerHTML = now;
@@ -348,17 +347,13 @@
 			var today = new Date(),
 				n = today.getHours(),
 				min = today.getMinutes();
-			min = (min < 10) ? '0' + min : min;
-			// $(".hour").append("[" + "&#8194;" + n+" "+ ":");
-	 		// 	$(".hour").append(" " + min + "" + "&#8194;" +"]");	
-	 		// $(".hour").append((calcTime('LA', '-7')));	
+				min = (min < 10) ? '0' + min : min;
 
 	 		$("#click-text").click(function() {
 	 			$("#picture-content").css("display", "block");
 	 			$("#content").css("display", "none");
 	 			$("#click-img").css("display", "block");
 	 			$("#click-text").css("display", "none");
-
 			})
 
 			$("#click-img").click(function() {
@@ -380,7 +375,6 @@
 				blue4 = getRandomInt(164,224),
 				blue5 = getRandomInt(200,254),
 				blue6 = getRandomInt(50,110),
-
 				color = "rgb(" + "0" + ",0," + blue +")" ,
 				color2 = "rgb(" + "0," + "67," + blue2 +")" ,
 				color3 = "rgb(" + "0," + "0," + blue3 +")" ,
@@ -388,11 +382,9 @@
 				color5 = "rgb(" + "76"+ ",84," + blue5 +")" ,
 				color6 = "rgb(" + "0" + ",0," + blue6 +")" ;
 
-
 			if (n <=3){
 				document.body.style.color = color;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color;
@@ -401,7 +393,6 @@
 			}else if(n <=7){
 				document.body.style.color = color2;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color2;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color2;
@@ -410,7 +401,6 @@
 			}else if(n <=11){
 				document.body.style.color = color3;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color3;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color3;
@@ -419,7 +409,6 @@
 			}else if(n <=15){
 				document.body.style.color = color4;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color4;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color4;
@@ -428,7 +417,6 @@
 			}else if(n <=19){
 				document.body.style.color = color5;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color5;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color5;
@@ -437,7 +425,6 @@
 			}else if (n <=23){
 				document.body.style.color = color6;
 				for (i = 0; i < concepts.length; i++) {
- 					// concepts[i].style.color = color6;
 				};
 				for (i = 0; i < header.length; i++) {
  					header[i].style.color = color6;
@@ -821,7 +808,6 @@
 		}) 
 
 		$(window).scroll(function() {
-
   			$('#picture-view').css({ transform: 'rotate(' + window.pageYOffset + 'deg)' });
   			$('#text-view').css({ transform: 'rotate(' + window.pageYOffset + 'deg)' });
 		}); 	
