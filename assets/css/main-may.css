@@ -359,7 +359,7 @@ a:hover {
 	max-width: 28vw
 }
 
-#wrapper .fullBleed{
+#wrapper .fullBleed {
 	max-width: 75vw;
 }
 
@@ -773,6 +773,38 @@ p.InO{
 #wrapper h3.InO{
 	color: #067d20
 }
+
+p.InBh, #wrapper h3.InBh{
+	color: brown;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.InBh a{
+	color: brown;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#title.InBh h4{
+	color: brown;
+}
+
+#title.InBh h2{
+	color: brown;
+}
+
+iframe {
+	width: 80vw;
+	height: 80vh;
+	border: solid brown 4px;
+	opacity: .8;
+}	
+
+iframe:hover {
+	opacity: 1;
+}
+
 
 #other {
 	width: 100vw;
