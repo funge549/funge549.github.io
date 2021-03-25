@@ -541,6 +541,13 @@ p.InOwm{
     flex-wrap: wrap;
 }
 
+iframe.InOwm {
+	width: 80vw;
+	height: 80vh;
+	border: solid #AE4FF9 4px;
+	opacity: .8;
+}
+
 
 #title.InOwm h4{
 	color: #AE4FF9;
@@ -794,14 +801,14 @@ p.InBh, #wrapper h3.InBh{
 	color: brown;
 }
 
-iframe {
+iframe.InBh  {
 	width: 80vw;
 	height: 80vh;
 	border: solid brown 4px;
 	opacity: .8;
 }	
 
-iframe:hover {
+iframe.inBh :hover {
 	opacity: 1;
 }
 
