@@ -1,7 +1,6 @@
 html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select,  {
 	padding: 0;
 	margin: 0;
-
 }
 
 @font-face {font-family: "AG-BO"; src: url("../fonts/AkzidenzGrotesk-BoldCondItalic.otf");}
@@ -21,7 +20,6 @@ body{
 	background-image: none;
 	margin: 0;
 	padding: 0;
-
 }
 
 a:hover {
@@ -207,9 +205,7 @@ a:hover {
 }
 
 #content{
-/*	position: absolute;*/
 	font-family: "AG-LC";
-/*	margin: 1em auto;*/
 	margin-left: 2em;
     max-width: 80vw;
     display: flex;
@@ -219,7 +215,6 @@ a:hover {
 #content h2{
 	font-size: 2.5em;
 	letter-spacing: 0.05em;
-
 }
 
 #content h1{
@@ -229,11 +224,7 @@ a:hover {
 
 #content h2 a{
 	text-decoration: none;
-	/*color: #FF6666;*/
-	/*color: IndianRed;*/
 	color: SteelBlue;
-	/*color: teal*/
-
 }
 
 #content h2 a {
@@ -262,10 +253,6 @@ a:hover {
 	margin: 0 2vw 0 0;
 }
 
-/*.left{
-	margin-left: 3vw;
-}
-*/
 #picture-content h1{
 	font-family: "AG-LC";
 	font-size: 3em;
@@ -314,15 +301,6 @@ a:hover {
 .horizontal::-webkit-scrollbar-thumb {
   border: 7px dashed rgba(70,130,180,0.8);
 }
-
-
-/*#side-bar{
-	width: 15vw;
-	height: 100vw;
-	position: fixed;
-	right: 0;
-	top: 11vh;
-}*/
 
 #wrapper {
 	font-family: "AG-LC";
@@ -431,6 +409,12 @@ a:hover {
 	padding-bottom: 1vh;
 }
 
+.proj-frame{
+	position: relative;
+	width: 25vw;
+	height: 30vh;
+	padding-bottom: 1vh;
+}
 
 #footer{
 	position: fixed;
@@ -547,7 +531,6 @@ iframe.InOwm {
 	border: solid #AE4FF9 4px;
 	opacity: .8;
 }
-
 
 #title.InOwm h4{
 	color: #AE4FF9;
@@ -870,7 +853,6 @@ iframe.inBh :hover {
     to {opacity: 1;}
 }
 
-
 button {
 	background-color: white;
 	font-size: 1.5em;
@@ -878,10 +860,6 @@ button {
 	width: 12vw;
 	border-color: white;
 }
-
-/*button a{
-	color: rgb(40, 135, 247);
-}*/
 
 button:hover {
 	background-color: #9999CC;
@@ -964,17 +942,7 @@ a.link{
   		right: 2vw;
   	}
 
-/*  	#picture-content .image {
-  		width: 80vw;
-  		height: 35vh;
-  		margin-left: 3vw;
-  	}*/
-
-/*  	#picture-content img{
-  		max-width: 80vw;
-  	}
-*/
-  	#picture-content img{
+	#picture-content img{
 
   		max-height: 20vh;
   	}
@@ -982,6 +950,18 @@ a.link{
   	#starshine {
   		height: 100vh;
   	}
+
+  	.proj{
+  		left: 50vw;
+  		top: 15vh;
+  	}
+
+  	.proj-frame{
+		position: relative;
+		width: 45vw;
+		height: 20vh;
+		padding-bottom: 1vh;
+	}
 
   }
 
@@ -1114,6 +1094,18 @@ a.link{
   		height: 100vh;
   	}
 
+  	.proj{
+  		left: 50vw;
+  		top: 15vh;
+  	}
+
+  	.proj-frame{
+		position: relative;
+		width: 45vw;
+		height: 20vh;
+		padding-bottom: 1vh;
+	}
+
 }
 
 #starshine {
@@ -1194,9 +1186,6 @@ a.link{
   -o-animation: glitter 18s linear 0s infinite normal;
 }
 
-
-
-
 /*CSS3 keyframes for glittering effect*/
 @-webkit-keyframes glitter {
   0% {
@@ -1216,5 +1205,3 @@ a.link{
     opacity: 0;
   }
 }
-
-
