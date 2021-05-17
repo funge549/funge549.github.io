@@ -1,0 +1,45 @@
+@font-face {font-family: "Futura"; src: url("../fonts/Futura-Medium.woff");}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.intro{
+	font-size: 6em;
+	position: absolute;
+	top: 20vh;
+	left: 50%;
+	transform: translate(-50%,0);
+
+}
+
+.option{
+	position: absolute;
+	top: 40vh;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+button{
+	width: 25vw;
+	height: 5vh;
+	margin: 1em;
+	font-size: 4em;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
