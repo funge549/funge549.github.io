@@ -329,6 +329,10 @@ a:hover {
     color: black;
 }
 
+#wrapper .thumbnail{
+	max-width: 20vw
+}
+
 #wrapper .min{
 	max-width: 40vw
 }
@@ -513,6 +517,7 @@ p.InDream a{
 	color: #1d69db;
 }
 
+
 p.InOwm{
 	color: #AE4FF9;
 	display: flex;
@@ -543,6 +548,19 @@ iframe.InOwm {
 .InOwm{
 	color:  #AE4FF9;
 }
+
+.column {
+	float: left;
+	width: 30vw;
+	padding-right: 2vw;
+}  
+
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
 p.InFung{
 	color: black;
 	display: flex;
@@ -793,6 +811,46 @@ iframe.InBh  {
 
 iframe.inBh :hover {
 	opacity: 1;
+}
+
+p.InCoffee, #wrapper h3.InCoffee{
+	color: DarkGreen;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.InCoffee a{
+	color: DarkGreen;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#title.InCoffee h4{
+	color: DarkGreen;
+}
+
+#title.InCoffee h2{
+	color: DarkGreen;
+}
+
+p.InK, #wrapper h3.InK{
+	color: Indigo;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.InK a{
+	color: Indigo;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#title.InK h4{
+	color: Indigo;
+}
+
+#title.InK h2{
+	color: Indigo;
 }
 
 

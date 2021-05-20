@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung // Kinkára</title>
+	<meta charset="utf-8">	
+	<link href='../assets/css/main-may.css' media='all' rel='stylesheet' type='text/css'/>
+	<link rel="icon" href="../assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2><a href="../index.html">Evelin Susan Fung Zhong</a></h2>
+	</div>
+	<div id="title" class="InK">
+		<h2>Kinkára</h2><br>
+		<h4>Exploration of web interactions for a luxury retreat hospitality project // UI / UX Design </h4>
+		<h4>Client:&#8201; Kinkára &#8201; Collaboration with&#8201; <a href="http://elastica.nu/" target="_blank"> &#60;elastica&#62;</a></h4>
+	</div> 
+	<div id="wrapper">
+		<img class="fullBleed" src="../assets/img/kinkara-13.png">
+		<p class="InK"></p>
+		<p class="InK">This luxury eco resort is one of a kind and it's brand system reflects it. Full of vibrancy, bold gradients and prominent patterns reflective of their location (Borucá Territory in Costa Rica). We reflected all these imagery and personality through an immersive and unique website proposal. Having the website be it's own world, was an extension of the Kinkára experience and give the potential guest a taste of what is waiting for them </p>
+		<img class="frame" src="../assets/img/kinkara-10.png">
+		<img class="frame" src="../assets/img/kinkara-11.png">
+		<img class="frame" src="../assets/img/kinkara-12.png">
+		<img class="frame" src="../assets/img/kinkara-1.png">
+		<img class="frame" src="../assets/img/kinkara-2.png">
+		<img class="frame" src="../assets/img/kinkara-3.png">
+		<p class="InK">Although these proposed sites weren't develop, they did entice and excite the client to hope to create a website like this in the future.</p>
+		<img class="fullBleed" src="../assets/img/kinkara-9.png"><br><br>
+		<img class="min" src="../assets/img/kinkara-4.png">
+		<img class="min" src="../assets/img/kinkara-5.png"><br><br>
+		<img class="min" src="../assets/img/kinkara-6.png">
+		<img class="min" src="../assets/img/kinkara-7.png"><br><br>
+		<img class="min" src="../assets/img/kinkara-8.png">
+		<br><br>
+	</div>
+
+	<div id="other">
+		<div class="next ej"><h2>more projects:</h2></div>
+		<div class="next"><h2><a href="./dream.html">Dream</a></h2></div>	
+		<div class="next"><h2><a href="./myWeather.html">my weather</a></h2></div>		
+		<div class="next"><h2><a href="./owm.html">Order With Me</a></h2></div>
+	</div>
+	<br><br>
+	
+	<div id="footer">	
+		<pre> 2016 – 2021 evelin fung</pre> 
+	</div>	
+	<script>
+		$(document).ready(function(){
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+				showMore();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");		
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			function showMore() {
+				if(document.body.scrollTop > 2400 || document.documentElement.scrollTop > 2400) {
+					$("#other").addClass("showing");
+				} else {
+					$("#other").removeClass("showing");
+				}
+			}
+
+
+			//can't let people right click on images
+			$("#wrapper").on("contextmenu",function(e){
+		       return false;
+		    });
+			
+		})	
+
+
+
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung</title>
+	<meta charset="utf-8">	
+	<link href='./assets/css/interaction.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1><a href="./index.html">Evelin Susan Fung Zhong</a></h1>
+	</div>
+
+		<div id="picture-content">
+		<div class="image">
+			<br><br>
+			<a href="./proj/dream.html"><h1>[in]finite dream</h1></a>
+			<p>Exploration of Interactivity through a dreamy space // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/dream9.png">
+				<img src="./assets/img/dream11.png">
+				<img src="./assets/img/dream5.png">
+				<img src="./assets/img/dream1.png">
+				<img src="./assets/img/dream2.png">
+				<img src="./assets/img/dream7.png">
+			</div>
+		</div>
+		<div class="image">
+			<br><br>
+			<a href="./proj/coffee.html"><h1>coffee source</h1></a>
+			<p>Rebranding + Site refresh // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/coffee-6.jpg">
+				<img src="./assets/img/coffee-7.jpg">
+				<img src="./assets/img/coffee-1.jpg">
+				<img src="./assets/img/coffee-9.jpg">
+				<img src="./assets/img/coffee.jpg">
+			</div>
+		</div>
+		<div class="image">
+			<br><br>
+			<a href="./proj/yourSouvenir.html"><h1>your souvenir</h1></a>
+			<p>Exploration of Ephemera and Identity through the output of a physical object // System & Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/ys-notes.png">
+				<img src="./assets/img/ys-notes-3.png">
+				<img src="./assets/img/ys-int-5.png">
+				<img src="./assets/img/ys-int-2.png">
+				<img src="./assets/img/ys-int-8.png">
+				<img src="./assets/img/ys-7.png">
+				<img src="./assets/img/ys-1.PNG">
+				<img src="./assets/img/ys-5.png">
+			</div>
+		</div>
+
+		<div class="image">
+			<br><br>
+			<a href="./proj/kinkara.html"><h1>Kinkára</h1></a>
+			<p>Exploration of web interactions for a luxury retreat hospitality project // UI / UX Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/kinkara-9.png">
+				<img src="./assets/img/kinkara-10.png">
+				<img src="./assets/img/kinkara-11.png">
+				<img src="./assets/img/kinkara-12.png">
+				<img src="./assets/img/kinkara-3.png">
+				<img src="./assets/img/kinkara-6.png">
+				<img src="./assets/img/kinkara-7.png">
+			</div>
+		</div>
+
+		<div class="image">
+			<br><br>
+			<a href="./proj/owm.html"><h1>Order With Me</h1></a>
+			<p>Exploration of Mobile App Design // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/owm-9.png">
+				<img src="./assets/img/owm-2.png">
+				<img src="./assets/img/owm-4.png">
+				<img src="./assets/img/owm-3.png">
+				<img src="./assets/img/owm-1.png">
+			</div>
+		</div>
+
+		<div class="image">
+			<br><br>
+			<a href="./proj/myWeather.html"><h1>my weather</h1></a>
+			<p>Exploration of Javascript & APIs // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/mw-process.png">
+				<img src="./assets/img/mw-site-1.png">
+				<img src="./assets/img/mw-site-5.png">
+				<img src="./assets/img/mw-site-4.png">
+				<img src="./assets/img/mw-site-3.png">
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="starshine">
+    	<div class="starry shine"></div>
+	</div>
+
+	<div id="footer">	
+		<pre> 2016 – 2021 esfz</pre> 
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+			console.log("welcome to my site!")
+			console.log("for more info fungevelin@gmail.com")
+
+
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			window.onscroll = function() {
+				changeHeader();
+			};
+
+			function changeHeader() {
+	  			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	  				$("#header").addClass("sticky");
+
+	 		 } else {
+	    			$("#header").removeClass("sticky");		
+	  			}
+			}
+
+			var concepts = document.getElementById("content").querySelectorAll("a"),
+				i,
+				blue = getRandomInt(64,84),
+				blue2 = getRandomInt(124,164),
+				blue3 = getRandomInt(184,224),
+				blue4 = getRandomInt(164,224),
+				blue5 = getRandomInt(200,254),
+				blue6 = getRandomInt(50,110),
+				color = "rgb(" + "0" + ",0," + blue +")" ,
+				color2 = "rgb(" + "0," + "67," + blue2 +")" ,
+				color3 = "rgb(" + "0," + "0," + blue3 +")" ,
+				color4 = "rgb(" + "0"+ ",0," + blue4 +")" ,
+				color5 = "rgb(" + "76"+ ",84," + blue5 +")" ,
+				color6 = "rgb(" + "0" + ",0," + blue6 +")" ;
+
+			if (n <=3){
+				document.body.style.color = color;
+				for (i = 0; i < concepts.length; i++) {
+				};
+							
+				console.log("color setting: all nighter?")  ;
+			}else if(n <=7){
+				document.body.style.color = color2;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				
+				console.log("color setting: good morning")  ;
+			}else if(n <=11){
+				document.body.style.color = color3;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				
+				console.log("color setting: time for lunch?") ;
+			}else if(n <=15){
+				document.body.style.color = color4;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				
+				console.log("color setting: coffee break!");
+			}else if(n <=19){
+				document.body.style.color = color5;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				
+				console.log("color setting: time to clock out!");
+			}else if (n <=23){
+				document.body.style.color = color6;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				
+				console.log("color setting: are you also a night owl?")
+			}
+
+		var body = $('#starshine'),
+		    	starry = $('.starry.shine'),
+		    	stars =  100,
+		    	sparkle = 20;
+		    
+		  var size = 'small',
+		 		sizeMobile = 'smallMobile';
+
+		  var createStar = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(size).appendTo(body);
+		  };
+
+		   var createStarM = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(sizeMobile).appendTo(body);
+		  };
+
+		  	if(window.matchMedia("(max-width: 767px)").matches){
+       			for(var i = 0; i < stars; i++) {
+       			  if(i % 2 === 0) {
+       			    size = 'smallMobile';
+       			  } else if(i % 3 === 0) {
+       			    size = 'mediumMobile';
+       			  }else if (i % 4 === 0) {
+       			  	size ='largeMobile'
+       			  }
+       			 	createStarM();
+       			}
+    		} else{
+        		for(var i = 0; i < stars; i++) {
+        		  if(i % 2 === 0) {
+        		    size = 'small';
+        		  } else if(i % 3 === 0) {
+        		    size = 'medium';
+        		  }else if (i % 4 === 0) {
+        		  	size ='large'
+        		  }
+        		  createStar();
+        		}
+    		}		
+		}) 
+
+	</script>	
+</body>
+</html>
