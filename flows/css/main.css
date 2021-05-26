@@ -1,8 +1,11 @@
-@font-face {font-family: "Futura"; src: url("../fonts/Futura-Medium.woff");}
+@font-face {font-family: "Maru"; src: url("../fonts/GT-Maru-Mono-Regular-Trial.woff2");}
+@font-face {font-family: "Maru-Mega"; src: url("../fonts/GT-Maru-Mega-Midi-Trial.woff2");}
+
 
 html, body {
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .wrapper{
@@ -11,30 +14,141 @@ html, body {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%,0);
+	z-index: 1;
 }
 
 .intro{
-	font-size: 6em;
+	font-family: "Maru-Mega";
+	font-size: 10em;
 	position: absolute;
 	top: 20vh;
 	left: 50%;
 	transform: translate(-50%,0);
-
+	text-align: center;
+	padding-bottom: 2vh;
 }
 
 .option{
+	font-family: "Maru";
 	position: absolute;
 	top: 40vh;
 	left: 50%;
 	transform: translate(-50%,0);
 }
 
-button{
+.option button{
+	font-family: "Maru";
 	width: 25vw;
 	height: 5vh;
 	margin: 1em;
 	font-size: 4em;
+	border-radius: 1em;
+	background-color: transparent;
 }
+
+.option button:hover {
+	background-color: rgba(255,255,255,0.5);
+
+}
+
+#counter{
+	font-family: "Maru";
+	font-size: 2em;
+	position: absolute;
+	top: 60vh;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+#countdown, #plural {
+	font-size: 5em;
+}
+
+button.goTwo.next, button.goThree.next,button.goFour.next,button.goFive.next,button.goSix.next,button.goSeven.next,button.goEight.next,button.goNine.next,button.goTen.next,button.goFinal.next{
+	display: none;
+	font-family: "Maru";
+	width: 55vw;
+	height: 5vh;
+	margin: 1em;
+	font-size: 4em;
+	border-radius: 1em;
+	background-color: transparent;
+	position: fixed;
+	top: 80vh;
+	left: 45%;
+	transform: translate(-50%,0);
+	text-align: center;
+}
+
+.two h1, .three h1 {
+	width: 90vw;
+}
+
+button.next:hover {
+	background-color: rgba(255,255,255,0.5);
+
+}
+
+
+.background{
+	opacity: .5;
+	z-index: -1;
+}
+
+svg {
+	position: absolute;
+	transform-origin: 50% 50%;
+	
+
+}
+
+#blob1{
+	animation: moving 10s ease-in-out infinite;
+	width: 50vw;
+	fill: #FF9999;
+	stroke: #FF9999;
+}
+
+#blob2{
+	animation: sideway 10s ease-in-out infinite;
+
+	width: 70vw;
+	fill: #FFCC99;
+	stroke: #FFCC99;;
+}
+
+#blob3{
+	animation: opposite 10s ease-in-out infinite;
+	width: 50vw;
+	fill: #CCCC00;
+	stroke: #CCCC00;;
+}
+
+@keyframes moving {
+  0%   { transform: translate(60vw, 10vh)rotate(60deg); }
+  28%  { transform: translate(20vw, 5vh)rotate(-20deg); }
+  68%  { transform: translate(-30vw, 0)rotate(50deg); }
+  88%  { transform: translate(-20vw, 15vh) rotate(-20deg); }
+  100% { transform: translate(60vw, 10vh)rotate(60deg); }
+}
+
+@keyframes opposite {
+  0%   { transform: translate(10vw, 40vh)scale(.5); }
+  28%  { transform: translate(60vw, 40vh)rotate(20deg); }
+  68%  { transform: translate(80vw, 40vh)rotate(-40deg)scale(1.1); }
+  88%  { transform: translate(40vw, 40vh) rotate(10deg); }
+  100% { transform: translate(10vw, 40vh)scale(.5); }
+}
+
+@keyframes sideway {
+  0%   { transform: translate(20vw, 70vh)rotate(40deg)scale(.8); }
+  28%  { transform: translate(50vw, 70vh)rotate(50deg)scale(.7); }
+  68%  { transform: translate(-20vw, 70vh)rotate(-30deg); }
+  88%  { transform: translate(10vw, 70vh) rotate(10deg)scale(.7); }
+  100% { transform: translate(20vw, 70vh)rotate(40deg); }
+}
+
+
 
 @media only screen 
   and (min-device-width: 375px) 

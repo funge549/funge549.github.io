@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>good morning</title>
+  <meta charset="utf-8">
+  <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+  <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
+  <link rel="icon" href="img/icon.png" type="image/x-icon" />
+  <script src="./js/jquery-3.3.1.min.js"></script>  
+  <script src="./js/easytimer.js"></script> 
+  <script src="./js/examples.min.js"></script> 
+
+</head>
+  <body>
+  <div class="wrapper">
+    <div class="intro"><h1>evening!</h1></div>
+    <div class="option">
+      <button class="start">start</button>
+    </div>  
+  </div>
+
+  <div class="one" style="display: none;">
+    <div class="intro"><h1>hero pose</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goTwo next">continue</button>
+  </div>
+
+  <div class="two" style="display: none;">
+    <div class="intro"><h1>child's pose</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goThree next">continue</button>
+  </div>
+
+  <div class="three" style="display: none;">
+    <div class="intro"><h1>downward dog</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goFour next">continue</button>
+  </div>
+
+  <div class="four" style="display: none;">
+    <div class="intro"><h1>camel pose</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goFive next">continue</button>
+  </div>
+
+  <div class="five" style="display: none;">
+    <div class="intro"><h1>butterfly fold</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goSix next">continue</button>
+  </div>
+
+  <div class="six" style="display: none;">
+    <div class="intro"><h1>supine twist <span style="color:#336699">left</span></h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goSeven next">continue</button>
+  </div>
+
+  <div class="seven" style="display: none;">
+    <div class="intro"><h1>supine twist <span style="color:#336699">right</span></h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goEight next">continue</button>
+  </div>
+
+  <div class="eight" style="display: none;">
+    <div class="intro"><h1>bridge</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goNine next">continue</button>
+  </div>
+
+  <div class="nine" style="display: none;">
+    <div class="intro"><h1>knee-to-chest</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goTen next">DONE !!</button>
+  </div>
+
+  <div class="ten" style="display: none;">
+    <div class="intro"><h1>lay flat</h1></div>
+    <div id="counter"><span id="countdown">20</span><span id="plural">s</span></div>
+    <button class="goFinal next">DONE !!</button>
+  </div>
+
+  <div class="final" style="display: none;">
+    <div class="intro"><h1>&#9786;<br>have a good day<br><br>&#x263A;</h1></div>
+  </div>  
+  
+  </body>
+
+  <script>
+    $(document).ready(function(){
+
+        document.body.style.backgroundColor = "rgba(185,215,240,0.3)";
+        
+        $(".start").click(function() {
+          $(".wrapper").css("display", "none");
+          $(".one").css("display", "block");
+           document.body.style.backgroundColor = "rgba(164,191,229,0.3)";
+            timer.reset();
+           
+        });  
+
+        $(".goTwo").click(function() {
+          $(".one").css("display", "none");
+          $(".two").css("display", "block");
+          document.body.style.backgroundColor = "rgba(159,201,237,0.3)";
+           timer.reset();
+        
+        });
+
+        $(".goThree").click(function() {
+          $(".two").css("display", "none");
+          $(".three").css("display", "block");
+          document.body.style.backgroundColor = "rgba(150,209,243,0.3)";
+          ;
+          timer.reset();
+          
+        });   
+
+        $(".goFour").click(function() {
+          $(".three").css("display", "none");
+          $(".four").css("display", "block");
+          document.body.style.backgroundColor = "rgba(142,210,238,0.3)";
+          timer.reset();
+          
+        });
+
+        $(".goFive").click(function() {
+          $(".four").css("display", "none");
+          $(".five").css("display", "block");
+          document.body.style.backgroundColor = "rgba(142,219,207,0.3)";
+          timer.reset();
+          
+        });  
+
+        $(".goSix").click(function() {
+          $(".five").css("display", "none");
+          $(".six").css("display", "block");
+          document.body.style.backgroundColor = "rgba(140,207,218,0.3)";
+          timer.reset();
+          
+        });
+
+        $(".goSeven").click(function() {
+          $(".six").css("display", "none");
+          $(".seven").css("display", "block");
+          document.body.style.backgroundColor = "rgba(140,207,218,0.3)";
+          timer.reset();
+          
+        });
+
+        $(".goEight").click(function() {
+          $(".seven").css("display", "none");
+          $(".eight").css("display", "block");
+          document.body.style.backgroundColor = "rgba(124,200,201,0.3)";
+          timer.reset();
+          
+        });
+
+        $(".goNine").click(function() {
+          $(".eight").css("display", "none");
+          $(".nine").css("display", "block");
+          document.body.style.backgroundColor = "rgba(108,193,180,0.3)";
+          timer.reset();
+          
+        });
+
+        $(".goTen").click(function() {
+          $(".nine").css("display", "none");
+          $(".ten").css("display", "block");
+          document.body.style.backgroundColor = "rgba(100,188,155, 0.3)";
+          timer.reset();
+          
+        });
+
+
+        $(".goFinal").click(function() {
+          $(".ten").css("display", "none");
+          $(".final").css("display", "block");
+          document.body.style.backgroundColor = "rgba(100,188,155, 0.5)";
+          timer.reset();
+          
+        }); 
+
+
+
+
+        // function timer(){
+        //   var seconds = document.getElementById("countdown").textContent,
+        //     audio = new Audio ("ding.wav")
+        // ;
+        // var countdown = setInterval(function() {
+        //     seconds--;
+        //     if (seconds <= 0){
+        //       clearInterval(countdown);
+        //       audio.play();
+        //       $(".next").css("display","block");
+        //       return;
+        //       } 
+
+               
+        //   }, 2000);
+        // }
+
+    })
+      var timer = new easytimer.Timer(),
+          audio = new Audio ("ding.wav");
+
+        timer.start({countdown: true, startValues: {seconds: 20}});
+
+        var display = timer.getTimeValues().seconds;
+
+        $("#counter #countdown").html(display.toString());
+
+        timer.addEventListener('secondsUpdated', function (e) {
+            $("#counter #countdown").html(timer.getTimeValues().seconds.toString());
+        });
+
+
+        timer.addEventListener('targetAchieved', function (e) {
+          audio.play();
+          $(".next").css("display","block");
+           
+
+        });
+
+  </script>
+
+</html>

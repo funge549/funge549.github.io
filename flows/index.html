@@ -6,16 +6,45 @@
   <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
   <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
   <link rel="icon" href="img/icon.png" type="image/x-icon" />
+  <script src="./js/jquery-3.3.1.min.js"></script>  
 </head>
   <body>
   <div class="wrapper">
     <div class="intro"><h1>welcome</h1></div>
     <div class="option">
-      <button>AM</button><br>
-      <button>PM</button>
+      <button class="morning">AM</button><br>
+      <button class="night">PM</button>
     </div>
   </div>
-<!--   <script src="./js/jquery-3.3.1.min.js"></script>  
-  <script src="./js/main.js"></script>   -->
+
+  <div class="background">
+    <svg id="blob1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.89 160.13">
+      <g  data-name="Layer 1"><path class="blob" d="M249.63,110.39c-8.82,52.28-34,34.1-114.7,46.76C52,170.17.59,128.3.59,75.29S22.71-12.14,113.41,5C174.71,16.66,258.64,57.07,249.63,110.39Z"/></g>
+    </svg>
+
+    <svg id="blob2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.67 175.89">
+      <g  data-name="Layer 1"><path class="blob" d="M209.4,88c0,48.26-27.77,87.39-76,87.39S.55,124.85.55,76.59,73.75.55,122,.55C230.84.55,209.4,39.68,209.4,88Z"/></g>
+    </svg>
+
+    <svg id="blob3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.85 133.24">
+      <g  data-name="Layer 1"><path class="blob" d="M182.36,78.61c0,47.08-31.05,60-86.76,51.86C43.62,122.86.49,100.65.49,53.57S56.6-12.71,103.94,10.05C157.55,35.82,182.36,31.53,182.36,78.61Z"/></g>
+    </svg>
+
+  </div>
   </body>
+
+  <script>
+    $(document).ready(function(){
+        document.body.style.backgroundColor = "#FFCCCC";
+        var i = 0;
+        function change() {
+          var colors = ["#FFFFCC", "#FFFF99", "#FFCCCC", "#FFCCFF", "#CCCCFF", "#CCFFCC", "#CCFF99"];
+          document.body.style.backgroundColor = colors[i];
+          i = (i + 1) % colors.length;
+        }
+        setInterval(change, 2500);
+    })
+
+  </script>
+
 </html>
