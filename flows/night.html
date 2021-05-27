@@ -95,6 +95,7 @@
           $(".one").css("display", "block");
            document.body.style.backgroundColor = "rgba(164,191,229,0.3)";
             timer.reset();
+            $(".next").css("display","none");
            
         });  
 
@@ -103,6 +104,7 @@
           $(".two").css("display", "block");
           document.body.style.backgroundColor = "rgba(159,201,237,0.3)";
            timer.reset();
+           $(".next").css("display","none");
         
         });
 
@@ -112,6 +114,7 @@
           document.body.style.backgroundColor = "rgba(150,209,243,0.3)";
           ;
           timer.reset();
+          $(".next").css("display","none");
           
         });   
 
@@ -120,6 +123,7 @@
           $(".four").css("display", "block");
           document.body.style.backgroundColor = "rgba(142,210,238,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -128,6 +132,7 @@
           $(".five").css("display", "block");
           document.body.style.backgroundColor = "rgba(142,219,207,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });  
 
@@ -136,6 +141,7 @@
           $(".six").css("display", "block");
           document.body.style.backgroundColor = "rgba(140,207,218,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -144,6 +150,7 @@
           $(".seven").css("display", "block");
           document.body.style.backgroundColor = "rgba(140,207,218,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -152,6 +159,7 @@
           $(".eight").css("display", "block");
           document.body.style.backgroundColor = "rgba(124,200,201,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -160,6 +168,7 @@
           $(".nine").css("display", "block");
           document.body.style.backgroundColor = "rgba(108,193,180,0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -168,6 +177,7 @@
           $(".ten").css("display", "block");
           document.body.style.backgroundColor = "rgba(100,188,155, 0.3)";
           timer.reset();
+          $(".next").css("display","none");
           
         });
 
@@ -177,6 +187,7 @@
           $(".final").css("display", "block");
           document.body.style.backgroundColor = "rgba(100,188,155, 0.5)";
           timer.reset();
+          $(".next").css("display","none");
           
         }); 
 
@@ -201,26 +212,33 @@
         // }
 
     })
-      var timer = new easytimer.Timer(),
-          audio = new Audio ("ding.wav");
+      const soundEffect = new Audio();
 
-        timer.start({countdown: true, startValues: {seconds: 20}});
+      soundEffect.play();
 
-        var display = timer.getTimeValues().seconds;
+      var timer = new easytimer.Timer();
 
-        $("#counter #countdown").html(display.toString());
+      soundEffect.src = 'ding.wav';
 
-        timer.addEventListener('secondsUpdated', function (e) {
-            $("#counter #countdown").html(timer.getTimeValues().seconds.toString());
-        });
+      timer.start({countdown: true, startValues: {seconds: 20}});
 
+      if(timer.isRunning(
+        $(".next").css("display","none"))
+      )  
+      
 
-        timer.addEventListener('targetAchieved', function (e) {
-          audio.play();
-          $(".next").css("display","block");
-           
+      var display = timer.getTimeValues().seconds;
 
-        });
+      $("#counter #countdown").html(display.toString());
+
+      timer.addEventListener('secondsUpdated', function (e) {
+          $("#counter #countdown").html(timer.getTimeValues().seconds.toString());
+      });
+      
+      timer.addEventListener('targetAchieved', function (e) {
+        soundEffect.play();
+        $(".next").css("display","block");
+      });
 
   </script>
 
