@@ -1,31 +1,837 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>HTML/CSS Puzzles</title>
-  <link rel="stylesheet" href="main.css">
+<head>	
+	<title>evelin fung</title>
+	<meta charset="utf-8">	
+	<link href='./assets/css/main-may.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./assets/js/moment.js"></script>
+	<script type="text/javascript" src="./assets/js/moment-timezone-with-data.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/circletype.min.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.fittext.js"></script>
 </head>
 <body>
-  <h1>HTML/CSS Puzzles</h1>
-  <ul>
-    <li>
-      <a href="puzzle-1/index.html">Puzzle 1</a>
-    </li>
-    <li>
-      <a href="puzzle-2/index.html">Puzzle 2</a>
-    </li>
-    <li>
-      <a href="puzzle-3/index.html">Puzzle 3</a>
-    </li>
-    <li>
-      <a href="puzzle-4/index.html">Puzzle 4</a>
-    </li>
-    <li>
-      <a href="puzzle-5/index.html">Puzzle 5</a>
-    </li>
-    <li>
-      <a href="puzzle-6/index.html">Puzzle 6</a>
-    </li>
-  </ul>
+	<div id="header">
+		<h1>Evelin Susan Fung Zhong</h1>
+		<div class="location">
+			<p>currently in california & it is <span id="time"></span></p>
+			<!-- <p>currently in california & it is <span id="time"></span></p> -->
+		</div>
+	</div>
+
+	<div id="click-text">
+		<div id="circle-picture"></div>
+			<div id="counter-picture">
+				<pre>&#10051;visual&#10051;view </pre>
+			</div>
+		<div id="picture-view">
+			<img src="./assets/img/flowerBlue.png">
+		</div>
+	</div>	
+
+	<div id="click-img">
+		<p>&#10051;text view&#10051;</p>
+		<div id="text-view">
+			<img src="./assets/img/flowerBlue.png">
+		</div>
+	</div>			
+
+		<div id="picture-content">
+		<div class="image">
+			<a href="./proj/dream.html"><h1>[in]finite dream</h1></a>
+			<p>Exploration of Interactivity through a dreamy space // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/dream1.png">
+				<img src="./assets/img/dream5.png">
+				<img src="./assets/img/dream2.png">
+				<img src="./assets/img/dream7.png">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/organikos.html"><h1>Organikos</h1></a>
+			<p>Exploration of Identity and Packaging for coffee // Branding</p>
+			<div class="horizontal">
+				<img src="./assets/img/organikos-04.png">
+				<img src="./assets/img/organikos-01.png">
+				<img src="./assets/img/organikos.png">		
+				<img src="./assets/img/org-1.png">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/yourSouvenir.html"><h1>your souvenir</h1></a>
+			<p>Exploration of Ephemera and Identity through the output of a physical object // System & Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/ys-int-5.png">
+				<img src="./assets/img/ys-int-2.png">
+				<img src="./assets/img/ys-int-8.png">
+				<img src="./assets/img/ys-7.png">
+				<img src="./assets/img/ys-1.PNG">
+				<img src="./assets/img/ys-5.png">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./madeincostarica.html"><h1>製造哥斯達黎加 [made in costa rica]</h1></a>
+			<p>Exploration of Tradition & Identity through recipes // Book & Interaction Design </p>
+			<div class="horizontal">
+				<img src="./assets/img/thesis1.jpg">
+				<img src="./assets/img/thesis11.png">
+				<img src="./assets/img/thesis5.png">
+				<img src="./assets/img/thesis4.png">
+				<img src="./assets/img/thesis5.png">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/fancyFree.html"><h1>Fancy Free</h1></a>
+			<p>Exploration of redesigning an existing book // Book Design </p>
+			<div class="horizontal">
+				<img src="./assets/img/fancy.jpg">
+				<img src="./assets/img/fancy6.jpg">
+				<img src="./assets/img/fancy3.jpg">
+				<img src="./assets/img/fancy2.jpg">
+				<img src="./assets/img/fancy7.jpg">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/owm.html"><h1>Order With Me</h1></a>
+			<p>Exploration of Mobile App Design // Interaction Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/owm-2.png">
+				<img src="./assets/img/owm-4.png">
+				<img src="./assets/img/owm-3.png">
+				<img src="./assets/img/owm-1.png">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/mogulTypeface.html"><h1>Mogul Typeface</h1></a>
+			<p>Exploration of letterforms and type // Type Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/mogul3.jpg">
+				<img src="./assets/img/mogul-2.jpg">
+				<img src="./assets/img/mogul5.jpg">
+				<img src="./assets/img/mogul6.jpg">
+			</div>
+		</div>
+		<div class="image">
+			<a href="./proj/honda.html"><h1>Honda</h1></a>
+			<p>Exploration of large scale and printed visuals for autmobiles // Advertising</p>
+			<div class="horizontal">
+				<img src="./assets/img/honda.png">
+				<img src="./assets/img/honda2.png">
+				<img src="./assets/img/honda4.png">
+			</div>
+		</div>	
+		<div class="image">
+			<a href="./proj/familiaFung.html"><h1>Familia Fung [Ancestry Book]</h1></a>
+			<p>Exploration of Identity & Tradition // Book Design </p>
+			<div class="horizontal">
+				<img src="./assets/img/fung6.jpg">
+				<img src="./assets/img/fung.jpg">
+				<img src="./assets/img/fung2.jpg">
+			</div>
+		</div>	
+		<div class="image">
+			<a href="./proj/sundaes&cones.html"><h1>sundaes & cones</h1></a>
+			<p>Exploration of Branding through an existing restaurant // Identity Design</p>
+			<div class="horizontal">
+				<img src="./assets/img/cones3.jpg">
+				<img src="./assets/img/cones1.png">
+				<img src="./assets/img/cones.jpg">
+				<img src="./assets/img/cones2.jpg">
+			</div>
+		</div>	
+	</div>
+
+	<div id="content"> 
+		<h2>is an interactive and visual designer interested in creating multidisciplinary systems and projects that showcase her cultural heritage and perspective. Currently works for <a  href="./proj/bakeryHouse.html">Bakery House</a> as a visual designer. She focuses on
+
+			<a class="brand">Branding</a>,
+			<img id="aB" class="one"> 
+	        <img id="bB" class="two"> 
+	        <img id="cB" class="three"> 
+			
+			<a class="interaction">UI/UX</a>,
+			 <img id="aU" class="one"> 
+	        <img id="bU" class="two"> 
+	        <img id="cU" class="three">  	
+			
+			<a class="type">Typography</a>,
+			<img id="aT" class="one"> 
+	        <img id="bT" class="two"> 
+	        <img id="cT" class="three">
+
+			<a class="web">Websites</a> & 
+			<img id="aW" class="one"> 
+	        <img id="bW" class="two"> 
+	        <img id="cW" class="three">
+
+			<a class="book">Book Design</a>.
+			<img id="aK" class="one"> 
+	        <img id="bK" class="two"> 
+	        <img id="cK" class="three">
+
+			Interested in 
+			<a class="tradition">tradition</a>,
+			<img id="aTr" class="one"> 
+	        <img id="bTr" class="two"> 
+	        <img id="cTr" class="three"> 
+
+			<a class="systems">systems</a>, 
+			<img id="aS" class="one"> 
+	        <img id="bS" class="two"> 
+	        <img id="cS" class="three"> 
+
+			<a class="culture">culture</a> &
+			<img id="aC" class="one"> 
+	        <img id="bC" class="two"> 
+	        <img id="cC" class="three"> 
+
+			<a class="food">food</a>.
+			<img id="aF" class="one"> 
+	        <img id="bF" class="two"> 
+	        <img id="cF" class="three"> 
+
+			Worked as an interactive designer for <a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a>, in projects like 
+			<a href="./proj/organikos.html" class="org"><span class="exBrand exSystems exFood">Organikos </span></a>&
+			<a href="./proj/honda.html" class="h70"><span class="exBrand">Honda 70 Aniversario</span></a>.
+		<br><br>
+		PROJECTS:
+		<br>
+		<a href="./madeincostarica.html" class="micr"><span class="exBook exWeb exType exTradition exCulture exFood"> Made In Costa Rica</span></a>, 
+		<a href="proj/yourSouvenir.html" class="ys"><span class="exSystems exInteraction exCulture exWeather">your souvenir</span></a>,
+		<a href="./proj/dream.html" class="dr"><span class="exWeb">Dream</span></a>, 
+		<a href="./proj/owm.html" class="owm"><span class="exInteraction exbrand exFood">Order With Me</span></a>, 
+		<a href="./proj/familiaFung.html" class="ffab"><span class="exBook exType exTradition">Familia Fung [Ancestry Book]</span></a>, 
+		<a href="./proj/sundaes&cones.html" class="rsc"><span class="exBrand exSystems exFood">Rebranding: sundaes & cones</span></a>,
+		<a href="./proj/fancyFree.html" class="ff"><span class="exBook exCulture exType">Fancy Free</span></a>, 
+		<a href="./proj/mogulTypeface.html" class="mt"><span class="exType">Mogul Typeface</span></a> &
+		<a href="https://raychelkim.github.io/thesis/index.html" target="_blank" class="ray"><span class="exInteraction exWeb">PERCEPTION</span></a>. 
+
+
+		<br><br>
+		EDUCATION:<BR>
+		BFA in Communication Design, Parsons School of Design, NY (2016-2020) <BR>
+		IB DIPLOMA + IGCSE Certificate, British School of Costa Rica (2012–2015)
+		<br><br>
+		EXPERIENCE:<BR>
+		<a href="./proj/bakeryHouse" target="_blank">Bakery House</a><br>
+		&emsp;Visual Designer (09/2020–now)<br>
+		<a  href="https://elastica.nu" target="_blank">&#60;elastica&#62;</a> <br>
+		&emsp;Senior Interactive Designer (09/2018–05/2020) @ Remotely<br>
+		&emsp;&emsp;Effie Awards Costa Rica for <a href="./proj/honda.html" class="h70"><span class="exBrand">Honda 70 Aniversario</span></a> (2019) <br>
+		&emsp;Graphic Design Intern (05/2018–08/2018) @ Costa Rica
+		<br><br>
+		CONTACT:<br>
+		<a href="mailto:fungevelin@gmail.com">fungevelin@gmail.com</a> <br>
+		<a href="https://www.instagram.com/_esfz_/" target="_blank">instagram</a><br><br>
+
+		DOWNLOAD: <br>
+		<a href="./assets/EvelinFung_CV.pdf" download>resumé</a>
+		</h2>
+
+		<div class="micr-ex proj">
+			<img src="./assets/img/thesis2.png" class="proj-img">
+			<img src="./assets/img/thesis5.png" class="proj-img">
+			<img src="./assets/img/thesis10.png" class="proj-img">
+		</div>	
+
+		<div class="pt-ex proj">
+			<img src="./assets/img/tea3.jpg" class="proj-img">
+			<img src="./assets/img/tea2.jpg" class="proj-img">
+			<img src="./assets/img/tea.jpg" class="proj-img">
+		</div>
+
+		<div class="ys-ex proj">
+			<img src="./assets/img/ys-5.png" class="proj-img">
+			<img src="./assets/img/ys-6.png" class="proj-img">
+			<img src="./assets/img/ys-3.png" class="proj-img">
+		</div>	
+
+		<div class="dr-ex proj">
+			<img src="./assets/img/dream5.png" class="proj-img">
+			<img src="./assets/img/dream2.png" class="proj-img">
+			<img src="./assets/img/dream1.png" class="proj-img">
+		</div>		
+
+		<div class="ffab-ex proj">
+			<img src="./assets/img/fung4.jpg" class="proj-img">
+			<img src="./assets/img/fung.jpg" class="proj-img">
+			<img src="./assets/img/fung2.jpg" class="proj-img">
+		</div>
+
+		<div class="rsc-ex proj">
+			<img src="./assets/img/cones.jpg" class="proj-img">
+			<img src="./assets/img/cones3.jpg" class="proj-img">
+			<img src="./assets/img/cones6.jpg" class="proj-img">
+		</div>
+
+		<div class="lp-ex proj">
+			<img src="./assets/img/lp-2.png" class="proj-img">
+			<img src="./assets/img/lp-3.png" class="proj-img">
+			<img src="./assets/img/lp-5.png" class="proj-img">
+		</div>	
+
+		<div class="mw-site-ex proj">
+			<img src="./assets/img/mw-site-1.png" class="proj-img">
+			<img src="./assets/img/mw-site-5.png" class="proj-img">
+			<img src="./assets/img/mw-site-3.png" class="proj-img">
+		</div>	
+
+		<div class="ff-ex proj">
+			<img src="./assets/img/fancy4.jpg" class="proj-img">
+			<img src="./assets/img/fancy.jpg" class="proj-img">
+			<img src="./assets/img/fancy6.jpg" class="proj-img">
+		</div>	
+
+		<div class="sn-ex proj">
+			<img src="./assets/img/network1.png" class="proj-img">
+			<img src="./assets/img/network4.png" class="proj-img">
+			<img src="./assets/img/network5.png" class="proj-img">
+		</div>	
+
+		<div class="mt-ex proj">
+			<img src="./assets/img/mogul2.jpg" class="proj-img">
+			<img src="./assets/img/mogul4.jpg" class="proj-img">
+			<img src="./assets/img/mogul5.jpg" class="proj-img">
+		</div>
+
+		<div class="cc-ex proj">
+			<img src="./assets/img/click-1.png" class="proj-img">
+			<img src="./assets/img/click-5.png" class="proj-img">
+			<img src="./assets/img/click-11.png" class="proj-img">
+		</div>	
+
+		<div class="owm-ex proj">
+			<img src="./assets/img/owm-2.png" class="proj-img">
+			<img src="./assets/img/owm-4.png" class="proj-img">
+			<img src="./assets/img/owm-3.png" class="proj-img">
+		</div>
+
+		<div class="org-ex proj">
+			<img src="./assets/img/organikos.png" class="proj-img">
+			<img src="./assets/img/org-1.png" class="proj-img">
+			<img src="./assets/img/organikos-04.png" class="proj-img">
+		</div>		
+
+		<div class="orc-ex proj">
+			<img src="./assets/img/orquidea-layout.png" class="proj-img">
+			<img src="./assets/img/orquidea-cover3.png" class="proj-img">
+			<img src="./assets/img/orquidea3.png" class="proj-img">
+		</div>
+
+		<div class="h70-ex proj">
+			<img src="./assets/img/honda3.png" class="proj-img">
+			<img src="./assets/img/honda4.png" class="proj-img">
+		</div>
+
+		<div class="ray-ex proj">
+			<iframe class="proj-frame" src="https://raychelkim.github.io/thesis/products/weight.html"></iframe>
+			<iframe class="proj-frame" src="https://raychelkim.github.io/thesis/products/final.html"></iframe>
+		</div>
+	</div>
+
+	<div id="starshine">
+    	<div class="starry shine"></div>
+	</div>
+
+	<div id="footer">	
+		<pre> 2016 – 2021 esfz</pre> 
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+			console.log("welcome to my site!")
+			console.log("for more info fungevelin@gmail.com")
+			function date_time() {
+			  now = moment().tz("America/Los_Angeles").format("h:mma");
+			  document.getElementById('time').innerHTML = now;
+			  setTimeout(function () { date_time(); }, 1000);
+			}
+			date_time();
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+			var today = new Date(),
+				n = today.getHours(),
+				min = today.getMinutes();
+				min = (min < 10) ? '0' + min : min;
+
+	 		$("#click-text").click(function() {
+	 			$("#picture-content").css("display", "block");
+	 			$("#content").css("display", "none");
+	 			$("#click-img").css("display", "block");
+	 			$("#click-text").css("display", "none");
+			})
+
+			$("#click-img").click(function() {
+	 			$("#picture-content").css("display", "none");
+	 			$("#content").css("display", "block");
+	 			$("#click-img").css("display", "none");
+	 			$("#click-text").css("display", "block");
+			})
+
+			var counter = new CircleType(document.getElementById('counter-picture'))
+			  	.radius(45);
+
+			var concepts = document.getElementById("content").querySelectorAll("a"),
+				header = document.getElementById("header").querySelectorAll("a"),
+				i,
+				blue = getRandomInt(64,84),
+				blue2 = getRandomInt(124,164),
+				blue3 = getRandomInt(184,224),
+				blue4 = getRandomInt(164,224),
+				blue5 = getRandomInt(200,254),
+				blue6 = getRandomInt(50,110),
+				color = "rgb(" + "0" + ",0," + blue +")" ,
+				color2 = "rgb(" + "0," + "67," + blue2 +")" ,
+				color3 = "rgb(" + "0," + "0," + blue3 +")" ,
+				color4 = "rgb(" + "0"+ ",0," + blue4 +")" ,
+				color5 = "rgb(" + "76"+ ",84," + blue5 +")" ,
+				color6 = "rgb(" + "0" + ",0," + blue6 +")" ;
+
+			if (n <=3){
+				document.body.style.color = color;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color;
+				};			
+				console.log("color setting: all nighter?")  ;
+			}else if(n <=7){
+				document.body.style.color = color2;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color2;
+				};
+				console.log("color setting: good morning")  ;
+			}else if(n <=11){
+				document.body.style.color = color3;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color3;
+				};
+				console.log("color setting: time for lunch?") ;
+			}else if(n <=15){
+				document.body.style.color = color4;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color4;
+				};
+				console.log("color setting: coffee break!");
+			}else if(n <=19){
+				document.body.style.color = color5;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color5;
+				};
+				console.log("color setting: time to clock out!");
+			}else if (n <=23){
+				document.body.style.color = color6;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color6;
+				};
+				console.log("color setting: are you also a night owl?")
+			}
+
+			var changeBrand = $(".brand");
+
+			changeBrand.click(function() {
+				changeBrand.toggleClass("bold");
+				$(".exBrand").toggleClass("bold");
+			})
+
+			changeBrand.hover(function(){
+				$("#aB").toggleClass("visible");
+				$("#bB").toggleClass("visible");
+				$("#cB").toggleClass("visible");
+			})
+
+			var img1B = './assets/img/choco2.png',
+			img2B = './assets/img/cones4.jpg',
+			img3B = './assets/img/honda3.png',
+			img4B = './assets/img/mw2.png',
+			img5B = './assets/img/tea.jpg',
+			img6B = './assets/img/fitted7.jpg',
+			img7B = './assets/img/21e.jpg',
+			img8B = './assets/img/choco4.png',
+			img9B = './assets/img/fitted2.jpg';
+
+		    const images = [img1B, img2B, img3B];
+		    const imagesA = [img4B, img5B, img6B];
+		    const imagesB = [img7B, img8B, img9B];
+
+		    function randomImage(){
+				return images[Math.floor(Math.random()* images.length)];
+			}
+			function randomImageA(){
+				return imagesA[Math.floor(Math.random()* imagesA.length)];
+			}
+			function randomImageB(){
+				return imagesB[Math.floor(Math.random()* imagesB.length)];
+			}
+
+			document.getElementById('aB').src = randomImage();
+			document.getElementById('bB').src = randomImageA();
+			document.getElementById('cB').src = randomImageB();
+
+			//UI / UX
+
+			var changeUI = $(".interaction");
+
+			changeUI.click(function() {
+				changeUI.toggleClass("bold");
+				$(".exInteraction").toggleClass("bold");
+			})
+
+			changeUI.hover(function(){
+				$("#aU").toggleClass("visible");
+				$("#bU").toggleClass("visible");
+				$("#cU").toggleClass("visible");
+			})
+
+			var img1U = './assets/img/mw5.png',
+			img2U = './assets/img/mw6.png',
+			img3U = './assets/img/ui-ux1.png',
+			img4U = './assets/img/ui-ux2.png',
+			img5U = './assets/img/ui-ux3.png',
+			img6U = './assets/img/ui-ux4.png',
+			img7U = './assets/img/ui-ux5.png',
+			img8U = './assets/img/network1.png',
+			img9U = './assets/img/tcs-4.jpg';
+
+		    const imagesU = [img1U, img2U, img3U];
+		    const imagesU2 = [img4U, img5U, img6U];
+		    const imagesU3 = [img7U, img8U, img9U];
+
+		    function randomImageU(){
+				return imagesU[Math.floor(Math.random()* imagesU.length)];
+			}
+			function randomImageU2(){
+				return imagesU2[Math.floor(Math.random()* imagesU2.length)];
+			}
+			function randomImageU3(){
+				return imagesU3[Math.floor(Math.random()* imagesU3.length)];
+			}
+
+			document.getElementById('aU').src = randomImageU();
+			document.getElementById('bU').src = randomImageU2();
+			document.getElementById('cU').src = randomImageU3();
+
+			//type
+
+			var changeType = $(".type");
+
+			changeType.click(function() {
+				changeType.toggleClass("bold");
+				$(".exType").toggleClass("bold");
+			})
+
+			changeType.hover(function(){
+				$("#aT").toggleClass("visible");
+				$("#bT").toggleClass("visible");
+				$("#cT").toggleClass("visible");
+			})
+
+			var img1T = './assets/img/relatability.jpg',
+			img2T = './assets/img/aesthetic3.jpg',
+			img3T = './assets/img/fung6.jpg',
+			img4T = './assets/img/Look1.jpg',
+			img5T = './assets/img/mogul6.jpg',
+			img6T = './assets/img/oped2.jpg',
+			img7T = './assets/img/relatability3.jpg',
+			img8T = './assets/img/trust.jpg',
+			img9T = './assets/img/fancy6.jpg';
+
+		    const imagesT = [img1T, img2T, img3T];
+		    const imagesT2 = [img4T, img5T, img6T];
+		    const imagesT3 = [img7T, img8T, img9T];
+
+		    function randomImageT(){
+				return imagesT[Math.floor(Math.random()* imagesT.length)];
+			}
+			function randomImageT2(){
+				return imagesT2[Math.floor(Math.random()* imagesT2.length)];
+			}
+			function randomImageT3(){
+				return imagesT3[Math.floor(Math.random()* imagesT3.length)];
+			}
+
+			document.getElementById('aT').src = randomImageT();
+			document.getElementById('bT').src = randomImageT2();
+			document.getElementById('cT').src = randomImageT3();
+
+			//web
+
+			var changeWeb = $(".web");
+
+			changeWeb.click(function() {
+				changeWeb.toggleClass("bold");
+				$(".exWeb").toggleClass("bold");
+			})
+
+			changeWeb.hover(function(){
+				$("#aW").toggleClass("visible");
+				$("#bW").toggleClass("visible");
+				$("#cW").toggleClass("visible");
+			})
+
+			var img1W = './assets/img/web1.png',
+			img2W = './assets/img/web2.png',
+			img3W = './assets/img/web3.png',
+			img4W = './assets/img/web4.png',
+			img5W = './assets/img/web5.png',
+			img6W = './assets/img/web6.png',
+			img7W = './assets/img/web7.png',
+			img8W = './assets/img/web1.png',
+			img9W = './assets/img/web2.png';
+
+		    const imagesW = [img1W, img2W, img3W];
+		    const imagesW2 = [img4W, img5W, img6W];
+		    const imagesW3 = [img7W, img8W, img9W];
+
+		    function randomImageW(){
+				return imagesW[Math.floor(Math.random()* imagesW.length)];
+			}
+			function randomImageW2(){
+				return imagesW2[Math.floor(Math.random()* imagesW2.length)];
+			}
+			function randomImageW3(){
+				return imagesW3[Math.floor(Math.random()* imagesW3.length)];
+			}
+
+			document.getElementById('aW').src = randomImageW();
+			document.getElementById('bW').src = randomImageW2();
+			document.getElementById('cW').src = randomImageW3();
+
+			//book
+
+			var changeBook = $(".book");
+
+			changeBook.click(function() {
+				changeBook.toggleClass("bold");
+				$(".exBook").toggleClass("bold");
+			})
+
+			changeBook.hover(function(){
+				$("#aK").toggleClass("visible");
+				$("#bK").toggleClass("visible");
+				$("#cK").toggleClass("visible");
+			})
+
+			var img1K = './assets/img/wikibook6.png',
+			img2K = './assets/img/orquidea-cover3.png',
+			img3K = './assets/img/fung.jpg',
+			img4K = './assets/img/fancy7.jpg',
+			img5K = './assets/img/aware2.png',
+			img6K = './assets/img/thesis2.png',
+			img7K = './assets/img/fung4.jpg',
+			img8K = './assets/img/times5.jpg',
+			img9K = './assets/img/thesis11.png';
+
+		    const imagesK = [img1K, img2K, img3K];
+		    const imagesK2 = [img4K, img5K, img6K];
+		    const imagesK3 = [img7K, img8K, img9K];
+
+		    function randomImageK(){
+				return imagesK[Math.floor(Math.random()* imagesK.length)];
+			}
+			function randomImageK2(){
+				return imagesK2[Math.floor(Math.random()* imagesK2.length)];
+			}
+			function randomImageK3(){
+				return imagesK3[Math.floor(Math.random()* imagesK3.length)];
+			}
+
+			document.getElementById('aK').src = randomImageK();
+			document.getElementById('bK').src = randomImageK2();
+			document.getElementById('cK').src = randomImageK3();
+
+			// interest
+
+			var changeTradition = $(".tradition"),
+				changeSystems = $(".systems"),
+				changeCulture = $(".culture"),
+				changeFood = $(".food");
+
+
+			changeTradition.click(function() {
+				changeTradition.toggleClass("bold-interest");
+				$(".exTradition").toggleClass("bold-interest");
+			})
+
+			changeTradition.hover(function(){
+				$("#aTr").toggleClass("visible");
+				$("#bTr").toggleClass("visible");
+				$("#cTr").toggleClass("visible");
+			})
+
+			document.getElementById('aTr').src = './assets/img/fung6.jpg';
+			document.getElementById('bTr').src = './assets/img/fung2.jpg';
+			document.getElementById('cTr').src = './assets/img/thesis8.png';
+
+			changeSystems.click(function() {
+				changeSystems.toggleClass("bold-interest");
+				$(".exSystems").toggleClass("bold-interest");
+			})
+
+			changeSystems.hover(function(){
+				$("#aS").toggleClass("visible");
+				$("#bS").toggleClass("visible");
+				$("#cS").toggleClass("visible");
+			})
+
+			document.getElementById('aS').src = './assets/img/organikos-04.png';
+			document.getElementById('bS').src = './assets/img/ys-int-6.png';
+			document.getElementById('cS').src = './assets/img/cones2.jpg';
+
+
+			changeCulture.click(function() {
+				changeCulture.toggleClass("bold-interest");
+				$(".exCulture").toggleClass("bold-interest");
+			})
+
+			changeCulture.hover(function(){
+				$("#aC").toggleClass("visible");
+				$("#bC").toggleClass("visible");
+				$("#cC").toggleClass("visible");
+			})
+
+			document.getElementById('aC').src = './assets/img/tea.png';
+			document.getElementById('bC').src = './assets/img/ys-6.png';
+			document.getElementById('cC').src = './assets/img/fancy6.jpg';
+
+			changeFood.click(function() {
+				changeFood.toggleClass("bold-interest");
+				$(".exFood").toggleClass("bold-interest");
+			})
+
+			changeFood.hover(function(){
+				$("#aF").toggleClass("visible");
+				$("#bF").toggleClass("visible");
+				$("#cF").toggleClass("visible");
+			})
+
+			document.getElementById('aF').src = './assets/img/owm-4.png';
+			document.getElementById('bF').src = './assets/img/organikos.png';
+			document.getElementById('cF').src = './assets/img/cones3.jpg';
+
+			//projects
+
+
+			$(".micr").hover(function(){
+				$(".micr-ex").toggleClass("visible");
+			})
+
+			$(".ys").hover(function(){
+				$(".ys-ex").toggleClass("visible");
+			})
+
+			$(".dr").hover(function(){
+				$(".dr-ex").toggleClass("visible");
+			})
+
+			$(".ffab").hover(function(){
+				$(".ffab-ex").toggleClass("visible");
+			})
+
+			$(".rsc").hover(function(){
+				$(".rsc-ex").toggleClass("visible");
+			})
+
+			$(".ff").hover(function(){
+				$(".ff-ex").toggleClass("visible");
+			})
+
+			$(".owm").hover(function(){
+				$(".owm-ex").toggleClass("visible");
+			})
+
+			$(".mt").hover(function(){
+				$(".mt-ex").toggleClass("visible");
+			})
+
+			$(".org").hover(function(){
+				$(".org-ex").toggleClass("visible");
+			})
+
+			$(".h70").hover(function(){
+				$(".h70-ex").toggleClass("visible");
+			})
+
+			$(".ray").hover(function(){
+				$(".ray-ex").toggleClass("visible");
+			})
+
+
+			// $("#cover").delay(3100).fadeOut('slow');
+
+		var body = $('#starshine'),
+		    	starry = $('.starry.shine'),
+		    	stars =  100,
+		    	sparkle = 20;
+		    
+		  var size = 'small',
+		 		sizeMobile = 'smallMobile';
+
+		  var createStar = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(size).appendTo(body);
+		  };
+
+		   var createStarM = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(sizeMobile).appendTo(body);
+		  };
+
+		  	if(window.matchMedia("(max-width: 767px)").matches){
+       			for(var i = 0; i < stars; i++) {
+       			  if(i % 2 === 0) {
+       			    size = 'smallMobile';
+       			  } else if(i % 3 === 0) {
+       			    size = 'mediumMobile';
+       			  }else if (i % 4 === 0) {
+       			  	size ='largeMobile'
+       			  }
+       			 	createStarM();
+       			}
+    		} else{
+        		for(var i = 0; i < stars; i++) {
+        		  if(i % 2 === 0) {
+        		    size = 'small';
+        		  } else if(i % 3 === 0) {
+        		    size = 'medium';
+        		  }else if (i % 4 === 0) {
+        		  	size ='large'
+        		  }
+        		  createStar();
+        		}
+    		}			
+		}) 
+
+		$(window).scroll(function() {
+  			$('#picture-view').css({ transform: 'rotate(' + window.pageYOffset + 'deg)' });
+  			$('#text-view').css({ transform: 'rotate(' + window.pageYOffset + 'deg)' });
+		}); 	
+
+
+
+	</script>	
 </body>
 </html>

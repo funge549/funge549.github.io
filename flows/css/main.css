@@ -125,6 +125,16 @@ svg {
 	stroke: #CCCC00;;
 }
 
+.visual{
+	position:absolute; 
+	bottom: 5vh; 
+	width:50vw;
+}
+
+img.visual{
+	width: 95vw;
+}
+
 @keyframes moving {
   0%   { transform: translate(60vw, 10vh)rotate(60deg); }
   28%  { transform: translate(20vw, 5vh)rotate(-20deg); }

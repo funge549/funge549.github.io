@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>evelin fung</title>
+	<meta charset="utf-8">	
+	<link href='./assets/css/main-jan.css' media='all' rel='stylesheet' type='text/css' />
+	<link rel="icon" href="./assets/img/favicon2.png" type="image/x-icon" />
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./assets/js/moment.js"></script>
+	<script type="text/javascript" src="./assets/js/moment-timezone-with-data.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/circletype.min.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.fittext.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="window info">
+		<h1>Evelin Susan Fung Zhong ↓</h1>
+		</div>
+	<br>
+		<div class="window info">
+			<h2>Currently:</h2><p>Packaging & Web Designer @ Yvo Beauty</p>
+			<h2>Previously:</h2><p>Visual Designer @ Bakery House <br>Interactive Designer @ elastica.nu<br>Graphic Design Intern @ elastica.nu</p>
+			<h2>Education:</h2><p>BFA in Communication Design @ Parsons School of Design, NY<br>IB Diploma + IGCSE Certificate @ British School of Costa Rica</p>
+			<h2>Contact:</h2><p><a href="mailito:fungevelin@gmail.com" target="_blank">fungevelin@gmail.com</a><br><a href="instagram.com/_esfz_">instagram</a></p>
+		</div>
+	</div>
+		
+	
+		<div class="location window clock">
+			<p><span id="time"></span></p><p>IN CA </p>
+		</div>
+	</div>	
+
+	<div id="click-text">
+		<div id="circle-picture"></div>
+		<div id="counter-picture">
+			<pre>&#10051;visual&#10051;view </pre>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="window"></div>
+		<a>hi</a>
+	</div>
+
+	<div id="starshine">
+    	<div class="starry shine"></div>
+	</div>	
+
+
+
+
+
+
+
+<script>
+		$(document).ready(function(){
+			console.log("welcome to my site!")
+			console.log("for more info fungevelin@gmail.com")
+			function date_time() {
+			  now = moment().tz("America/Los_Angeles").format("h:mma");
+			  document.getElementById('time').innerHTML = now;
+			  setTimeout(function () { date_time(); }, 1000);
+			}
+			date_time();
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+			var today = new Date(),
+				n = today.getHours(),
+				min = today.getMinutes();
+				min = (min < 10) ? '0' + min : min;
+
+			$("#click-img").click(function() {
+	 			$("#picture-content").css("display", "none");
+	 			$("#content").css("display", "block");
+	 			$("#click-img").css("display", "none");
+	 			$("#click-text").css("display", "block");
+			})
+
+			var counter = new CircleType(document.getElementById('counter-picture'))
+			  	.radius(45);
+
+			var concepts = document.getElementById("content").querySelectorAll("a"),
+				header = document.getElementById("header").querySelectorAll("a"),
+				i,
+				blue = getRandomInt(64,84),
+				blue2 = getRandomInt(124,164),
+				blue3 = getRandomInt(184,224),
+				blue4 = getRandomInt(164,224),
+				blue5 = getRandomInt(200,254),
+				blue6 = getRandomInt(50,110),
+				color = "rgb(" + "0" + ",0," + blue +")" ,
+				color2 = "rgb(" + "0," + "67," + blue2 +")" ,
+				color3 = "rgb(" + "0," + "0," + blue3 +")" ,
+				color4 = "rgb(" + "0"+ ",0," + blue4 +")" ,
+				color5 = "rgb(" + "76"+ ",84," + blue5 +")" ,
+				color6 = "rgb(" + "0" + ",0," + blue6 +")" ;
+
+			if (n <=3){
+				document.body.style.color = color;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color;
+				};			
+				console.log("color setting: all nighter?")  ;
+			}else if(n <=7){
+				document.body.style.color = color2;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color2;
+				};
+				console.log("color setting: good morning")  ;
+			}else if(n <=11){
+				document.body.style.color = color3;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color3;
+				};
+				console.log("color setting: time for lunch?") ;
+			}else if(n <=15){
+				document.body.style.color = color4;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color4;
+				};
+				console.log("color setting: coffee break!");
+			}else if(n <=19){
+				document.body.style.color = color5;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color5;
+				};
+				console.log("color setting: time to clock out!");
+			}else if (n <=23){
+				document.body.style.color = color6;
+				for (i = 0; i < concepts.length; i++) {
+				};
+				for (i = 0; i < header.length; i++) {
+ 					header[i].style.color = color6;
+				};
+				console.log("color setting: are you also a night owl?")
+			}
+
+			
+
+			$(".ray").hover(function(){
+				$(".ray-ex").toggleClass("visible");
+			})
+
+
+		var body = $('#starshine'),
+		    	starry = $('.starry.shine'),
+		    	stars =  100,
+		    	sparkle = 20;
+		    
+		  var size = 'small',
+		 		sizeMobile = 'smallMobile';
+
+		  var createStar = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(size).appendTo(body);
+		  };
+
+		   var createStarM = function() {
+		    starry.clone().removeAttr('id').css({
+		      top: (Math.random() * 200) + 'vh',
+		      left: (Math.random() * 100) + '%',
+		      webkitAnimationDelay: (Math.random() * sparkle) + 's',
+		      mozAnimationDelay: (Math.random() * sparkle) + 's'
+		    }).addClass(sizeMobile).appendTo(body);
+		  };
+
+		  	if(window.matchMedia("(max-width: 767px)").matches){
+       			for(var i = 0; i < stars; i++) {
+       			  if(i % 2 === 0) {
+       			    size = 'smallMobile';
+       			  } else if(i % 3 === 0) {
+       			    size = 'mediumMobile';
+       			  }else if (i % 4 === 0) {
+       			  	size ='largeMobile'
+       			  }
+       			 	createStarM();
+       			}
+    		} else{
+        		for(var i = 0; i < stars; i++) {
+        		  if(i % 2 === 0) {
+        		    size = 'small';
+        		  } else if(i % 3 === 0) {
+        		    size = 'medium';
+        		  }else if (i % 4 === 0) {
+        		  	size ='large'
+        		  }
+        		  createStar();
+        		}
+    		}			
+		}) 
+
+		$(window).scroll(function() {
+  			$('#picture-view').css({ transform: 'rotate(' + window.pageYOffset + 'deg)' });
+		}); 
+
+
+
+</script>
+
+</body>
+</html>
