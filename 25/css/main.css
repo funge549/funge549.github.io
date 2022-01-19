@@ -1,0 +1,150 @@
+@font-face {font-family: "Alpina"; src: url("../fonts/GT-Alpina-Fine-Condensed-Bold-Italic.woff2");}
+@font-face {font-family: "Alpina-bold"; src: url("../fonts/GT-Alpina-Fine-Condensed-Bold-Trial.woff2");}
+@font-face {font-family: "Maru-Mega"; src: url("../fonts/GT-Maru-Mega-Maxi-Trial.woff2");}
+
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	z-index: 1;
+	margin-top: 20vh;
+}
+
+.intro{
+	font-family: "Alpina";
+	font-size: 20em;
+	text-align: center;
+
+}
+
+.night {
+	position: relative;
+	left: 50%;
+	top: 5vh;
+	transform: translate(-50%,0);
+	font-family: "Alpina";
+	font-size: 5em;
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+.button1{
+
+	position: absolute;
+
+
+	color: white;
+	display: none;
+
+
+}
+
+.details{
+	position: absolute;
+	top: 55vh;
+	left: 60vw;
+
+	color: black;
+	font-family: "Alpina";
+	font-size: 5em;
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+.float{
+	font-size: 10em;
+	font-family: "Maru-Mega";
+	position: absolute;
+	top: 0;
+	left: 10vw;
+	z-index: -1;
+	color: white;
+	display: none;
+
+
+}
+
+.float button{
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	font-family: "Alpina";
+	font-size: 0.25em;
+}
+
+
+.float2{
+	font-size: 10em;
+	font-family: "Maru-Mega";
+	position: absolute;
+	top: 0;
+	left: 25vw;
+	z-index: -1;
+	color: white;
+	opacity: .25;
+	display: none;
+
+
+}
+
+.float p {
+	padding: .1em;
+	
+}
+
+@keyframes spin{
+	100%{
+		
+		z-index: 1;
+		transform: scale(2);
+	}
+}
+
+@keyframes spins{
+	100%{
+		transform: rotate(360deg);
+		opacity: 1
+	}
+}
+
+.event{
+	position: absolute;
+	top: 2vh;
+	left: 5vw;
+	font-family: "Alpina";
+	margin: 1vh;
+	padding-top: 1vh;
+	display: none;
+	margin-top: 0;
+}
+
+.event h1{
+	color: white;
+	font-size: 12em;
+}
+.event h2{
+	font-size: 5em;
+}
+.event h3{
+	font-size: 3em;
+}
+
+.event p{
+	font-size: 3em;
+	font-family: "Alpina-bold";
+}
+
+.event a{
+	text-decoration: underline;
+}

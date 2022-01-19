@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>25</title>
+  <meta charset="utf-8">
+  <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+  <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
+  <link rel="icon" href="img/icon.png" type="image/x-icon" />
+  <script src="./js/jquery-3.3.1.min.js"></script>  
+</head>
+  <body>
+  <div class="wrapper">
+    <div class="intro"><h1>hello there</h1></div>
+    <div class="next">
+      <button class="night">click here</button>
+    </div>
+
+
+
+
+
+    <div class="button1">
+      <button class="details" style="z-index: 1;">click for details</button>
+    </div>
+
+    <div class="float">
+      
+      <p style="transform: rotate(45deg);animation: spins 15s infinite;">eveesoo</p>
+      <p style="transform: rotate(-15deg);animation: spin 20s infinite;">wow</p>
+      <p style="transform: rotate(-35deg);animation: spins 10s infinite;">25</p>
+      <p style="transform: rotate(25deg);animation: spin 20s infinite;">quarter life</p>
+      <p style="transform: rotate(-15deg);animation: spin 25s infinite;">wow</p>
+      <p style="transform: rotate(-35deg);animation: spin 15s infinite;">25</p>
+      <p style="transform: rotate(5deg);animation: spin 15s infinite; position: fixed; right: 0">25</p>
+
+      
+    </div>
+
+    <div class="float2">
+      <p style="transform: rotate(45deg);animation: spin 15s infinite;">eveesoo</p>
+      <p style="transform: rotate(-15deg);animation: spins 20s infinite;">wow</p>
+      <p style="transform: rotate(-35deg);animation: spin 10s infinite;">25</p>
+      <p style="transform: rotate(25deg);animation: spins 20s infinite;">quarter life</p>
+      <p style="transform: rotate(-15deg);animation: spins 25s infinite;">wow</p>
+      <p style="transform: rotate(-35deg);animation: spin 15s infinite;">25</p>
+       <p style="transform: rotate(5deg);animation: spin 15s infinite; position: fixed; right: 0">25</p>
+    </div>
+  </div>
+
+      <div class="event">
+      <h1> EVEESOO 25th Bday</h1><br>
+      <h2>Plans: Cute Coffee Date, Romantic Dinner & <br>Cake Ceremony</h2>
+      <br><br>
+      <h3>Cute Coffee Date</h3>
+      <p>Time: 3:00pm (tbc)</p>
+      <p>Location options:<br> <a href="https://goo.gl/maps/eKERQHwWHszxPpMK7">goodboybob coffee roasters</a> or <a href="https://g.page/dinosaur_coffee?share">Dinosaur Coffee</a></p>
+      <br><br>
+      <h3>Romantic Dinner</h3>
+      <p>Time: 7:00pm</p>
+      <p>Location: <a href="https://goo.gl/maps/ooedDR5rPHu99EYy7">Cassia</a></p>
+      <br><br>
+
+      <h3>Cake Ceremony</h3>
+      <p>Time: before Cute Coffee Date or <br>after Romantic Dinner</p>
+      <p>Location: <a href="https://goo.gl/maps/X7MVJgY7Jw9WpMYX7">606</a></p>
+      <br><br>
+
+      <h3>for more information please call: <a href=""tel:347-265-8198""><br>+1 (347) 265 8198</a></h3><br><br><br><br>
+
+      <h3>*tbc = to be confirmed</h3>
+    </div>
+
+
+  </div>
+  </body>
+
+  <script>
+    $(document).ready(function(){
+        document.body.style.backgroundColor = "#9999FF";
+        var i = 0;
+        function change() {
+          var colors = ["#9999FF", "#CCCCFF", "#6699FF", "#99CCFF", "#FFCCFF", "#FFCCCC"];
+          document.body.style.backgroundColor = colors[i];
+          i = (i + 1) % colors.length;
+        }
+        setInterval(change, 2000);
+
+
+        $(".night").click(function() {
+          $(".night").css("display", "none");
+          $(".intro").css("display", "none");
+          $(".float").css("display", "block");
+          $(".float2").css("display", "block");
+          $(".button1").css("display", "block");
+        });
+
+        $(".details").click(function() {
+          $(".button1").css("display", "none");
+          $(".float").css("display", "none");
+          $(".float2").css("display", "none");
+          $(".event").css("display", "block");
+
+        });
+    })
+
+  </script>
+
+</html>
