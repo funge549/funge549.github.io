@@ -1,0 +1,175 @@
+html, body {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	font-family: sans-serif;
+
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	color: white;
+}
+
+.top-navigation{
+	height: 5vh;
+	width: 100vw;
+	position: fixed;
+	display: block;
+	top: 0;
+	color: white;
+	background-color: darkred;
+	z-index: 3;
+
+}
+
+.top-navigation p{
+	position: relative;
+	display: inline-block;
+	top:1vh;
+	width: 33vw;
+	height: auto;
+	text-align: center;
+}
+
+
+.side-navigation{
+	height: 100vh;
+	width: 25vw;
+	position: fixed;
+	top: 0;
+	background-color: black;
+	color: black;
+}
+
+.side-navigation .content{
+	position: fixed;
+	top: 10vh;
+	left: 2vw;
+}
+
+.side-navigation .content{
+	width: auto;
+	height: auto;
+	padding: 1;
+	text-align: left;
+}
+
+side-navigation .content h1{
+	width: 100%;
+	height: 100%;
+	transform: translate(0,-50%);
+}
+
+.branding{
+	background-color: blue;
+}
+
+.applied{
+	background-color: red;
+}
+
+.misc{
+	background-color: yellow;
+}
+
+.side-navigation img{
+	top: 20vh;
+	height: 10vh;
+}
+
+.side-navigation h1{
+	padding-top: 5vh;
+	top: 50vh;
+	height: 10vh;
+}
+
+.slider-tool {
+  width: 50%;
+  position: fixed;
+  bottom: 4vh;
+  left: 2vw;
+  opacity: .3;
+}
+
+.slider-tool:hover{
+	opacity: 1;
+}
+
+.slider {
+  -webkit-appearance: none;	
+  width: 10vw;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+
+}
+
+.artwork{
+	padding-top: 10vh;
+	left: 25vw;
+	display:block;
+	position: absolute;
+	z-index: 2;
+	margin-left: 2vw;
+}
+
+
+.box{
+/*	min-width: 10vw;
+	min-height: 15vh;*/
+	height: auto;
+	margin: 2vh 1vw;
+	display:inline-block;
+}
+
+.box img {
+	width: 10vw;
+
+}
+
+/**********LANDING************/
+
+.wrapper-landing{
+	width: 80vw;
+	color: whitesmoke;
+	font-size: 5vw;
+	text-align: center;
+	position: fixed;
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.wrapper-landing img {
+	width: 1vw;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>raido test-1</title>
+  <meta charset="utf-8">
+  <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+  <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
+  <!-- <link rel="icon" href="img/icon.png" type="image/x-icon" /> -->
+  <script src="./js/jquery-3.3.1.min.js"></script>  
+</head>
+  <body>
+  <div class="wrapper">
+    <div class="top-navigation">
+      <p><a href="">CV</a></p>
+      <p><a href="">IG</a></p>
+      <p><a href="">SOUNDCLOUD</a></p>
+    </div>
+
+    <div class="side-navigation">
+      <div class="content">
+        <img src="./img/raido.png"><br><br>
+        <h1 class="branding">Branding</h1><br>
+        <h1 class="applied">Applied Brands</h1><br>
+        <h1 class="misc">Misc. Designs</h1><br>
+      </div>
+      <div class="slider-tool">
+           <input type="range" min="10" max="30" value="10" class="slider" id="Slider">
+        </div>
+    </div>
+
+    <div class="artwork">
+      <div class="box">
+        <img src="img/raido.png" alt="Image 1">
+      </div>
+      <div class="box">
+        <img src="img/raido2.png" alt="Image 2">
+      </div>
+      <div class="box">
+        <img src="img/raido3.png" alt="Image 3">
+      </div>
+      <div class="box">
+        <img src="img/raido4.png" alt="Image 4">
+      </div>
+      <div class="box">
+        <img src="img/raido5.png" alt="Image 5">
+      </div>
+      <div class="box">
+        <img src="img/raido6.png" alt="Image 6">
+      </div>
+    </div>
+
+</div>
+
+
+  </body>
+
+  <script>
+
+    $(document).ready(function() {
+  const slider = document.getElementById('Slider');
+  const boxes = document.querySelectorAll('.box');
+
+  slider.addEventListener('input', handleChange);
+
+  function handleChange(e) {
+    const value = e.target.value / 100; // Normalize value to a range of 0 to 1
+    boxes.forEach(box => {
+      const images = box.querySelectorAll('img');
+      images.forEach(image => {
+        image.style.width = value * 100 + 'vw';
+        // image.style.height = value * 100 + 'vh';
+      });
+    });
+
+  }
+});
+
+
+
+  </script>
+
+</html>

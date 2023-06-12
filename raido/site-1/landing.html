@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>raido test-1</title>
+  <meta charset="utf-8">
+  <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+  <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
+  <!-- <link rel="icon" href="img/icon.png" type="image/x-icon" /> -->
+  <script src="./js/jquery-3.3.1.min.js"></script>  
+</head>
+  <body>
+  <div class="wrapper-landing">
+   <h1>Giancarlo Renzi Y. an Italo-Costarrican Multidisciplinary Designer with 8+ years of experience and a Bachelor's & Master's Degree in the Industrial Design Field. </h1>
+
+  </div>
+  </body>
+
+  <script>
+
+    $(document).ready(function() {
+  const h1 = $('h1');
+  const words = h1.text().split(' ');
+  const colors = ['red', 'blue', 'yellow'];
+  const fonts = ['serif','sans-serif','monospace','cursive']
+  const images = [
+    'img/raido-1.png',
+    'img/raido-2.png',
+    'img/raido-3.png'
+  ];
+  const maxImages = 10; 
+  const imageDelay = 1000; //(in milliseconds)
+  const toggleDelay = 500; //(in milliseconds)
+  let imageCounter = 0; 
+  let stopInsertion = false;
+
+
+  setInterval(function() {
+    
+    const randomIndex = Math.floor(Math.random() * words.length);
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    const imageTag = '<img src="' + randomImage + '">';
+    const maxImages = 3;
+
+    // Update the selected word with the random color
+    words[randomIndex] = '<span style="color: ' + randomColor + '">' + words[randomIndex] + '</span>';
+
+    words[randomIndex] = '<span style="font-family: ' + randomFont + '">' + words[randomIndex] + '</span>';
+
+    if (!stopInsertion && imageCounter < maxImages) {
+      const randomIndex = Math.floor(Math.random() * words.length);
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      const imageTag = '<img src="' + randomImage + '">';
+      words.splice(randomIndex, 0, imageTag);
+      imageCounter++;
+
+      if (imageCounter === maxImages) {
+        setTimeout(function() {
+          stopInsertion = true;
+        }, 10000); // Stop inserting images after 10 seconds
+      }
+    }
+
+    // Toggle image visibility
+    const imagesInH1 = h1.find('img');
+    imagesInH1.each(function() {
+      const image = $(this);
+      setTimeout(function() {
+        image.toggle();
+      }, toggleDelay);
+    });
+
+
+
+    // Update the h1 text with the modified words
+    h1.html(words.join(' '));
+  }, 2000); // Change the color every 2 seconds
+});
+
+//    $(document).ready(function() {
+//   const h1 = $('h1');
+//   const words = h1.text().split(' ');
+
+//   setInterval(function() {
+//     // Generate a random index
+//     const randomIndex = Math.floor(Math.random() * words.length);
+    
+//     // Generate a random color
+//     const randomColor = getRandomColor();
+
+//     // Update the selected word with the random color
+//     words[randomIndex] = '<span style="color: ' + randomColor + '">' + words[randomIndex] + '</span>';
+
+//     // Update the h1 text with the modified words
+//     h1.html(words.join(' '));
+//   }, 2000); // Change the color every 2 seconds
+
+//   // Function to generate a random color
+//   function getRandomColor() {
+//     const letters = '0123456789ABCDEF';
+//     let color = '#';
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   }
+// });
+
+
+
+  </script>
+
+</html>

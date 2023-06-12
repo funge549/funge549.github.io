@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>raido test-1</title>
+  <meta charset="utf-8">
+  <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+  <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css'/>
+  <!-- <link rel="icon" href="img/icon.png" type="image/x-icon" /> -->
+  <script src="./js/jquery-3.3.1.min.js"></script>  
+</head>
+  <body>
+  <div class="wrapper">
+    <div class="intro">
+      <h1>evee's 26 bday</h1>
+      <br><br>
+      <h2>Date: Sunday 22 January 2023</h2>
+      <h2>Plans: Cute Brunch, Good Coffee & Aesthetic Views</h2>
+      <br><br><br>
+      <h2>Cute <span class="brunch">Brunch</span></h2>
+      <p>Time: 10:30am</p>
+      <p>Location: Lunetta</p>
+      <p>Address: <a href="https://maps.apple.com/?address=2420%20/%202424%20Pico%20Boulevard,%20Santa%20Monica,%20CA%2090405,%20United%20States&auid=7841313734828745828&ll=34.022373,-118.463649&lsp=9902&q=Lunetta&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhAUCgQIChAACgQIUhABCgQIVRAPCgQIWRACCgUIpAEQARImKaB+vO1JAkFAMT9C/TUFnl3AOR5U4klwA0FAQfMnC6JTnV3AUAQ%3D">2424 Pico Blvd, Santa Monica</a><p>
+      <br>
+      <h2>Good <span class="coffee">Coffee</span></h2>
+      <p>Time: After Brunch</p>
+      <p>Location: goodboybob</p>
+      <p>Address: <a href="https://maps.apple.com/?address=2058%20Broadway,%20Santa%20Monica,%20CA%20%2090404,%20United%20States&auid=6781174678466306085&ll=34.027990,-118.476285&lsp=9902&q=Goodboybob%20Coffee&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhAICgQIChAACgQIUhABCgQIVRAPCgQIWRACCgUIpAEQARImKXUrlfIGA0FAMcbsz2Dcnl3AOfMAu04tBEFAQbq/xskqnl3AUAQ%3D">2058 Broadway Santa Monica</a></p>
+      <br><br>
+      <h2>Aesthetic <span class="getty">Views</span></h2>
+      <p>Time: 1:00pm</p>
+      <p>Location: The Getty Center</p>
+      <p>Address: <a href="https://maps.apple.com/?address=Getty%20Center%20Dr,%20Los%20Angeles,%20CA%20%2090049,%20United%20States&ll=34.084809,-118.475786&q=Getty%20Center%20Dr&_ext=EiYpn+ix1kcKQUAxfikxL8yeXcA5Hb7XMm4LQUBBgpzAeRqeXcBQBA%3D%3D">N Sepulveda Blvd & Getty Center Dr</a><p>
+      <br>
+      <h2>*meeting place: evee's house @ 10:00am*</h2>
+      <br><br>
+      <h2>for more information please call: <a href="tel:347-265-8198"><br>+1 (347) 265 8198</a></h2>
+    </div>
+
+    <div class="visuals">
+      <button class="exit"><p>x</p></button>
+      <div class="one"><img src="img/brunch-3.png"></div>
+      <div class="two"><img src="img/brunch-2.png"></div>
+      <div class="three"><img src="img/brunch-1.png"></div>
+
+      <div class="one-coffee"><img src="img/coffee-3.png"></div>
+
+      <div class="three-coffee"><img src="img/coffee-1.png"></div>
+
+      <div class="one-getty"><img src="img/getty-3.png"></div>
+      <div class="two-getty"><img src="img/getty-2.png"></div>
+      <div class="three-getty"><img src="img/getty-1.jpg"></div>
+    </div>
+
+  </div>
+
+
+  </body>
+
+  <script>
+    $(document).ready(function(){
+       
+
+        $(".exit").click(function() {
+          $(".exit").css("display", "none");
+          $(".one").css("display", "none");
+          $(".two").css("display", "none");
+          $(".three").css("display", "none");
+          $(".intro").css("opacity", "1");
+          $(".one-coffee").css("display", "none");
+          $(".two-coffee").css("display", "none");
+          $(".three-coffee").css("display", "none");
+          $(".one-getty").css("display", "none");
+          $(".two-getty").css("display", "none");
+          $(".three-getty").css("display", "none");
+
+        });
+
+        $(".brunch").click(function() {
+          $(".exit").css("display", "block");
+          $(".one").css("display", "block");
+          $(".two").css("display", "block");
+          $(".three").css("display", "block");
+          $(".intro").css("opacity", "0.25");
+
+        });
+
+        $(".getty").click(function() {
+          $(".exit").css("display", "block");
+          $(".one-getty").css("display", "block");
+          $(".two-getty").css("display", "block");
+          $(".three-getty").css("display", "block");
+          $(".intro").css("opacity", "0.25");
+
+        });
+
+        $(".coffee").click(function() {
+          $(".exit").css("display", "block");
+          $(".one-coffee").css("display", "block");
+
+          $(".three-coffee").css("display", "block");
+          $(".intro").css("opacity", "0.25");
+
+        });
+
+
+    })
+
+  </script>
+
+</html>

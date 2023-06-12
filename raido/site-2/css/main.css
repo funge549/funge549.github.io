@@ -1,0 +1,109 @@
+@font-face {font-family: "MedIta"; src: url("../fonts/GT-Super-Display-Medium-Italic.woff2");}
+@font-face {font-family: "Med"; src: url("../fonts/GT-Super-Display-Medium.woff2");}
+
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fffef7;
+
+}
+
+.wrapper{
+	height: 100vh;
+	width: 90vw;
+	z-index: 1;
+}
+
+.intro{
+	color: #020f47;
+	font-family: Med;
+	margin-left: 2em;
+	margin-top: 5em;
+	opacity: 1;
+}
+
+.intro h1{
+	font-size: 5em;
+	font-family: Med;
+}
+
+.intro h2{
+	font-size: 3em;
+	font-family: Med;
+}
+
+
+.intro span{
+	font-family: MedIta;
+	text-decoration: underline solid 0.75px;
+	color:#8383f2;
+}
+
+
+.intro p{
+	margin-left: .5em;
+	line-height: 1.25em;
+	font-size: 3em;
+}
+
+.intro a{
+	color:#020f47;
+}
+
+button {
+	position: fixed;
+	display: none;
+	left: 2em;
+	top: 5em;
+	width: auto;
+	height: auto;
+	padding: 0 1em;
+	background-color: #020f47;
+
+}
+
+button p {
+	font-size: 5em;
+	font-family: Med;
+	color: #fffef7;
+}
+
+img{
+		max-width: 50vw;
+}
+
+.one , .one-coffee, .one-getty
+{
+	position: fixed;
+	display: none;
+	z-index: 2;
+	top: 37em;
+	left: 4em;
+	max-width: 25vw;
+}
+
+
+.two , .two-coffee, .two-getty{
+	position: fixed;
+	display: none;
+	z-index: 2;
+	top: 50em;
+	left: 28em;
+
+}
+
+
+
+.three , .three-coffee, .three-getty{
+	position: fixed;
+	display: none;
+	z-index: 2;
+	top: 6em;
+	left: 28em;
+	max-width: 25vw;
+}
+
+
+
+
